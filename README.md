@@ -6,6 +6,11 @@
     <p>DevWay</p>
 </h1>
 
+<!-- Resumo das instruções abaixo -->
+## Este vídeo resume todas as instruções abaixo, com toda a parte teórica, o que é branch, versionamento, repositório, etc: [Curso de Git e Github COMPLETO 2021 [Iniciantes] + Desafios + MuitaPrática](https://youtu.be/kB5e-gTAl_s)
+
+<br>
+
 <!-- Instruções para clonar o projeto -->
 ## 🛑 Siga os passos abaixo para Clonar no Repositório
 
