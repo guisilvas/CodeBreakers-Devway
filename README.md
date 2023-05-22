@@ -41,7 +41,7 @@ git clone https://github.com/guisilvas/CodeBreakers-Devway.git
 
 <br>
 
-- Após clonar o repositório clique com o botão direito e selecione _Abrir com o VS Code_ ou abra o _VS Code_ e abra a pasta onde o clone foi realizado.
+- Após clonar o repositório clique com o botão direito e selecione _Abrir com o Visual Studio Code_ ou abra o _Visual Studio Code_ e abra a pasta onde o clone foi realizado.
 
 <br>
 
@@ -89,7 +89,7 @@ git config --get user.email
 
 <br>
 
-- No canto superior direito selecione _Novo Repositório_, _Add_ e _Clonar Repositório_.
+- No canto superior direito selecione _New Repository_, _Add_ e _Clone Repository_.
 
 <br>
 
@@ -106,7 +106,7 @@ git config --get user.email
 
 ## 1. Commit pelo GitHub Desktop 
 
-- Antes de qualquer coisa atualize seu código, para isso abra o GitHub Desktop, selecione o repositório no canto superior direito e clique na opção _Pull Origin_.
+- Antes de qualquer coisa atualize seu código, para isso abra o GitHub Desktop, selecione o repositório no canto superior direito e, na parte superior, clique na opção _Pull Origin_.
 
 <br>
 
@@ -118,7 +118,7 @@ git config --get user.email
 
 <br>
 
-- No canto inferior esquero ao lado da sua foto no campo _Summary (required)_ você irá colocar resumidamente a sua alteração no código. Se achar necessário pode colocar uma descrição no campo _Description_ logo abaixo.
+- No canto inferior esquerdo ao lado da sua foto no campo _Summary (required)_ você irá colocar resumidamente a sua alteração no código. Se achar necessário pode colocar uma descrição no campo _Description_ logo abaixo.
 
 <br>
 
