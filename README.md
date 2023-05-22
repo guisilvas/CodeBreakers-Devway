@@ -69,7 +69,7 @@ git clone https://github.com/guisilvas/CodeBreakers-Devway.git
 
 <br>
 
-- Configure seu nome e email [No terminal do GitBash ou powerShell]
+- Configure seu nome e email [No terminal do GitBash ou PowerShell]
 ```bash
 
 git config user.name "Seu Nome"
@@ -81,7 +81,7 @@ git config user.email "seuemail@example.com"
 
 <br>
 
-- Verifique seu nome e email [No terminal do GitBash ou powerShell]
+- Verifique seu nome e email [No terminal do GitBash ou PowerShell]
 ```bash
 
 git config --get user.name
