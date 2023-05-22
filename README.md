@@ -94,6 +94,13 @@ Boas práticas
 
 <br>
 
+### - Antes de alterar qualquer coisa atualize seu código:
+```bash
+git pull
+```
+
+<br>
+
 ### - Cada alteração do projeto deve ser notificada previamente
 - Caso queira alterar algo que não seja da sua equipe notifique o grupo
 
