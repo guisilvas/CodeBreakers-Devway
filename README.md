@@ -158,7 +158,7 @@ git commit -m "Mensagem descritiva da alteração"
 
 - Após o commit basta mandar as alterações para o repositório remoto pelo comando:
 ```bash
-git push"
+git push
 ```
 
 <br>
