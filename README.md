@@ -6,8 +6,8 @@
     <p>DevWay</p>
 </h1>
 
-<!-- Instruções para contribuir no projeto -->
-## 🛑 Siga os passos abaixo para commitar no repositório
+<!-- Instruções para clonar o projeto -->
+## 🛑 Siga os passos abaixo para Clonar no Repositório
 
 <br>
 
@@ -18,7 +18,7 @@
 
 <br>
 
-## Clonando o repositório usando o GitBash
+## 1. Clonando o repositório usando o GitBash
 
 
 - No computador/notebook crie uma pasta para armazenar um clone do repositório na sua máquina.
@@ -76,6 +76,90 @@ git config --get user.email
 <br>
 
 - Caso todos os passos tenham ocorrido com sucesso você está pronto(a) para realizar alterações no projeto.
+
+<br>
+
+## 2. Clonando o repositório pelo GitHub Desktop
+
+- Baixe o [GitHub Desktop](https://desktop.github.com/)
+
+<br>
+
+- Instale o GitHub Desktop, abra e faça login na sua conta do GitHub.
+
+<br>
+
+- No canto superior direito selecione _Novo Repositório_, _Add_ e _Clonar Repositório_.
+
+<br>
+
+- Selecione a opção _URL_ e cole o link do repositório: https://github.com/guisilvas/CodeBreakers-Devway.git
+
+<br>
+
+<!-- Instruções para contribuir no projeto -->
+## 🛑 Commit
+
+- Commitar significa colocar as suas alterações no projeto oficial, mas o commit é apenas um dos passos até realizar a alteração de fato.
+
+<br>
+
+## 1. Commit pelo GitHub Desktop 
+
+- Antes de qualquer coisa atualize seu código, para isso abra o GitHub Desktop, selecione o repositório no canto superior direito e clique na opção _Pull Origin_.
+
+<br>
+
+- No centro da tela clique em _Open in Visual Studio Code_ ou utilize o comando _Ctrl + Shift + A_.
+
+<br>
+
+- Realize as alterações e volte ao GitHub Desktop.
+
+<br>
+
+- No canto inferior esquero ao lado da sua foto no campo _Summary (required)_ você irá colocar resumidamente a sua alteração no código. Se achar necessário pode colocar uma descrição no campo _Description_ logo abaixo.
+
+<br>
+
+- Clique em _Commit to main_ para enviar as alterações para a branch principal.
+
+<br>
+
+- Por fim na parte superior da tela clique em _Push Origin_ para subir suas alterações para o repositório remoto.
+
+<br>
+
+## 2. Commit pelo GitBash/PowerShell
+
+- Após realizar as alterações no projeto, dentro do Visual Studio Code utilize o comando _Ctrl + "_, o terminal será aberto.
+
+<br>
+
+- Para adicionar todas as alterações na área de _Stage_ utilize o comando:
+```bash
+git add .
+```
+
+- Para adiconar as alterações de um único arquivo utilize o comando:
+```bash
+# No lugar de index.html coloque o arquivo que deseja commitar
+git add index.html
+```
+
+<br>
+
+- Após adicionar é preciso commitar as alterações saindo da área de _Stage_ para _Modified_, use o comando:
+```bash
+git commit -m "Mensagem descritiva da alteração"
+```
+
+<br>
+
+- Após o commit basta mandar as alterações para o repositório remoto pelo comando:
+```bash
+git push"
+```
 
 <br>
 
