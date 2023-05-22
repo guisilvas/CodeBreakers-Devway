@@ -18,7 +18,25 @@
 
 <br>
 
-## 1. Clonando o repositório usando o GitBash
+## 1. Clonando o repositório pelo GitHub Desktop
+
+- Baixe o [GitHub Desktop](https://desktop.github.com/)
+
+<br>
+
+- Instale o GitHub Desktop, abra e faça login na sua conta do GitHub.
+
+<br>
+
+- No canto superior direito selecione _New Repository_, _Add_ e _Clone Repository_.
+
+<br>
+
+- Selecione a opção _URL_ e cole o link do repositório: https://github.com/guisilvas/CodeBreakers-Devway.git
+
+<br>
+
+## 2. Clonando o repositório usando o GitBash
 
 
 - No computador/notebook crie uma pasta para armazenar um clone do repositório na sua máquina.
@@ -76,24 +94,6 @@ git config --get user.email
 <br>
 
 - Caso todos os passos tenham ocorrido com sucesso você está pronto(a) para realizar alterações no projeto.
-
-<br>
-
-## 2. Clonando o repositório pelo GitHub Desktop
-
-- Baixe o [GitHub Desktop](https://desktop.github.com/)
-
-<br>
-
-- Instale o GitHub Desktop, abra e faça login na sua conta do GitHub.
-
-<br>
-
-- No canto superior direito selecione _New Repository_, _Add_ e _Clone Repository_.
-
-<br>
-
-- Selecione a opção _URL_ e cole o link do repositório: https://github.com/guisilvas/CodeBreakers-Devway.git
 
 <br>
 
