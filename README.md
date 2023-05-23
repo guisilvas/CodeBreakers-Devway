@@ -20,7 +20,7 @@
 
 ## 1. Commit pelo GitHub Desktop 
 
-- Antes de qualquer coisa atualize seu código, para isso abra o GitHub Desktop, selecione o repositório no canto superior direito e, na parte superior, clique na opção _Pull Origin_.
+- Antes de qualquer coisa atualize seu código, para isso abra o GitHub Desktop, selecione o repositório no canto superior esquerdo e, na parte superior da tela, clique na opção _Pull Origin_.
 
 <br>
 
@@ -28,7 +28,7 @@
 
 <br>
 
-- Realize as alterações e volte ao GitHub Desktop.
+- Seu código está atualizado, realize as alterações e volte ao GitHub Desktop.
 
 <br>
 
@@ -107,6 +107,9 @@ git pull
 ### - Todos os commits devem conter uma mensagem descritiva da alteração
 
 <br>
+
+### - Para que não haja conflitos no projeto certifique-se de possuir o código atualizado
+- Se ao realizar um _git push_ aparecer un conflito você alterou uma seção que outra pessoa também alterou. Para solucionar esse problema deverá corrigir o conflito.
 
 <!-- Git do Site em funcionamento -->
 <img src="">
