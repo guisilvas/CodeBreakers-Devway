@@ -7,103 +7,12 @@
 </h1>
 
 <!-- Resumo das instruções abaixo -->
-## Este vídeo resume todas as instruções abaixo, com toda a parte teórica, o que é branch, versionamento, repositório, etc: [Curso de Git e Github COMPLETO 2021 [Iniciantes] + Desafios + MuitaPrática](https://youtu.be/kB5e-gTAl_s)
-
-<br>
-
-<!-- Instruções para clonar o projeto -->
-## 🛑 Siga os passos abaixo para Clonar no Repositório
-
-<br>
-
-## Baixe o Git - [Baixar](https://git-scm.com/)
-- Este [vídeo](https://youtu.be/UBAX-13g8OM) ensina a baixar e instalar.
-
-## Faça login no GitHub - [Logar](https://github.com/)
-
-<br>
-
-## 1. Clonando o repositório pelo GitHub Desktop
-
-- Baixe o [GitHub Desktop](https://desktop.github.com/)
-
-<br>
-
-- Instale o GitHub Desktop, abra e faça login na sua conta do GitHub.
-
-<br>
-
-- No canto superior direito selecione _New Repository_, _Add_ e _Clone Repository_.
-
-<br>
-
-- Selecione a opção _URL_ e cole o link do repositório: https://github.com/guisilvas/CodeBreakers-Devway.git
-
-<br>
-
-## 2. Clonando o repositório usando o GitBash
-
-
-- No computador/notebook crie uma pasta para armazenar um clone do repositório na sua máquina.
-
-<br>
-
-- Clique com o botão direito e selecione _Abrir com o GitBash_.
-
-<br>
-
-- Com o terminal aberto digite o seguinte código para clonar o repositório remoto:
-
-*Não é possível colar no terminal então digite _git clone_ e clique com o botão direito e cole o link do repositório
-
-```bash
-
-git clone https://github.com/guisilvas/CodeBreakers-Devway.git
-
-```
-
-<br>
-
-- Após clonar o repositório clique com o botão direito e selecione _Abrir com o Visual Studio Code_ ou abra o _Visual Studio Code_ e abra a pasta onde o clone foi realizado.
-
-<br>
-
-- Certifique-se do seu nome e email estejam configurados corretamente antes de commitar.
-
-*_Siga os passos dentro da pasta do repositório para definir o nome e email apenas para aquele repositório específico caso esteja utilizando uma máquina de terceiros_
-
-<br>
-
-- Configure seu nome e email [No terminal do GitBash ou PowerShell]
-```bash
-
-git config user.name "Seu Nome"
-
-
-git config user.email "seuemail@example.com"
-
-```
-
-<br>
-
-- Verifique seu nome e email [No terminal do GitBash ou PowerShell]
-```bash
-
-git config --get user.name
-
-
-git config --get user.email
-
-```
-
-<br>
-
-- Caso todos os passos tenham ocorrido com sucesso você está pronto(a) para realizar alterações no projeto.
+## O que é, como usar e baixar Git/GitHub: [Curso de Git e Github COMPLETO 2021 [Iniciantes] + Desafios + MuitaPrática](https://youtu.be/kB5e-gTAl_s)
 
 <br>
 
 <!-- Instruções para contribuir no projeto -->
-## 🛑 Commit
+# 🟢 Como fazer um commit 🟢
 
 - Commitar significa colocar as suas alterações no projeto oficial, mas o commit é apenas um dos passos até realizar a alteração de fato.
 
@@ -278,24 +187,36 @@ O projeto Devway é uma plataforma com trilhas de conhecimento em programação,
 
 - Levantamento de Requisitos e Documentação
     - [Gabriel Mendonça](https://github.com/Gabriel037)
-    - [Anny Duarte](https://github.com/Muniz-DuarteAnny)
-    - [Henrique Rios](https://github.com/hriquerios)
-    - [Pablo Soares](https://github.com/PabloSoares1572)
-    - [Luzia Rodrigues]()
-    - [Bruno Santana]()
+    - [Guilherme Silva](https://github.com/guisilvas)
 
 <br>
 
-- Desenvolvimento e Testes
-    - [Guilherme Silva](https://github.com/guisilvas)
+- Design da Plataforma
+    - [Anny Duarte](https://github.com/Muniz-DuarteAnny)
+    - [Bruno Santana]()
+    - [Luzia Rodrigues](https://github.com/Luziarcmuniz)
+
+<br>
+
+- Wireframe
     - [Breno Gomes](https://github.com/brngom3s)
+    - [Eduarda Leandra](https://github.com/DudaLeandra)
+    - [Henrique Rios](https://github.com/hriquerios)
+
+<br>
+
+- Desenvolvimento Frontend e Testes
+    - [Bruna Gontijo](https://github.com/brunagtmaia)
     - [Douglas](https://github.com/DOzinhaha)
+    - [Pablo Soares](https://github.com/PabloSoares1572)
+
+<br>
+
+- Banco de Dados e Backend
 
 <br>
 
 - Hospedagem
-    - [Bruna Gontijo](https://github.com/brunagtmaia)
-    - [Eduarda Leandra](https://github.com/DudaLeandra)
 
 <br>
 
