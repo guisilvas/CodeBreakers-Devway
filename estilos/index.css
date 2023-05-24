@@ -45,6 +45,24 @@ body{
   background-image: linear-gradient(to bottom, #FF5925, white);
   background-size: 100% 200%;
 }
+
+.run {
+  position: absolute;
+  width: 130px;
+  bottom: 40%;
+  animation: run 5s linear;
+}
+
+ @keyframes run {
+  from {
+    right:100%;
+  }
+  to {
+    right: -130px;
+  }
+}
+
+
 @media (max-width: 600px) {
   #titulo_e_comecar h2{
     font-size: 1.5rem;
