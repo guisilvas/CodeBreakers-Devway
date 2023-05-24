@@ -1,0 +1,103 @@
+/* importações */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* retirando a margem do body */
+body{
+  margin:0;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('foto.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#titulo_e_comecar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color:white;
+  padding-top: 30px;
+}
+
+#titulo_e_comecar h2{
+  font-size: 2em;
+  
+}
+#titulo_e_comecar h1{
+  font-size:2.5em;
+}
+
+#titulo_e_comecar button{
+  /* tamanhos */
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 16px;
+  margin-top:10px;
+  /* cores */
+  color:white;
+  border: 3px solid white;
+  background-image: linear-gradient(to bottom, #FF5925, white);
+  background-size: 100% 200%;
+}
+@media (max-width: 600px) {
+  #titulo_e_comecar h2{
+    font-size: 1.5rem;
+    
+  }
+  #titulo_e_comecar h1{
+    font-size:2rem;
+  }
+  #titulo_e_comecar {
+    padding-top: 5px;
+  }
+  #titulo_e_comecar button{
+    width: 150px;
+    font-size: 0.8rem;
+    margin-top:5px;
+  }
+}
+
+/* @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 27.5rem;
+  }
+}
+
+@keyframes line-typing {
+  from {
+    border-right-color: var(--primary-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+@keyframes flutuar {
+  0% {
+    transform: translateY(2rem);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(2rem);
+  }
+}
+@keyframes appear-vidro {
+  from {
+    right: -4rem;
+    opacity: 0;
+  }
+  to {
+    right: -2rem;
+    opacity: 1;
+  }
+} */
