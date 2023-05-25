@@ -44,13 +44,26 @@ body{
   border: 3px solid white;
   background-image: linear-gradient(to bottom, #FF5925, white);
   background-size: 100% 200%;
+  cursor:pointer;
 }
 
+button:active {
+  transform: translateY(4px);
+}
 .run {
+  /*left: -126px;*/
+  right:100%;
   position: absolute;
   width: 130px;
   bottom: 40%;
   animation: run 5s linear;
+}
+
+.avatar {
+  position: absolute;
+  width: 130px;
+  bottom: 40%;
+  right:100%;
 }
 
  @keyframes run {
