@@ -6,11 +6,12 @@ body{
   margin:0;
   font-family: 'Press Start 2P', cursive;
   background-image: url('foto.jpg');
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-left: 15px;
   padding-right: 15px;
+  overflow: hidden;
 }
 
 #titulo_e_comecar{
@@ -29,6 +30,16 @@ body{
 }
 #titulo_e_comecar h1{
   font-size:2.5em;
+  animation: moverTitulo 2s ease-in-out infinite;
+}
+/* animação do titulo */
+@keyframes moverTitulo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 #titulo_e_comecar button{
@@ -61,7 +72,7 @@ button:active {
 
 .avatar {
   position: absolute;
-  width: 130px;
+  width: 120px;
   bottom: 40%;
   right:100%;
 }
@@ -78,7 +89,7 @@ button:active {
 
 @media (max-width: 600px) {
   #titulo_e_comecar h2{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     
   }
   #titulo_e_comecar h1{
@@ -92,43 +103,11 @@ button:active {
     font-size: 0.8rem;
     margin-top:5px;
   }
-}
-
-/* @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 27.5rem;
+  .avatar {
+    position: absolute;
+    width: 100px;
+    bottom: 50%;
+    right:100%;
   }
 }
 
-@keyframes line-typing {
-  from {
-    border-right-color: var(--primary-color);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-@keyframes flutuar {
-  0% {
-    transform: translateY(2rem);
-  }
-  50% {
-    transform: translateY(-2rem);
-  }
-  100% {
-    transform: translateY(2rem);
-  }
-}
-@keyframes appear-vidro {
-  from {
-    right: -4rem;
-    opacity: 0;
-  }
-  to {
-    right: -2rem;
-    opacity: 1;
-  }
-} */
