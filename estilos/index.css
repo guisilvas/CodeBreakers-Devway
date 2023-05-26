@@ -37,27 +37,49 @@ body{
 }
 
 .content-form h1 {
+  padding-bottom: 11vh;
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 35px;
   line-height: 50px;
   color: #F3E8E8;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .input-login {
+  font-family: 'Press Start 2P';  
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   background: rgba(217, 217, 217, 0.08);
   border-radius: 20px;
-  height: 88px;
-  width: 471px;
+  height: 8vh;
+  width: 60vh;
   border: none;
   color: white;
-  font-size: 40;
+  font-size: 20;
+  padding-left: 20px;
   
+}
+.input-login:focus{
+
+    border: none;
+    outline: none; /* Remove a borda de destaque padrão do navegador */
+    filter:blur( 70%);
+  
+}
+.enviar {
+  font-family: 'Press Start 2P';
+  /* background-color: #FF5925; */
+  color: white;
+  width: 25vh;
+  height: 8vh;
+  border-width: 4px;
+  font-size: 2.5vh;
+  background: linear-gradient(180deg, #FF5925 0%, #FF835C 100%);
+  border: 3px solid #FFFFFF;
+  border-radius: 16px;
 }
 
 .input-login::placeholder {
@@ -66,7 +88,7 @@ body{
   font-weight: 400;
   font-size: 24px;
   padding-left: 25px;
-  color: #F3E8E8;
+  color: rgba(243, 232, 232, 0.76);
   height: 100%;
 }
 
@@ -75,6 +97,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10vh;
 }
 
 #titulo_e_comecar{
