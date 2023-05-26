@@ -1,15 +1,11 @@
-function clicarb(){
-    var imagemElemento = document.getElementById("avatar1");
-    if (imagemElemento.classList.contains("avatar")) {
-        imagemElemento.classList.remove("avatar");
-        imagemElemento.classList.add("run");
-      } else {
-        imagemElemento.classList.remove("run");
-        imagemElemento.classList.add("avatar");
-      }
-     
+let title = document.getElementById('titulo_e_comecar');
+let contentLogin = document.querySelector('.content-login');
+
+function login(){
+  contentLogin.classList.add('open');
+  title.style.display = 'none';
+  return contentLogin.style.display = 'block';
 }
-    var botao = document.getElementById("biniciar");
-        botao.addEventListener("click", clicarb);
+
 
 
