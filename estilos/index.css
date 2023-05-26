@@ -1,5 +1,6 @@
 /* importações */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 /* retirando a margem do body */
 body{
@@ -43,26 +44,49 @@ body{
 }
 
 .content-form h1 {
+  padding-bottom: 11vh;
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 35px;
   line-height: 50px;
   color: #F3E8E8;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.content-form p {
+  color: #F3E8E8;
+  font-family: 'Cabin';
+  font-size: 30px;
+}
+
+.content-form a {
+  color: #FF5925;
+  font-family: 'Cabin';
+  font-size: 30px;
+  text-decoration: none;
+}
+
 .input-login {
+  font-family: 'Press Start 2P';  
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   background: rgba(217, 217, 217, 0.08);
   border-radius: 20px;
-  height: 88px;
-  width: 471px;
+  height: 8vh;
+  width: 60vh;
   border: none;
   color: white;
-  font-size: 40;
+  font-size: 20;
+  padding-left: 20px;
+  
+}
+.input-login:focus{
+
+    border: none;
+    outline: none; /* Remove a borda de destaque padrão do navegador */
+    filter:blur( 70%);
   
 }
 
@@ -72,7 +96,7 @@ body{
   font-weight: 400;
   font-size: 24px;
   padding-left: 25px;
-  color: #F3E8E8;
+  color: rgba(243, 232, 232, 0.76);
   height: 100%;
 }
 
@@ -81,6 +105,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10vh;
 }
 
 #titulo_e_comecar{
@@ -133,7 +158,7 @@ button:active {
   z-index: 10;
   width: 130px;
   bottom: 40%;
-  animation: run 2.5s linear infinite;
+  animation: run 7s linear infinite;
 }
 
 /* animação do titulo */
