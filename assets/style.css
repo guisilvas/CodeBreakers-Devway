@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('fundo.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 45%;
+  right: -45%;
+  height: 100vh;
+  background: rgba(237, 237, 237, 0.04);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  z-index: 1000;
+  transition: all 1s ease-out;
+}
+
+.content-login.open-login {
+  right: 0;
+}
+
+.content-form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.content-form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.content-form-login h1 {
+  padding-bottom: 10vh;
+  font-size: 35px;
+  line-height: 50px;
+  color: #F3E8E8;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.content-form-register h1 {
+  padding-bottom: 10vh;
+  font-size: 35px;
+  line-height: 50px;
+  color: #F3E8E8;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10vh;
+}
+
+.button_form {
+  width: 200px;
+  height: 60px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 20px;
+  color:white;
+  border: 2px solid white;
+  background-color: #FF5925;
+  margin-top: 5vh;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor:pointer;
+}
+
+.content-form-login p {
+  color: #F3E8E8;
+  font-family: 'Cabin';
+  font-size: 30px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.822);
+
+}
+
+.content-form-login a {
+  color: #FF5925;
+  font-weight: bold;
+  font-family: 'Cabin';
+  font-size: 30px;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content-form-register a {
+  color: #F3E8E8;
+  font-weight: bold;
+  font-family: 'Cabin';
+  font-size: 30px;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input {
+  font-family: 'Press Start 2P';  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.08);
+  border-radius: 20px;
+  height: 8vh;
+  width: 60vh;
+  border: none;
+  color: white;
+  font-size: 20;
+  padding-left: 20px;
+  
+}
+.input:focus{
+
+    border: none;
+    outline: none;
+    filter:blur( 70%);
+  
+}
+
+.input::placeholder {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  padding-left: 25px;
+  color: rgba(243, 232, 232, 0.76);
+  height: 100%;
+}
+
+
+.index-start{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 5.5rem;
+  color:white;
+}
+
+.index-texts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 45%;
+}
+
+.index-start h1{
+  font-size: 3rem;
+  padding-bottom: 40px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+}
+.index-start h2{
+  font-size: 2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+}
+
+
+.button_action{
+  animation: float 2s ease-in-out infinite;
+  width: 200px;
+  height: 60px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 20px;
+  color:white;
+  border: 3px solid white;
+  background-color: #FF5925;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor:pointer;
+}
+
+.button_action:active {
+  transform: translateY(4px);
+}
+.person-run {
+  position: absolute;
+  z-index: 10;
+  width: 130px;
+  bottom: 43%;
+  animation: run 7s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+@keyframes run {
+  from {
+    right:100%;
+  }
+  to {
+    right: -130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .index-start h2{
+    font-size: 1.7rem;
+  }
+  .index-start h1{
+    font-size:2rem;
+  }
+  .index-start {
+    padding-top: 5px;
+  }
+  .index-start button{
+    width: 150px;
+    font-size: 0.8rem;
+    margin-top:5px;
+  }
+}
+
