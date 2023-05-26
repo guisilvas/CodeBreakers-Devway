@@ -13,4 +13,11 @@
         echo "Conexão com o banco de dados bem sucedida.";
     }
 
+
+    /*"$conexao=mysqli_connect($dbhost, $dbUsername, $dbPassword, $dbName);
+    if(!$conexao){
+        die("Houve um erro: ".mysqli_connect_error());
+    }"*/
+
+
 ?>
