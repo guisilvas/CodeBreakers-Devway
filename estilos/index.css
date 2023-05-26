@@ -11,7 +11,7 @@ body{
   background-position: center;
   padding-left: 15px;
   padding-right: 15px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .content-login {
