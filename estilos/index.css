@@ -20,7 +20,7 @@ body{
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 50%;
+  width: 45%;
   height: 100vh;
   right: 0;
   top: 0px;
@@ -55,8 +55,11 @@ body{
   height: 88px;
   width: 471px;
   border: none;
-
+  color: white;
+  font-size: 40;
+  
 }
+
 .input-login::placeholder {
   font-family: 'Press Start 2P';
   font-style: normal;
@@ -127,7 +130,7 @@ button:active {
   position: absolute;
   width: 130px;
   bottom: 40%;
-  animation: run 5s linear;
+  animation: run 2.5s linear infinite;
 }
 
 .avatar {
