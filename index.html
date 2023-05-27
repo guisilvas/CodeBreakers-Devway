@@ -1,33 +1,52 @@
-<html>
+<!DOCTYPE html>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="estilos/index.css">
-</head>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Dev Way - A Jornada</title>
+  </head>
 
-<body>
-  <div id="titulo_e_comecar">
-    <h2>Bem-vindos a jornada</h2>
-    <h1>Dev Way</h1>
-    <button class="button_action" onclick="login()">Iniciar</button>
-  </div>
-
-  <div class="content-login" style="display: none;">
-    <div class="content-form">
-      <h1>Login</h1>
-      <form action="" class="form">
-        <input class="input-login" type="email" placeholder="Email"><br><br>
-        <input class="input-login" type="password" placeholder="Senha"><br><br>
-        <input class="button_action" type="submit" value="Entrar">
-      </form>
-
-      <p>Não é cadastrado? <a href="">Cadastre-se</a></p>
+  <body>
+    <div class="index-start">
+      <span class="index-texts">
+        <h1>Bem-vindos<br> a<br> jornada</h1>
+        <h2>Dev Way</h2>
+      </span>
+      <button class="button_action" onclick="login()">Iniciar</button>
     </div>
-  </div>
-  
-  <img src="/imagens/personagem-correndo.gif"  class="run" id="avatar">
 
-  <script src="scripts/main.js" defer></script>
-</body>
+    <div class="content-login">
+      <div class="content-form-login">
+        <h1>Login</h1>
+        <form action="" class="form">
+          <input class="input" type="email" placeholder="Email"><br><br>
+          <input class="input" type="password" placeholder="Senha"><br><br>
+          <input class="button_form" type="submit" value="Entrar">
+        </form>
+
+        <p>Não é cadastrado?</p>
+        <a href="#" id="register">Cadastre-se</a>
+      </div>
+      
+      <div class="content-form-register" style="display: none;">
+        <h1>Cadastro</h1>
+        <form action="" class="form">
+          <input class="input" type="text" placeholder="Nome"><br><br>
+          <input class="input" type="email" placeholder="Email"><br><br>
+          <input class="input" type="password" placeholder="Senha"><br><br>
+          <input class="button_form" type="submit" value="Salvar">
+        </form>
+
+        <a href="index.html" id="register">Voltar</a>
+      </div>
+    </div>
+    
+    <img src="/img/personagem-correndo.gif" class="person-run">
+
+    <script src="javascript/main.js" defer></script>
+  </body>
 
 </html>
