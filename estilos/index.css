@@ -93,9 +93,9 @@ body{
 .input-login::placeholder {
   font-family: 'Press Start 2P';
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  padding-left: 25px;
+  font-weight: 5vh;
+  font-size: 3vh;
+  padding-left: 2vh;
   color: rgba(243, 232, 232, 0.76);
   height: 100%;
 }
@@ -115,12 +115,12 @@ body{
   align-items: center;
   text-align: center;
   color:white;
-  padding-top: 30px;
+  padding-top: 5vh;
 }
 
 #titulo_e_comecar h2{
   font-size: 2.5rem;
-  max-width:400px;
+  max-width: 120vh;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 0;
   
@@ -156,7 +156,7 @@ button:active {
   right:100%;
   position: absolute;
   z-index: 10;
-  width: 130px;
+  width: 14vh;
   bottom: 40%;
   animation: run 7s linear infinite;
 }
