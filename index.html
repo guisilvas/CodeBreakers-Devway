@@ -21,10 +21,10 @@
     <div class="content-login">
       <div class="content-form-login">
         <h1>Login</h1>
-        <form action="" class="form">
-          <input class="input" type="email" placeholder="Email"><br><br>
-          <input class="input" type="password" placeholder="Senha"><br><br>
-          <input class="button_form" type="submit" value="Entrar">
+        <form action="testLogin.php" method="POST" class="form">
+          <input name="email" class="input" type="email" placeholder="Email"><br><br>
+          <input name="senha" class="input" type="password" placeholder="Senha"><br><br>
+          <input class="button_form" name="submit" type="submit" value="Entrar">
         </form>
 
         <p>Não é cadastrado?</p>
@@ -33,10 +33,10 @@
       
       <div class="content-form-register" style="display: none;">
         <h1>Cadastro</h1>
-        <form action="" class="form">
-          <input class="input" type="text" placeholder="Nome"><br><br>
-          <input class="input" type="email" placeholder="Email"><br><br>
-          <input class="input" type="password" placeholder="Senha"><br><br>
+        <form action="register.php" method="post" class="form">
+          <input name="nome" class="input" type="text" placeholder="Nome"><br><br>
+          <input name="email" class="input" type="email" placeholder="Email"><br><br>
+          <input name="senha" class="input" type="password" placeholder="Senha"><br><br>
           <input class="button_form" type="submit" value="Salvar">
         </form>
 
@@ -44,7 +44,7 @@
       </div>
     </div>
     
-    <img src="/img/personagem-correndo.gif" class="person-run">
+    <img src="img/personagem-correndo.gif" class="person-run">
 
     <script src="javascript/main.js" defer></script>
   </body>
