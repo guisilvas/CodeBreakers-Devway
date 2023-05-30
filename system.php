@@ -18,7 +18,7 @@
         session_destroy();
 
         // Volta ao Login
-        header('Location: index.php');
+        header('Location: index.html');
     }
 
     // Verifica se o botão de sair foi clicado
@@ -30,7 +30,7 @@
         session_destroy();
         
         // Redireciona para a página de login
-        header('Location: index.php');
+        header('Location: index.html');
         exit();
     }
 
@@ -48,7 +48,7 @@
             session_destroy();
             
             // Redireciona para a página de login ou qualquer outra página desejada
-            header('Location: login.php');
+            header('Location: login.html');
             exit();
         }
     }
