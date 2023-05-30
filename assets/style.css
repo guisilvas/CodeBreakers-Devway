@@ -1,3 +1,205 @@
+ /* HEAD:estilos/index.css */
+/* importações */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+/* retirando a margem do body */
+body{
+  margin:0;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('foto.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-x: hidden;
+}
+
+.content-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 45%;
+  height: 100vh;
+  right: -600px;
+  top: 0px;
+  background: rgba(237, 237, 237, 0.04);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  transition: right 2s ease;
+  z-index: 1000;
+
+}
+.content-login.open{
+  right: 0;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-form h1 {
+  padding-bottom: 11vh;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 50px;
+  color: #F3E8E8;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.content-form p {
+  color: #F3E8E8;
+  font-family: 'Cabin';
+  font-size: 30px;
+}
+
+.content-form a {
+  color: #FF5925;
+  font-family: 'Cabin';
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.input-login {
+  font-family: 'Press Start 2P';  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  background: rgba(217, 217, 217, 0.08);
+  border-radius: 20px;
+  height: 8vh;
+  width: 60vh;
+  border: none;
+  color: white;
+  font-size: 20;
+  padding-left: 20px;
+  
+}
+.input-login:focus{
+
+    border: none;
+    outline: none; /* Remove a borda de destaque padrão do navegador */
+    filter:blur( 70%);
+  
+}
+
+.input-login::placeholder {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 5vh;
+  font-size: 3vh;
+  padding-left: 2vh;
+  color: rgba(243, 232, 232, 0.76);
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10vh;
+}
+
+#titulo_e_comecar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color:white;
+  padding-top: 5vh;
+}
+
+#titulo_e_comecar h2{
+  font-size: 2.5rem;
+  max-width: 120vh;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0;
+  
+}
+#titulo_e_comecar h1{
+  font-size:4rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  animation: moverTitulo 2s ease-in-out infinite;
+}
+
+.button_action{
+  /* tamanhos */
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 16px;
+  margin-top:10px;
+  /* cores */
+  color:white;
+  border: 3px solid white;
+  background-image: linear-gradient(to bottom, #FF5925, white);
+  background-size: 100% 200%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor:pointer;
+}
+
+button:active {
+  transform: translateY(4px);
+}
+.run {
+  /*left: -126px;*/
+  right:100%;
+  position: absolute;
+  z-index: 10;
+  width: 14vh;
+  bottom: 40%;
+  animation: run 7s linear infinite;
+}
+
+/* animação do titulo */
+@keyframes moverTitulo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes run {
+  from {
+    right:100%;
+  }
+  to {
+    right: -130px;
+  }
+}
+
+@media (max-width: 600px) {
+  #titulo_e_comecar h2{
+    font-size: 1.7rem;
+    
+  }
+  #titulo_e_comecar h1{
+    font-size:2rem;
+  }
+  #titulo_e_comecar {
+    padding-top: 5px;
+  }
+  #titulo_e_comecar button{
+    width: 150px;
+    font-size: 0.8rem;
+    margin-top:5px;
+  }
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
@@ -245,3 +447,4 @@ body{
   }
 }
 
+/* >>>>>>> 1cda52d9a82c29c9f82ce4efec768edf22325902:assets/style.css */
