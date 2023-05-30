@@ -5,13 +5,29 @@
     <!-- Nome do projeto -->
     <p>DevWay</p>
 </h1>
-<ul>
-<li>1 - Colocar cód na pasta "C:\xampp\htdocs"</li>
-<li>2 - Instalar biblioteca howler utilizando o npm para compilar a música</li>
-<li>3 - Criar o banco de dados manualmente utilizando sql, comando na pasta data</li>
-<li>4 - Rodar aplicação em algum server online exemplo XAMPP (iniciar o serviço APACHE, e o Mysql)</li>
-</ul>
 
+<h2 align="center">
+    Como rodar o Projeto
+</h2>
+
+<br>
+
+## 1 - Baixar o XAMPP e colocar código na pasta "C:\xampp\htdocs"
+
+<br>
+
+## 2 - Instalar a biblioteca howler utilizando o npm para compilar a música
+
+<br>
+
+## 3 - Criar o banco de dados manualmente utilizando sql, comando na pasta data
+
+<br>
+
+## 4 - Rodar aplicação em algum server online exemplo XAMPP (iniciar o serviço APACHE, e o Mysql)
+
+<br>
+<br>
 
 <!-- Links úteis -->
 ## 🔗 Links
@@ -42,6 +58,7 @@ O projeto Devway é uma plataforma com trilhas de conhecimento em programação,
 
 - Organização
     - [Azure](https://azure.microsoft.com/)
+    - [Trello](https://trello.com/create-first-team)
 
 <br>
 
@@ -82,42 +99,24 @@ O projeto Devway é uma plataforma com trilhas de conhecimento em programação,
 
 <br>
 
-- Levantamento de Requisitos e Documentação
+- Desenvolvedores
+
+    - [Anny Duarte](https://github.com/Muniz-DuarteAnny)
+    - [Bruna Gontijo](https://github.com/brunagtmaia)
+    - [Bruno Santana]()
+    - [Breno Gomes](https://github.com/brngom3s)
+    - [Douglas](https://github.com/DOzinhaha)
+    - [Eduarda Leandra](https://github.com/DudaLeandra)
     - [Gabriel Mendonça](https://github.com/Gabriel037)
     - [Guilherme Silva](https://github.com/guisilvas)
-
-<br>
-
-- Design da Plataforma
-    - [Anny Duarte](https://github.com/Muniz-DuarteAnny)
-    - [Bruno Santana]()
-    - [Luzia Rodrigues](https://github.com/Luziarcmuniz)
-
-<br>
-
-- Wireframe
-    - [Breno Gomes](https://github.com/brngom3s)
-    - [Eduarda Leandra](https://github.com/DudaLeandra)
     - [Henrique Rios](https://github.com/hriquerios)
-
-<br>
-
-- Desenvolvimento Frontend e Testes
-    - [Bruna Gontijo](https://github.com/brunagtmaia)
-    - [Douglas](https://github.com/DOzinhaha)
+    - [Luzia Rodrigues](https://github.com/Luziarcmuniz)
     - [Pablo Soares](https://github.com/PabloSoares1572)
 
 <br>
 
-- Banco de Dados e Backend
-
-<br>
-
-- Hospedagem
-
-<br>
-
 ---
+
 <br>
 
 <p align="center">por DIV/DEV/1M</p>
