@@ -58,7 +58,7 @@
             echo "Erro na preparação da consulta SQL" . mysqli_error($conexao);
         }
     } else {
-        header('Location: login.php');
+        header('Location: index.html');
     }
 
 ?>
