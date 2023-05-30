@@ -7,8 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <title>Dev Way - A Jornada</title>
+    <script src="node_modules/howler/dist/howler.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const sound = new Howl({
+          src: ['music/fundo.mp3'], 
+          autoplay: true,
+          loop: true
+        });
+      });
+    </script>
   </head>
-
+  
   <body>
     <div class="index-start">
       <span class="index-texts">
@@ -17,7 +27,7 @@
       </span>
       <button class="button_action" onclick="login()">Iniciar</button>
     </div>
-
+    
     <div class="content-login">
       <div class="content-form-login">
         <h1>Login</h1>
@@ -26,7 +36,7 @@
           <input name="senha" class="input" type="password" placeholder="Senha"><br><br>
           <input class="button_form" name="submit" type="submit" value="Entrar">
         </form>
-
+        
         <p>Não é cadastrado?</p>
         <a href="#" id="register">Cadastre-se</a>
       </div>
@@ -39,12 +49,13 @@
           <input name="senha" class="input" type="password" placeholder="Senha"><br><br>
           <input class="button_form" type="submit" value="Salvar">
         </form>
-
-        <a href="index.html" id="register">Voltar</a>
+        
+        <a href="#" id="back">Voltar</a>
       </div>
     </div>
     
     <img src="img/personagem-correndo.gif" class="person-run">
+
 
     <script src="javascript/main.js" defer></script>
   </body>
