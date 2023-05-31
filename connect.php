@@ -11,6 +11,7 @@
     if(!$conexao) {
         // Conexão não estabelecida e cancelada
         die("Houve um erro: ". mysqli_connect_error());
+
     } else {
         // Conxão estabelecida, não precisa ser mostrado
         // echo "Conexão com banco de dados efetuada com sucesso!";
