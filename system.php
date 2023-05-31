@@ -43,13 +43,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>devway</title>
+    <link rel="stylesheet" href="assets/style_main.css">
+    <title>Dev Way - A Jornada</title>
 </head>
 <body>
-    <h1>Acessou o Sistema</h1>
-    <!-- Formulário com o botão de sair -->
-    <form method="post" action="">
-        <input type="submit" name="sair" value="Sair">
-    </form>
+    <div class="container">
+        <h1>Acessou o Sistema</h1>
+            <div class="header">
+                <img src="img/personagem-correndo.gif" class="person-run">
+            </div>
+            <form method="post" action="">
+                <input type="submit" name="sair" value="Sair">
+            </form>
+    </div>
 </body>
 </html>
