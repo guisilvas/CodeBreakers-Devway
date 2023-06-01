@@ -1,9 +1,10 @@
 <?php
-
     //Iniciando seção caso ainda não tenha sido iniciada
     if (!isset($_SESSION)) {
         // Seção iniciada
         session_start();
+        // pega o id do usuário atravez do metodo get
+        $user_id = $_GET['user_id'];
     }
     
     // Incluindo o arquivo connect.php
