@@ -11,7 +11,7 @@
         $senha = $_POST['senha'];
 
         // Verifica se o e-mail já está cadastrado
-        $consulta = "SELECT COUNT(*) FROM cadastro WHERE email = '$email'";
+        $consulta = "SELECT COUNT(*) FROM users WHERE email = '$email'";
         $resultado = mysqli_query($conexao, $consulta);
         $count = mysqli_fetch_array($resultado)[0];
 
@@ -25,7 +25,7 @@
             echo "<script>window.location.href = 'index.html';</script>";
 
         } else { // Preparando a consulta SQL
-            $sql = "INSERT INTO cadastro (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+            $sql = "INSERT INTO users (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
             // Execução da consulta
             if (mysqli_query($conexao, $sql)) { // Cadastro efetuado com sucesso

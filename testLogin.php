@@ -13,13 +13,13 @@
         $senha = $_POST['senha'];
 
         // Consulta do email
-        $sqlEmail = "SELECT * FROM cadastro WHERE email = '$email'";
+        $sqlEmail = "SELECT * FROM users WHERE email = '$email'";
         $resultEmail = mysqli_query($conexao, $sqlEmail);
 
         if (mysqli_num_rows($resultEmail) > 0) { // Verifica se o email está cadastrado
 
             // Consulta do email e senha
-            $sql = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
+            $sql = "SELECT * FROM users WHERE email = '$email' AND senha = '$senha'";
             $result = mysqli_query($conexao, $sql);
 
             if (mysqli_num_rows($result) > 0) { // Email e senha corretos
