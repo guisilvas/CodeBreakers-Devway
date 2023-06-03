@@ -66,6 +66,7 @@
                 grid-column: 3;
                 height: 50px;
             }
+        
             
         </style>
     </head>
@@ -87,16 +88,17 @@
 
             // Verifica se a consulta retornou resultados para TEMAS
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
-                
-                // Loop para percorrer os resultados e exibir As trilhas em divs
+                // conta tipo o id do tema 
+                $contador = 1;
+                // Loop para percorrer os resultados e exibir os temas em divs
                 while ($row = $resultado_pesquisa_temas->fetch_assoc()) {
-                    // conta tipo o id do tema 
-                    $contador = 1;
+                    
                     $nome = $row["nome"];
 
                     // exibição do tema
                     echo "<div class='tema_conteiner'>";
                     echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
+                    echo "<button onclick='comecar_tema()'>Começar tema</button>";
 
 
                     // lista suspença de cursos
@@ -117,14 +119,17 @@
                             $curso_link = $row_curso['link'];
                             // exibição
                             echo "<ul>";
-                            echo "<a href='".$curso_link."'><li>".$row_curso['tema_id']."</li></a>";
+                            echo "<a href='".$curso_link."'><li>".$nome_curso."</li></a>";
                             echo "</ul>";
                         }
                     }else{
                         echo '<script>alert("Nenhum curso encontrado");</script>';
                     }
+                    // fecha a divi do tema
                     echo "</div>";
+                    // fecha a div dos cursos
                     echo "</div>";
+                    // soma +1 no tema para calculaar o próximo 
                     $contador++;
                 }
             } else {
