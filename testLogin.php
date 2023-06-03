@@ -27,7 +27,7 @@
                 $_SESSION['senha'] = $senha;
                 // header('Location: system.php');
                 $row = mysqli_fetch_assoc($result);
-                header("Location: system.php?user_id=". $row['user_id']);
+                header("Location: system.php?user_id=". $row['id']);
 
             } else { // Email e/ou senha incorretos
                 echo "<script>alert('E-mail ou senha incorretos!')</script>";
