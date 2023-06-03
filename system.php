@@ -35,7 +35,6 @@
         header('Location: index.html');
         exit();
     }
-    
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +45,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style_main.css">
     <title>Dev Way - A Jornada</title>
+    <style>
+        .trilhas{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .trilhas_conteiner{
+            display: flex;
+            width: 300px;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(1rem);
+            margin:10px;
+            text-decoration: none;
+        }
+        
+    </style>
 </head>
 <body>
     <div class="container">
@@ -56,6 +76,32 @@
             <form method="post" action="">
                 <input type="submit" name="sair" value="Sair">
             </form>
+    </div>
+    <h1>lista de trilhas</h1>
+    <div class="trilhas">
+        <?php
+            $pesquisa_trilhas = "SELECT nome FROM trilhas";
+            $resultado_pesquisa_trilhas = mysqli_query($conexao, $pesquisa_trilhas);
+
+            // Verifica se a consulta retornou resultados
+            if (mysqli_num_rows($resultado_pesquisa_trilhas) > 0) {
+                $contador = 1; // Inicializa o contador para mudar o link 
+
+                // Loop para percorrer os resultados e exibir As trilhas em divs
+                while ($row = $resultado_pesquisa_trilhas->fetch_assoc()) {
+                    // echo "Nome: " . $row["nome"] . "<br>";id=". $row['id'])
+                    $nome = $row["nome"];
+                    echo "<a href='system_tilha" . $contador . ".php?user_id=". $user_id ."&trilha=".$nome."'><div class='trilhas_conteiner'>";
+                    echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
+                    echo "</div></a>";
+
+                    $contador++;
+                }
+            } else {
+                echo '<script>alert("Nenhuma trilha encontrada");</script>';
+            }
+
+        ?>
     </div>
 </body>
 </html>

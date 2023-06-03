@@ -13,7 +13,7 @@
         $senha = $_POST['senha'];
 
         // Consulta do email
-        $sqlEmail = "SELECT * FROM usuarios WHERE email = '$email'";
+        $sqlEmail = "SELECT * FROM users WHERE email = '$email'";
         $resultEmail = mysqli_query($conexao, $sqlEmail);
 
         if (mysqli_num_rows($resultEmail) > 0) { // Verifica se o email está cadastrado
