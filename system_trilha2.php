@@ -4,18 +4,17 @@
         // Seção iniciada
         session_start();
         // pega o id do usuário atravez do metodo get
-        $user_id = $_GET['user_id'];
-        $trilha = $_GET['trilha'];
+        // $user_id = $_GET['user_id'];
+        // $trilha = $_GET['trilha'];
     }
     
     // Incluindo o arquivo connect.php
     include_once('connect.php');
-
+    
     // Verifica se as seções de email e senha estão ativas
-    if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) { // Não estão
+    if ((!isset($_SESSION['email']) == true)) { // Não estão
         // Não está logado
         unset($_SESSION['email']);
-        unset($_SESSION['senha']);
 
         // Destroi a sessão
         session_destroy();
@@ -23,7 +22,7 @@
         // Tentativa de acesso via URL, vai para a página de acesso negado
         header('Location: denied.html');
     }
-
+    
     // Verifica se o botão de sair foi clicado
     if (isset($_POST['sair'])) {
         // Remove todas as variáveis de sessão
@@ -39,49 +38,28 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <style>
-            body{
-                background-color: #010133; 
-            }
-            nav{
-                display: grid;
-                grid-template-columns: 9% 80% 9%;
-                align-items: center;
-            }
-            .bt_voltar{
-                grid-column: 1;
-                height: 50px;
-            }
-            .barra_progresso{
-                grid-column: 2;
-                margin: 10px;
-                border-radius: 50px;
-                width: 1%;
-                height: 50px;
-                background-color: #000099;
-            }
-            .bt_sair{
-                grid-column: 3;
-                height: 50px;
-            }
-        
-            
-        </style>
-    </head>
-    <body>
-        <nav>
-            <button class=bt_voltar>Voltar</button>
-            <div class="barra_progresso"></div>
-            <button class="bt_sair">sair</button>
-        </nav>
-
-        <h1><?php echo $trilha ?></h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style_trilhas.css">
+    <title>Dev Way - Trilha</title>
+</head>
+<body>
+    <nav class="topbar">
+        <button class=bt_voltar>Voltar</button>
+        <div class="barra_progresso"></div>
+        <button class="bt_sair">sair</button>
+    </nav>
+    
+    <div class="content">
         <?php
+            $nomeTrilha = $_GET["trilha"];
+            echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" ."</h1>";
             // pesquisando o nome dos temas
-            $pesquisa_temas = "SELECT nome FROM temas";
+            $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 2";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
+            $_SESSION["idTrilha"] = 2;
             // pesuquisando o nome dos cursos
             $pesquisa_cursos = "SELECT * FROM cursos";
             $resultado_pesquisa_cursos = mysqli_query($conexao, $pesquisa_cursos);
@@ -92,44 +70,45 @@
                 $contador = 1;
                 // Loop para percorrer os resultados e exibir os temas em divs
                 while ($row = $resultado_pesquisa_temas->fetch_assoc()) {
-                    
+                    $idTema = $row["id"];
                     $nome = $row["nome"];
-
                     // exibição do tema
                     echo "<div class='tema_conteiner'>";
                     echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
-                    echo "<button onclick='comecar_tema()'>Começar tema</button>";
-
-
-                    // lista suspença de cursos
-                    echo "<div class='cursos_conteiner'>";
 
                     //filtra os cursos pro tema
-                    $pesquisa_filtrar_cursos = "SELECT * FROM CURSOS WHERE tema_id = $contador";
+                    $pesquisa_filtrar_cursos = "SELECT * FROM cursos WHERE tema_id = $idTema";
                     $resultado_filtrar_cursos = mysqli_query($conexao, $pesquisa_filtrar_cursos);
                             
                     //verifica se retornou resultador dos cursos
                     if (mysqli_num_rows($resultado_filtrar_cursos) > 0) {
                     // loop para listar os cursos
-                            
+                        $contadorCursos = 1;
                         while ($row_curso = $resultado_filtrar_cursos->fetch_assoc()) {
-                               
                             // captura os dados
-                            $nome_curso = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
+                            $cursoTemaId = $row_curso['tema_id'];
+                            $finish = $row_curso['finish'];
+                            $idCurso = $row_curso['id'];
                             // exibição
-                            echo "<ul>";
-                            echo "<a href='".$curso_link."'><li>".$nome_curso."</li></a>";
-                            echo "</ul>";
+                            echo "<div class='courseList'>";
+                            if($finish == 1) {
+                                echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso' checked>";
+                                echo "<label for='curso'>" . $curso_link ."</label>";
+
+                            } else {
+                                echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
+                                echo "<label for='curso'>" . $curso_link ."</label>";
+                            }
+                            echo "</div>";
+                            $contadorCursos++;
                         }
-                    }else{
+                    } else {
                         echo '<script>alert("Nenhum curso encontrado");</script>';
                     }
-                    // fecha a divi do tema
+                    // fecha a div do tema
                     echo "</div>";
-                    // fecha a div dos cursos
-                    echo "</div>";
-                    // soma +1 no tema para calculaar o próximo 
+                    // soma +1 no tema para calcular o próximo 
                     $contador++;
                 }
             } else {
@@ -137,6 +116,7 @@
             }
 
         ?>
-        <script type="text/javascript" src="javascript\system.js"></script>
-    </body>
+    </div>
+    <script src="javascript/system.js"></script>
+</body>
 </html>

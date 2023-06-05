@@ -13,18 +13,19 @@
         $senha = $_POST['senha'];
 
         // Consulta do email
-        $sqlEmail = "SELECT * FROM users WHERE email = '$email'";
-        $resultEmail = mysqli_query($conexao, $sqlEmail);
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = mysqli_query($conexao, $sql);
 
-        if (mysqli_num_rows($resultEmail) > 0) { // Verifica se o email está cadastrado
-            $row = mysqli_fetch_assoc($resultEmail);
+        if (mysqli_num_rows($result) > 0) { // Verifica se o email está cadastrado
+            $row = mysqli_fetch_assoc($result);
             $hash = $row['senha']; // Obtém a senha criptografada do banco de dados
 
             // Verifica se a senha digitada corresponde à senha criptografada
             if (password_verify($senha, $hash)) {
                 $_SESSION['email'] = $email;
-                $_SESSION['senha'] = $senha;
-                header("Location: system.php?user_id=". $row['user_id']);
+                $_SESSION['id'] = $row['id'];
+                header("Location: system.php");
+                // header("Location: system.php?user_id=". $row['id']);
             } else {
                 // Senha incorreta
                 echo "<script>alert('E-mail ou senha incorretos!')</script>";
