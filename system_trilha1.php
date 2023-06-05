@@ -85,6 +85,7 @@
                         $contadorCursos = 1;
                         while ($row_curso = $resultado_filtrar_cursos->fetch_assoc()) {
                             // captura os dados
+                            $curso_nome = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
                             $cursoTemaId = $row_curso['tema_id'];
                             $finish = $row_curso['finish'];
@@ -93,11 +94,11 @@
                             echo "<div class='courseList'>";
                             if($finish == 1) {
                                 echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso' checked>";
-                                echo "<label for='curso'>" . $curso_link ."</label>";
+                                echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
 
                             } else {
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
-                                echo "<label for='curso'>" . $curso_link ."</label>";
+                                echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                             }
                             echo "</div>";
                             $contadorCursos++;
