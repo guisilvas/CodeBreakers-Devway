@@ -57,12 +57,13 @@
             $nomeTrilha = $_GET["trilha"];
             echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" ."</h1>";
             // pesquisando o nome dos temas
-            $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 1";
+            $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 1"; //colocaria para pegar o id da trilha 
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
             $_SESSION["idTrilha"] = 1;
-            // pesuquisando o nome dos cursos
+            // pesquisando o nome dos cursos
             $pesquisa_cursos = "SELECT * FROM cursos";
             $resultado_pesquisa_cursos = mysqli_query($conexao, $pesquisa_cursos);
+            
             // Verifica se a consulta retornou resultados para TEMAS
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
                 // conta tipo o id do tema 
@@ -90,16 +91,33 @@
                             $cursoTemaId = $row_curso['tema_id'];
                             $finish = $row_curso['finish'];
                             $idCurso = $row_curso['id'];
+                            $id_user = $_SESSION['id'];
                             // exibição
                             echo "<div class='courseList'>";
-                            if($finish == 1) {
-                                echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso' checked>";
+                            // Pesquisa curso e usuário, se retornar quer dizer que o curso já está concluido
+                            $sql_curso_especifico = "SELECT * FROM usuariocurso WHERE curso_id = '$idCurso' AND user_id = '$id_user'";
+                            $resultado_curso_especifico = mysqli_query($conexao, $sql_curso_especifico);
+                            
+                            
+                            // exibição
+                            echo "<div class='courseList'>";
+                            // se retornar já está concluido ent a caixa tem que estar marcada 
+                            if (mysqli_num_rows($resultado_curso_especifico) > 0){
+                                echo "<input type='checkbox' name='curso' checked>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-
-                            } else {
+                            }else{
+                                // se não, ainda não foi concluido e podemos carca-la 
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                             }
+                            // if($finish == 1) {
+                            //     echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso' checked>";
+                            //     echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
+
+                            // } else {
+                            //     echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
+                            //     echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
+                            // }
                             echo "</div>";
                             $contadorCursos++;
                         }
