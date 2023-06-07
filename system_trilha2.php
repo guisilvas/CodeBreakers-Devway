@@ -1,9 +1,11 @@
 <?php
-		//trilha 2
     //Iniciando seção caso ainda não tenha sido iniciada
     if (!isset($_SESSION)) {
         // Seção iniciada
         session_start();
+        // pega o id do usuário atravez do metodo get
+        // $user_id = $_GET['user_id'];
+        // $trilha = $_GET['trilha'];
     }
     
     // Incluindo o arquivo connect.php
@@ -56,14 +58,10 @@
         <?php
             $nomeTrilha = $_GET["trilha"];
             echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" ."</h1>";
-
             // pesquisando o nome dos temas
-            $pesquisa_temas = "SELECT * FROM temas WHERE trilha_id = 2";
+            $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 2";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
-						//atribui o id da trilha a variável d seção 
             $_SESSION["idTrilha"] = 2;
-
-
             // pesuquisando o nome dos cursos
             $pesquisa_cursos = "SELECT * FROM cursos";
             $resultado_pesquisa_cursos = mysqli_query($conexao, $pesquisa_cursos);
@@ -90,7 +88,6 @@
                         $contadorCursos = 1;
                         while ($row_curso = $resultado_filtrar_cursos->fetch_assoc()) {
                             // captura os dados
-							$curso_nome = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
                             $cursoTemaId = $row_curso['tema_id'];
                             $finish = $row_curso['finish'];
@@ -103,9 +100,8 @@
 
                             } else {
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
-																echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
+                                echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                             }
-														//fecha a div do curso 
                             echo "</div>";
                             $contadorCursos++;
                         }
