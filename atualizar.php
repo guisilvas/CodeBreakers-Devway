@@ -9,7 +9,6 @@ if (isset($_POST['campo']) && isset($_POST['id_curso'])) {
     $valor = $_POST['campo'];
     $idCurso = $_POST['id_curso'];
     $idUser = $_SESSION['id'];
-    $idTrilha = $_SESSION["idTrilha"];
     // Conecte-se ao banco de dados
     include_once('connect.php');
     
@@ -24,12 +23,12 @@ if (isset($_POST['campo']) && isset($_POST['id_curso'])) {
         $sql_curso_existente = "DELETE FROM usuariocurso WHERE curso_id = '$idCurso' AND user_id = '$idUser'";
         $resultado_curso_existente = mysqli_query($conexao, $sql_curso_existente);
         if ($resultado_curso_especifico) {
-            echo "Curso já tinha sido concluido";
+            echo "Curso deletado";
         } 
         
     }else{
         // senão ele será cadastrado 
-        $sql = " INSERT INTO usuariocurso (user_id, curso_id, finish) VALUES ('$idUser', '$idCurso', 1);";
+        $sql = " INSERT INTO usuariocurso (user_id, curso_id, finish) VALUES ('$idUser', '$idCurso', '$valor');";
         $resultado = mysqli_query($conexao, $sql);
 
         if ($resultado) {

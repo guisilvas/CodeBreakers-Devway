@@ -14,12 +14,65 @@ body{
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
 }
-nav{
-    display: grid;
-    grid-template-columns: 9% 80% 9%;
+
+.navbar{
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    background-color: aliceblue;    
     align-items: center;
+    position: fixed;
+    z-index: 1;
+    }
+    
+.navbar a{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    background-image: url('../img/casa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0);
+    border:none;
+    position: absolute;
+    right: 30px;
 }
+    
+.navbar input{
+    height: 1.5rem;
+    width: 4rem;
+    cursor: pointer;
+    background-image: url("../img/quit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    color: transparent;
+}
+    
+    
+    
+.bn{
+    right: 30px;
+    position: absolute;
+}
+    
+#perfil{
+    height: 2rem;
+    width: 2rem;
+    background-image: url('img/perfil.png');
+    cursor: pointer;
+    border:none;
+    position: absolute;
+    left: 15px;
+      
+}
+
+
+
 .content {
     height: 100%;
     width: 100%;
@@ -27,25 +80,7 @@ nav{
     flex-direction: column;
     padding-left: 5rem;
     padding-top: 5rem;
-}
-.topbar{
-    background-color: white;
-}
-.bt_voltar{
-    grid-column: 1;
-    height: 50px;
-}
-.barra_progresso{
-    grid-column: 2;
-    margin: 10px;
-    border-radius: 50px;
-    width: 1%;
-    height: 50px;
-    background-color: #000099;
-}
-.bt_sair{
-    grid-column: 3;
-    height: 50px;
+    position: relative;
 }
 
 .titleTrilha {
@@ -89,4 +124,3 @@ nav{
     padding-left: 10px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
 }
-
