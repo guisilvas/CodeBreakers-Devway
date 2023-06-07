@@ -48,7 +48,7 @@
 <body>
     <header>
         <nav class="navbar"> 
-            <img src="./assets/perfil.png" id="perfil">
+            <a href="profile.php"><img src="./assets/perfil.png" id="perfil"></a>
             <div class="bn">
                 <form method="post" action="">
                     <input type="submit" name="sair" value="sair">

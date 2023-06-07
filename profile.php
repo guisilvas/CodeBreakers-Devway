@@ -9,9 +9,10 @@
     //pegando a variável de seção 
     $id_user = $_SESSION['id'];
 
-
     // pesquisando no banco 
-    $pesquisa_usuario = "SELECT "
+    $pesquisa_usuario = "SELECT * FROM users WHERE id = '$id_user'";
+    $resultado_pesquisa_usuario = mysqli_query($conexao, $pesquisa_usuario);
+    $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style_profile.css">
+    <link rel="stylesheet" href="assets\style_profile.css">
     <title>Document</title>
 </head>
 <body>
@@ -34,15 +35,15 @@
 
     <div class="grid-container">
         <div class="grid-item">
-            <div class="img_profile1"><a href="-----"><img src="/assets/characters/defaultCharacter.png" class="aa"></a></div>
+            <div class="img_profile1"><a href="-----"><img src="assets\characters\defaultCharacter.png" class="aa"></a></div>
         </div>
         <div class="grid-item">
             <div class="title_profile">
                 <h2 class="text">Perfil</h2></div>
                 <div class="form_profile">
                    <!-- <form  class="form"> -->
-                    <input type="text" name="Usuario">
-                    <input type="text" name="E-mail">
+                    <input type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>">
+                    <input type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>">
                    <!-- </form> -->
                 </div>
             </div>
