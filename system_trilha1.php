@@ -101,13 +101,13 @@
                             echo "<div class='courseList'>";
                             // se retornar já está concluido ent a caixa tem que estar marcada 
                             if (mysqli_num_rows($resultado_curso_especifico) > 0){
-                                echo "<input type='checkbox' name='curso' data-curso-id='$idCurso' checked>";
-                                echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
+                                echo "<input type='checkbox' id='checkbox' name='curso' data-curso-id='$idCurso' checked>";
+                                echo "<a class='nome_curso' href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                                 // Adiciona 1 ao progresso a cada curso marcado
                                 $controlProgresso++;
                             }else{
                                 // se não, ainda não foi concluido e podemos carca-la 
-                                echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
+                                echo "<input type='checkbox' id='checkbox' name='curso' data-curso-id='$idCurso'>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                             }
                             echo "</div>";
