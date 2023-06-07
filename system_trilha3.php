@@ -1,4 +1,5 @@
 <?php
+		//trilha3 - erro na linha 101 
     //Iniciando seção caso ainda não tenha sido iniciada
     if (!isset($_SESSION)) {
         // Seção iniciada
@@ -43,13 +44,11 @@
     <title>Dev Way - Trilha</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-           
-            <a href="system.php"></a>
-            
-        </nav>
-    </header>
+    <nav class="topbar">
+        <button class=bt_voltar>Voltar</button>
+        <div class="barra_progresso"></div>
+        <button class="bt_sair">sair</button>
+    </nav>
     
     <div class="content">
         <?php
@@ -59,6 +58,9 @@
             $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 3";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
             $_SESSION["idTrilha"] = 3;
+            // pesuquisando o nome dos cursos
+            $pesquisa_cursos = "SELECT * FROM cursos";
+            $resultado_pesquisa_cursos = mysqli_query($conexao, $pesquisa_cursos);
 
             // Verifica se a consulta retornou resultados para TEMAS
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
@@ -68,7 +70,6 @@
                 while ($row = $resultado_pesquisa_temas->fetch_assoc()) {
                     $idTema = $row["id"];
                     $nome = $row["nome"];
-                    
                     // exibição do tema
                     echo "<div class='tema_conteiner'>";
                     echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
@@ -76,7 +77,7 @@
                     //filtra os cursos pro tema
                     $pesquisa_filtrar_cursos = "SELECT * FROM cursos WHERE tema_id = $idTema";
                     $resultado_filtrar_cursos = mysqli_query($conexao, $pesquisa_filtrar_cursos);
-
+                            
                     //verifica se retornou resultador dos cursos
                     if (mysqli_num_rows($resultado_filtrar_cursos) > 0) {
                     // loop para listar os cursos
@@ -86,36 +87,18 @@
                             $curso_nome = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
                             $cursoTemaId = $row_curso['tema_id'];
+                            $finish = $row_curso['finish'];
                             $idCurso = $row_curso['id'];
-                            $id_user = $_SESSION['id'];
-
-                            // Pesquisa curso e usuário, se retornar quer dizer que o curso já está concluido
-                            $sql_curso_especifico = "SELECT * FROM usuariocurso WHERE curso_id = '$idCurso' AND user_id = '$id_user'";
-                            $resultado_curso_especifico = mysqli_query($conexao, $sql_curso_especifico);
-                            
-                            
                             // exibição
                             echo "<div class='courseList'>";
-                            // se retornar já está concluido ent a caixa tem que estar marcada 
-                            if (mysqli_num_rows($resultado_curso_especifico) > 0){
-                                echo "<input type='checkbox' name='curso' data-curso-id='$idCurso' checked>";
+                            if($finish == 1) {
+                                echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso' checked>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-                            }else{
-                                // se não, ainda não foi concluido e podemos carca-la 
+
+                            } else {
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-                            }
-                            
-                            
-                            // if($finish == 1) {
-                            //     //armazena os dados de id do curso e id do usuário 
-                            //     echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso'  checked>";
-                            //     echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-
-                            // } else {
-                            //     echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
-                            //     echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-                            // }
+				                    }
                             echo "</div>";
                             $contadorCursos++;
                         }

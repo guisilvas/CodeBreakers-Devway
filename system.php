@@ -46,17 +46,6 @@
     <title>Dev Way - A Jornada</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar"> 
-            <img src="assets/perfil.png" id="perfil">
-            <div class="bn">
-                <form method="post" action="">
-                    <input type="submit" name="sair" value="sair">
-                </form>
-            </div>
-        </nav>
-    </header>
-    <img src="assets/fundo-system.jpg" class="fundo">
     <div class="container">
         <h1>Meus Cursos</h1>
         <div class="trilhas">
@@ -80,6 +69,9 @@
     
                 ?>
         </div>
+        <form method="post" action="">
+            <input type="submit" name="sair" value="Sair">
+        </form>
     </div>
 </body>
 </html>
