@@ -20,8 +20,8 @@ body{
 .navbar{
   display: flex;
   width: 100vw;
-  height: 5vh;
-  background-color: aliceblue;    
+  height: 8vh;
+  background-color: white;    
   align-items: center;
   position: fixed;
   z-index: 1;
@@ -31,7 +31,7 @@ body{
   height: 2rem;
   width: 2rem;
   cursor: pointer;
-  background-image: url('../img/casa.png');
+  background-image: url('../assets/casa.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body{
   height: 1.5rem;
   width: 4rem;
   cursor: pointer;
-  background-image: url("../img/quit.png");
+  background-image: url("../assets/quit.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -63,7 +63,7 @@ body{
 #perfil{
   height: 2rem;
   width: 2rem;
-  background-image: url('img/perfil.png');
+  background-image: url('../assets/perfil.png');
   cursor: pointer;
   border:none;
   position: absolute;
@@ -119,13 +119,13 @@ body{
   background-color: rgba(62, 152, 212, 0.384);
   backdrop-filter: blur(10px);
   border-radius: 30px;
-  color: aliceblue;
+  color: #F3E8E8;
   font-size: 1rem;
   transition-duration: 0.4s;
   }
 
 .trilhas_conteiner:hover{
-  color:hsl(0, 31%, 70%);
+  color:#FF5925;
   text-shadow: 0px 4px 4px rgb(0 0 0 / 70%);
   box-shadow: 0px 4px 4px rgb(0 0 0 / 30%);
 }

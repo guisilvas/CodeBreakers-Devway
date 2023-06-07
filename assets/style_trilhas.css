@@ -20,7 +20,7 @@ body{
 .navbar{
     display: flex;
     width: 100vw;
-    height: 5vh;
+    height: 8vh;
     background-color: aliceblue;    
     align-items: center;
     position: fixed;
@@ -31,7 +31,7 @@ body{
     height: 2rem;
     width: 2rem;
     cursor: pointer;
-    background-image: url('../img/casa.png');
+    background-image: url('../assets/casa.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body{
     height: 1.5rem;
     width: 4rem;
     cursor: pointer;
-    background-image: url("../img/quit.png");
+    background-image: url("../assets/quit.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -63,7 +63,7 @@ body{
 #perfil{
     height: 2rem;
     width: 2rem;
-    background-image: url('img/perfil.png');
+    background-image: url('../assets/perfil.png');
     cursor: pointer;
     border:none;
     position: absolute;
