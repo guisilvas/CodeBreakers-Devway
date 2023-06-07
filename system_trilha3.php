@@ -1,11 +1,9 @@
 <?php
+		//trilha3 - erro na linha 101 
     //Iniciando seção caso ainda não tenha sido iniciada
     if (!isset($_SESSION)) {
         // Seção iniciada
         session_start();
-        // pega o id do usuário atravez do metodo get
-        // $user_id = $_GET['user_id'];
-        // $trilha = $_GET['trilha'];
     }
     
     // Incluindo o arquivo connect.php
@@ -86,6 +84,7 @@
                         $contadorCursos = 1;
                         while ($row_curso = $resultado_filtrar_cursos->fetch_assoc()) {
                             // captura os dados
+                            $curso_nome = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
                             $cursoTemaId = $row_curso['tema_id'];
                             $finish = $row_curso['finish'];
@@ -99,7 +98,7 @@
                             } else {
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-                            }
+				                    }
                             echo "</div>";
                             $contadorCursos++;
                         }
