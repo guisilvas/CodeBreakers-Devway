@@ -42,17 +42,22 @@
                 <h2 class="text">Perfil</h2></div>
                 <div class="form_profile">
                    <!-- <form  class="form"> -->
-                    <input type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>">
-                    <input type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>">
+                    <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>">
+                    <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>">
                    <!-- </form> -->
                 </div>
             </div>
         </div>
      
-      </div>
-
-
-
-
+    </div>
 </body>
+<script>
+
+    var inputElement1 = document.getElementById("inputbloq1");
+    inputElement1.disabled = true;
+
+    var inputElement2 = document.getElementById("inputbloq2");
+    inputElement2.disabled = true;
+
+</script>
 </html>
