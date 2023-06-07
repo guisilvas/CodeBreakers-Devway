@@ -14,7 +14,6 @@ body{
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
 }
 
 .navbar{
@@ -25,7 +24,7 @@ body{
     align-items: center;
     position: fixed;
     z-index: 1;
-    }
+}
     
 .navbar a{
     height: 2rem;
@@ -112,7 +111,20 @@ body{
 .trilhas_nome:hover {
     cursor: pointer;
 }
+
+.nome_curso {
+    text-decoration: none;
+    width: 100%;
+    margin: 5px;
+    color: white;
+    line-height: 28px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+}
+
 .courseList {
+    display: flex;
     padding-left: 8rem;
     margin-bottom: 5px;
     margin-top: 5px;
