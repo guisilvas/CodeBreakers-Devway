@@ -9,77 +9,16 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Press Start 2P', cursive;
-  height: 100vh;
-  width: 100vw;
-  margin: 0px;
-  overflow: hidden;     
-}
-
-.navbar{
-  display: flex;
-  width: 100vw;
-  height: 5vh;
-  background-color: aliceblue;    
-  align-items: center;
-  position: fixed;
-  z-index: 1;
-}
-  
-.navbar a{
-  height: 2rem;
-  width: 2rem;
-  cursor: pointer;
-  background-image: url('../img/casa.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255,255,255,0);
-  border:none;
-  position: absolute;
-  right: 30px;
-}
-  
-.navbar input{
-  height: 1.5rem;
-  width: 4rem;
-  cursor: pointer;
-  background-image: url("../img/quit.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  color: transparent;
-}
-  
-  
-  
-.bn{
-  right: 30px;
-  position: absolute;
-}
-  
-#perfil{
-  height: 2rem;
-  width: 2rem;
-  background-image: url('img/perfil.png');
-  cursor: pointer;
-  border:none;
-  position: absolute;
-  left: 15px;
-    
-}
-
-.fundo{
+  background-image: url('fundo-system.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   width: 100vw;
-  position: absolute;
-  z-index: -1;
 }
+
 .container {
   height: 100%;
   display: flex;
@@ -89,7 +28,7 @@ body{
 }
 
 .container h1 {
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 3rem;
   padding-bottom: 40px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
@@ -116,22 +55,13 @@ body{
   margin: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(62, 152, 212, 0.384);
-  backdrop-filter: blur(10px);
+  background-color: rgba(35, 206, 217, 0.3);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
   border-radius: 30px;
-  color: aliceblue;
+  color: white;
   font-size: 1rem;
-  transition-duration: 0.4s;
-  }
-
-.trilhas_conteiner:hover{
-  color:hsl(0, 31%, 70%);
-  text-shadow: 0px 4px 4px rgb(0 0 0 / 70%);
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 30%);
-}
-
-.trilhas_conteiner:active{
-  transform: translateY(4px)
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
 }
 
 @keyframes float {
