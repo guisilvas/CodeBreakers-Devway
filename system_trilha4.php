@@ -81,13 +81,15 @@
                     //verifica se retornou resultador dos cursos
                     if (mysqli_num_rows($resultado_filtrar_cursos) > 0) {
                     // loop para listar os cursos
-                        $contadorCursos = 1;
+                        // Controle do numero de cursos(Cursos marcados)
+                        $contadorCursos = 0;
+                        // Controle do progresso
+                        $controlProgresso = 0;
                         while ($row_curso = $resultado_filtrar_cursos->fetch_assoc()) {
                             // captura os dados
                             $curso_nome = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
                             $cursoTemaId = $row_curso['tema_id'];
-                            $finish = $row_curso['finish'];
                             $idCurso = $row_curso['id'];
                             $id_user = $_SESSION['id'];
 
@@ -102,6 +104,8 @@
                             if (mysqli_num_rows($resultado_curso_especifico) > 0){
                                 echo "<input type='checkbox' name='curso' checked>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
+                                // Adiciona 1 ao progresso a cada curso marcado
+                                $controlProgresso++;
                             }else{
                                 // se não, ainda não foi concluido e podemos carca-la 
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
@@ -128,6 +132,11 @@
                     echo "</div>";
                     // soma +1 no tema para calcular o próximo 
                     $contador++;
+
+                    $progresso = ($controlProgresso * 10) / $contadorCursos;
+                    // Progresso do tema
+                    echo "<h3 class=\"trilhas_nome\"> Progresso: " . $contadorCursos . " " . $controlProgresso .  " " . $progresso ."</h3>";
+                    echo "<progress class=\"progress_bar\" value=\"" . $progresso . "\" max=\"10\"> </progress>";
                 }
             } else {
                 echo '<script>alert("Nenhuma trilha encontrada");</script>';
