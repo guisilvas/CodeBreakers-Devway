@@ -45,14 +45,14 @@ CREATE TABLE `temas` (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `temas` (`nome`, `trilha_id`) VALUES
+INSERT INTO `temas` ( `nome`, `trilha_id`) VALUES
 ('HTML - Fundamentos', 1),
-('PHP - Fundamentos', 2),
 ('CSS - Fundamentos', 1),
 ('JAVASCRIPT - Fundamentos', 1),
+('PHP - Fundamentos', 2),
 ('Python - Fundamentos', 2),
-('Git e GitHub', 3),
-('Banco de dados', 4);
+('Git e GitHub - Fundamentos', 3),
+('Banco de dados - Fundamentos', 4);
 
 CREATE TABLE `cursos` (
   `id` int NOT NULL AUTO_INCREMENT,
