@@ -43,11 +43,13 @@
     <title>Dev Way - Trilha</title>
 </head>
 <body>
-    <nav class="topbar">
-        <button class=bt_voltar>Voltar</button>
-        <div class="barra_progresso"></div>
-        <button class="bt_sair">sair</button>
-    </nav>
+    <header>
+        <nav class="navbar">
+           
+            <a href="system.php"></a>
+            
+        </nav>
+    </header>
     
     <div class="content">
         <?php
@@ -57,9 +59,6 @@
             $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 4";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
             $_SESSION["idTrilha"] = 4;
-            // pesuquisando o nome dos cursos
-            $pesquisa_cursos = "SELECT * FROM cursos";
-            $resultado_pesquisa_cursos = mysqli_query($conexao, $pesquisa_cursos);
 
             // Verifica se a consulta retornou resultados para TEMAS
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
@@ -102,7 +101,7 @@
                             echo "<div class='courseList'>";
                             // se retornar já está concluido ent a caixa tem que estar marcada 
                             if (mysqli_num_rows($resultado_curso_especifico) > 0){
-                                echo "<input type='checkbox' name='curso' checked>";
+                                echo "<input type='checkbox' name='curso' data-curso-id='$idCurso' checked>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                                 // Adiciona 1 ao progresso a cada curso marcado
                                 $controlProgresso++;
