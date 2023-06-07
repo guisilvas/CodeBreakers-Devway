@@ -44,11 +44,13 @@
     <title>Dev Way - Trilha</title>
 </head>
 <body>
-    <nav class="topbar">
-        <button class=bt_voltar>Voltar</button>
-        <div class="barra_progresso"></div>
-        <button class="bt_sair">sair</button>
-    </nav>
+    <header>
+        <nav class="navbar">
+           
+            <a href="system.php"></a>
+            
+        </nav>
+    </header>
     
     <div class="content">
         <?php
