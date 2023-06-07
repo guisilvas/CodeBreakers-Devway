@@ -110,17 +110,6 @@
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                             }
-                            
-                            
-                            // if($finish == 1) {
-                            //     //armazena os dados de id do curso e id do usuário 
-                            //     echo "<input type='checkbox' name='curso'  data-curso-id='$idCurso'  checked>";
-                            //     echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-
-                            // } else {
-                            //     echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
-                            //     echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
-                            // }
                             echo "</div>";
                             $contadorCursos++;
                         }
