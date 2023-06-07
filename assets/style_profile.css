@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(180deg, #0E1947 -3.65%, rgba(32, 6, 58, 0.71) 96.35%);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    width: 100vw;
+    height: 7vh;
+    background-color:aliceblue;     
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    }
+    
+.navbar a{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    background-image: url('../img/casa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0);
+    border:none;
+    position: absolute;
+    right: 30px;
+}
+    
+.navbar input{
+    height: 2rem;
+    width: 4rem;
+    cursor: pointer;
+    background-image: url("../img/quit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    color: transparent;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    padding: 8rem;
+    column-gap: 4rem;
+    justify-content: center;
+    
+  }
+  
+  .grid-item {    
+    padding: 20px;
+    font-size: 30px;
+    width: 40vw;
+    height: 30vw;
+    text-align: center;
+    align-items: center;
+  }
+  .img_profile1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .aa {
+    width: 100%;
+    height: 90%;
+        
+  }
+
+  .title_profile {
+    font-family: 'Press Start 2P';
+        color: white;
+  }
+  .text{
+    font-family: 'Press Start 2P';
+    
+  }
+  /* .form { 
+    font-family: 'Press Start 2P', cursive;
+    display:grid;
+    padding-top: 5%;
+    width: 46.3vw;  
+    grid-template-columns: 3, 1fr;
+   height: 100%;
+    flex-direction: column;
+    color: white;
+    */
+  /* } */
+  .form_profile {
+
+    padding-top: 2rem;
+    font-family: 'Press Start 2P';
+    height: 85%;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .form_profile input{ 
+    
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    border-radius: 20px;
+    width: 80%;
+    height: 3.5rem;
+    background-color: rgba(255,255,255,0);
+    margin: 1.3rem;
+    font-size: 1.5rem;
+    padding-left: 10px ;
+  }
+  #senha {
+    
+    width: 7vh;
+    height: 5vh;
+    position: absolute;
+    right: 9.5rem;
+    border-radius: 2vh;
+  }
+
