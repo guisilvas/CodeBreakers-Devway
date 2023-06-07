@@ -59,9 +59,6 @@
             $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 4";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
             $_SESSION["idTrilha"] = 4;
-            // pesuquisando o nome dos cursos
-            $pesquisa_cursos = "SELECT * FROM cursos";
-            $resultado_pesquisa_cursos = mysqli_query($conexao, $pesquisa_cursos);
 
             // Verifica se a consulta retornou resultados para TEMAS
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
@@ -89,7 +86,6 @@
                             $curso_nome = $row_curso['nome'];
                             $curso_link = $row_curso['link'];
                             $cursoTemaId = $row_curso['tema_id'];
-                            $finish = $row_curso['finish'];
                             $idCurso = $row_curso['id'];
                             $id_user = $_SESSION['id'];
 
@@ -102,7 +98,7 @@
                             echo "<div class='courseList'>";
                             // se retornar já está concluido ent a caixa tem que estar marcada 
                             if (mysqli_num_rows($resultado_curso_especifico) > 0){
-                                echo "<input type='checkbox' name='curso' checked>";
+                                echo "<input type='checkbox' name='curso' data-curso-id='$idCurso' checked>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
                             }else{
                                 // se não, ainda não foi concluido e podemos carca-la 
