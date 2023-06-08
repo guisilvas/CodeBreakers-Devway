@@ -39,6 +39,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/style_trilhas.css"> -->
     <link rel="stylesheet" href="assets/style_trilhas.css">
     <title>Dev Way - Trilha</title>
 </head>
@@ -71,11 +72,11 @@
                     
                     // exibição do tema
                     echo "<div class='tema_conteiner_principal'>";
-                    // div que vai ficar com a direção horizontal 
                     echo "<div class='tema_nome'>" . $nome ;
-                    echo "<button class='seta_tema' name='bt_brir_cursos'onclick='myFunction()'><img src='assets\icons\seta.png'></button>";
+                    echo "<button class='seta_tema' id='seta_".$idTema."' name='bt_brir_cursos' onclick='abrir_cursos(\"tema_".$idTema."\", \"seta_".$idTema."\")'><img src='assets\icons\seta.png'></button>";
                     echo "</div>";
-                    echo "<div class='tema_conteiner'>";
+                    echo "<div class='tema_conteiner' id='tema_".$idTema."' style='display: none;'>";
+
 
 
                     //filtra os cursos pro tema

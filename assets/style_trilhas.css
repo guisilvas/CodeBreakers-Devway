@@ -12,9 +12,10 @@ body{
     font-family: 'Press Start 2P', cursive;
     background: linear-gradient(180deg, #0E1947 -3.65%, rgba(32, 6, 58, 0.71) 96.35%);
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
+    background-attachment: fixed;
 }
 
 .navbar{
@@ -82,7 +83,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 5rem;
+    padding-left: 2rem;
     padding-top: 5rem;
     position: relative;
 }
@@ -112,46 +113,17 @@ body{
 .seta_tema{
     background-color: transparent;
     border:none;
-    transition: .3s ease;
-}
-.seta_tema.open{
-    transform: rotate(100deg);
+    transition: .5s ease;
 }
 .tema_conteiner{
     display: none;
     flex-direction: column;
     transition: .3s ease;
-    background-color: red;
-}
-.tema_conteiner.open{
-    display: flex;
 }
 
-
-
-/* .tema_conteiner {
-    height: 100%;
-    width: 70%;
-    margin-bottom: 5vh;
-} */
-
-/* .trilhas_nome {
-    color: white;
-    font-size: 1.4rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
-    height: 10vh;
-    width: 100%;
-    background: #162A89;
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding-left: 7rem;
-} 
 .trilhas_nome:hover {
     cursor: pointer;
-} */
+} 
 .nome_curso {
     text-decoration: none;
     width: 100%;

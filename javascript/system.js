@@ -1,6 +1,13 @@
-function myFunction(){
-  
-  alert('certo');
+function abrir_cursos(id,seta) {
+  var div = document.getElementById(id);
+  var seta_tema = document.getElementById(seta);
+  if (div.style.display === "none") {
+    div.style.display = "block";
+    seta_tema.style.transform = "rotate(180deg)";
+  } else {
+    div.style.display = "none";
+    seta_tema.style.transform = "none";
+  }
 }
 document.addEventListener('DOMContentLoaded', function() {
   var checkboxes = document.getElementsByName('curso'); //lista de caixas de seleção com o nome "curso" e adiciona um ouvinte de evento para cada uma

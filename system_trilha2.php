@@ -70,8 +70,11 @@
                     $nome = $row["nome"];
                     
                     // exibição do tema
-                    echo "<div class='tema_conteiner'>";
-                    echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
+                    echo "<div class='tema_conteiner_principal'>";
+                    echo "<div class='tema_nome'>" . $nome ;
+                    echo "<button class='seta_tema' id='seta_".$idTema."' name='bt_brir_cursos' onclick='abrir_cursos(\"tema_".$idTema."\", \"seta_".$idTema."\")'><img src='assets\icons\seta.png'></button>";
+                    echo "</div>";
+                    echo "<div class='tema_conteiner' id='tema_".$idTema."' style='display: none;'>";
 
                     //filtra os cursos pro tema
                     $pesquisa_filtrar_cursos = "SELECT * FROM cursos WHERE tema_id = $idTema";
