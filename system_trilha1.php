@@ -70,8 +70,13 @@
                     $nome = $row["nome"];
                     
                     // exibição do tema
+                    echo "<div class='tema_conteiner_principal'>";
+                    // div que vai ficar com a direção horizontal 
+                    echo "<div class='tema_nome'>" . $nome ;
+                    echo "<button class='seta_tema' name='bt_brir_cursos'onclick='myFunction()'><img src='assets\icons\seta.png'></button>";
+                    echo "</div>";
                     echo "<div class='tema_conteiner'>";
-                    echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
+
 
                     //filtra os cursos pro tema
                     $pesquisa_filtrar_cursos = "SELECT * FROM cursos WHERE tema_id = $idTema";
@@ -125,6 +130,7 @@
                     // Progresso do tema
                     echo "<h3 class=\"trilhas_nome\"> Progresso: " . $contadorCursos . " " . $controlProgresso .  " " . $progresso ."</h3>";
                     echo "<progress class=\"progress_bar\" value=\"" . $progresso . "\" max=\"10\"> </progress>";
+                    echo "</div>";
                 }
             } else {
                 echo '<script>alert("Nenhuma trilha encontrada");</script>';
@@ -132,6 +138,6 @@
 
         ?>
     </div>
-    <script src="javascript/system.js"></script>
+    <script type="" src="javascript/system.js" defer></script>
 </body>
 </html>

@@ -51,10 +51,7 @@ body{
     background-position: center;
     border: none;
     color: transparent;
-}
-    
-    
-    
+}   
 .bn{
     right: 30px;
     position: absolute;
@@ -72,7 +69,14 @@ body{
 }
 
 
-
+/* nome da trilha na parte de cima  */
+.titleTrilha {
+    color: white;
+    font-size: 2.5rem;
+    padding-bottom: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+}
+/* conteiner pai de todos  */
 .content {
     height: 100%;
     width: 100%;
@@ -82,20 +86,56 @@ body{
     padding-top: 5rem;
     position: relative;
 }
-
-.titleTrilha {
-    color: white;
-    font-size: 2.5rem;
-    padding-bottom: 40px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+/* dropdown */
+.tema_conteiner_principal{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
 }
-.tema_conteiner {
+.tema_nome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    color: white;
+    font-size: 1.4rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+    background: #162A89;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.seta_tema{
+    background-color: transparent;
+    border:none;
+    transition: .3s ease;
+}
+.seta_tema.open{
+    transform: rotate(100deg);
+}
+.tema_conteiner{
+    display: none;
+    flex-direction: column;
+    transition: .3s ease;
+    background-color: red;
+}
+.tema_conteiner.open{
+    display: flex;
+}
+
+
+
+/* .tema_conteiner {
     height: 100%;
     width: 70%;
     margin-bottom: 5vh;
-}
+} */
 
-.trilhas_nome {
+/* .trilhas_nome {
     color: white;
     font-size: 1.4rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
@@ -108,10 +148,10 @@ body{
     display: flex;
     align-items: center;
     padding-left: 7rem;
-}
+} 
 .trilhas_nome:hover {
     cursor: pointer;
-}
+} */
 .nome_curso {
     text-decoration: none;
     width: 100%;
