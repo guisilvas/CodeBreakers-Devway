@@ -32,10 +32,17 @@ CREATE TABLE `usuarioTrilha` (
   `user_id` INT NOT NULL,
   `trilha_id` INT NOT NULL,
   `dayStart` INT DEFAULT NULL,
+  `progress` VARCHAR DEFAULT NULL,
   FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
   FOREIGN KEY (`trilha_id`) REFERENCES `trilhas`(`id`),
   PRIMARY KEY (`user_id`, `trilha_id`)
 );
+
+INSERT INTO `usuariotrilha` (`user_id`, `trilha_id`,) VALUES 
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4);
 
 CREATE TABLE `temas` (
   `id` int NOT NULL AUTO_INCREMENT,
