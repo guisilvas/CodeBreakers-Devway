@@ -39,7 +39,7 @@
             <div class="img_profile1"><a href="-----"><img src="assets\characters\defaultCharacter.png" class="aa"></a></div>
         </div>
         <div class="grid-item">
-            <div class="title_profile">
+            <div class="title_profile" id="title">
                 <h2 class="text">Perfil</h2></div>
                 <div class="form_profile">
                    <!-- <form  class="form"> -->
@@ -100,7 +100,7 @@
    }
 
     // Tamanho mínimo para adicionar a nova classe
-    let tamanhoMinimo = 472; // Por exemplo, 472 pixels de largura
+    let tamanhoMinimo = 500; // Por exemplo, 500 pixels de largura
 
     // Verificar o tamanho da tela e adicionar a nova classe
     function adicionarNovaClasse() {
@@ -121,6 +121,32 @@
 
     // Chamar a função no carregamento inicial da página
     window.addEventListener('load', adicionarNovaClasse);
+
+     // Obter as referências das divs
+    var divOrigem = document.getElementById('title');
+    var divDestino = document.getElementById('grid-container!');
+
+    // Dimensão mínima da tela para a realocação
+    var larguraMinima = 500; // Por exemplo, 768 pixels
+
+    // Função para verificar a dimensão da tela e realocar a div
+    function verificarDimensaoTela() {
+      var larguraTela = window.innerWidth;
+
+      if (larguraTela <= larguraMinima) {
+        // Remover a div da divOrigem
+        divOrigem.remove();
+
+        // Adicionar a div removida à divDestino
+        divDestino.insertAdjacentElement('afterbegin',divOrigem) ;
+      }
+    }
+
+    // Chamar a função no carregamento inicial da página
+    window.addEventListener('load', verificarDimensaoTela);
+
+    // Chamar a função quando a janela for redimensionada
+    window.addEventListener('resize', verificarDimensaoTela)
 
    
 
