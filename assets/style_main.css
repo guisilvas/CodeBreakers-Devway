@@ -14,7 +14,14 @@ body{
   height: 100vh;
   width: 100vw;
   margin: 0px;
-  overflow: hidden;     
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('fundo-system.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .navbar{
@@ -62,24 +69,23 @@ body{
     
 }
 
-.fundo{
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+.container {
   height: 100vh;
   width: 100vw;
-  position: absolute;
-  z-index: -1;
-}
-.container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.container h1 {
+.trilhas h1 {
   color: rgb(255, 255, 255);
   font-size: 3rem;
   padding-bottom: 40px;
@@ -90,7 +96,7 @@ body{
 
 .trilhas{
   display: flex;
-  width: 60%;
+  max-width: 800px;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -131,5 +137,11 @@ body{
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+@media (max-width: 700px) {
+  .trilhas h1{
+    padding-top: 30rem;
+    text-align: center;
   }
 }

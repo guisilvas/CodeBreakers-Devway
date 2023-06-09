@@ -56,10 +56,10 @@
             </div>
         </nav>
     </header>
-    <img src="assets/fundo-system.jpg" class="fundo">
+    <!-- <img src="assets/fundo-system.jpg" class="fundo"> -->
     <div class="container">
-        <h1>Meus Cursos</h1>
         <div class="trilhas">
+        <h1>Meus Cursos</h1>
             <?php
                 $pesquisa_trilhas = "SELECT nome FROM trilhas";
                 $resultado_pesquisa_trilhas = mysqli_query($conexao, $pesquisa_trilhas);
