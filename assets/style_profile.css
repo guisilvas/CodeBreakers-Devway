@@ -54,45 +54,47 @@ body{
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
     
-    padding: 8rem;
-    column-gap: 4rem;
-    justify-content: center;
+  padding: 8rem;
+  column-gap: 4rem;
+  justify-content: center;
     
-  }
+}
   
-  .grid-item {    
-    padding: 20px;
-    font-size: 30px;
-    width: 40vw;
-    height: 30vw;
-    text-align: center;
-    align-items: center;
-  }
-  .img_profile1 {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .aa {
-    width: 100%;
-    height: 90%;
-        
-  }
+.grid-item {    
+  padding: 20px;
+  font-size: 30px;
+  width: 40vw;
+  height: 30vw;
+  text-align: center;
+  align-items: center;
+}
 
-  .title_profile {
-    font-family: 'Press Start 2P';
-        color: white;
-  }
-  .text{
-    font-family: 'Press Start 2P';
+.img_profile1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aa {
+  width: 100%;
+  height: 90%;     
+}
+
+.title_profile {
+  font-family: 'Press Start 2P';
+  color: white;
+}
+
+.text{
+  font-family: 'Press Start 2P';
     
-  }
+}
   /* .form { 
     font-family: 'Press Start 2P', cursive;
     display:grid;
@@ -104,36 +106,55 @@ body{
     color: white;
     */
   /* } */
-  .form_profile {
+.form_profile {
 
-    padding-top: 2rem;
-    font-family: 'Press Start 2P';
-    height: 85%;
+  padding-top: 2rem;
+  font-family: 'Press Start 2P';
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_profile input{ 
+    
+font-family: 'Press Start 2P', cursive;
+color: white;
+border-radius: 20px;
+width: 80%;
+height: 3.5rem;
+background-color: #cf83eb40;
+margin: 1.3rem;
+/*font-size: 1.5rem*/
+padding-left: 10px ;
+border-color: violet;
+}
+
+/*esta classe vai substituir .grid-container*/
+.novocontainer{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+@media screen and (max-width: 426px){
+  .navbar{
     width: 100%;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+    position: initial;
   }
-  .form_profile input{ 
-    
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    border-radius: 20px;
-    width: 80%;
-    height: 3.5rem;
-    background-color: rgba(255,255,255,0);
-    margin: 1.3rem;
-    font-size: 1.5rem;
-    padding-left: 10px ;
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    height: 40%;
   }
-  #senha {
+
     
-    width: 7vh;
-    height: 5vh;
-    position: absolute;
-    right: 9.5rem;
-    border-radius: 2vh;
-  }
+}
+
 
