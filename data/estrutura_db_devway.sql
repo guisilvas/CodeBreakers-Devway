@@ -3,6 +3,8 @@
 -- Clicar em New no canto superior esquerdo
 -- Selecionar SQL e colar o código abaixo
 
+-- Selecione o código apenas até o tracejado, após criar insira registros à tabela usuariotrilha
+
 DROP DATABASE IF EXISTS `devway`;
 
 CREATE DATABASE `devway`;
@@ -32,17 +34,11 @@ CREATE TABLE `usuarioTrilha` (
   `user_id` INT NOT NULL,
   `trilha_id` INT NOT NULL,
   `dayStart` INT DEFAULT NULL,
-  `progress` VARCHAR DEFAULT NULL,
+  `progress` varchar(20) DEFAULT NULL,
   FOREIGN KEY (`user_id`) REFERENCES `users`(`id`),
   FOREIGN KEY (`trilha_id`) REFERENCES `trilhas`(`id`),
   PRIMARY KEY (`user_id`, `trilha_id`)
 );
-
-INSERT INTO `usuariotrilha` (`user_id`, `trilha_id`,) VALUES 
-(1, 1),
-(1, 2),
-(1, 3),
-(1, 4);
 
 CREATE TABLE `temas` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -183,3 +179,13 @@ CREATE TABLE `usuarioCurso` (
   FOREIGN KEY (`curso_id`) REFERENCES `cursos`(`id`),
   PRIMARY KEY (`user_id`, `curso_id`)
 );
+
+-------------------------------------------------------------------------------
+
+-- Depois de criar o banco de dados
+
+INSERT INTO `usuariotrilha` (`user_id`, `trilha_id`,) VALUES 
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4);
