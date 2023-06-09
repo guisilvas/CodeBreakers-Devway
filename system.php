@@ -47,7 +47,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar"> 
+        <nav class="navbar" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);"> 
             <a href="profile.php"><img src="./assets/perfil.png" id="perfil"></a>
             <div class="bn">
                 <form method="post" action="">
@@ -59,7 +59,7 @@
     <!-- <img src="assets/fundo-system.jpg" class="fundo"> -->
     <div class="container">
         <div class="trilhas">
-        <h1>Meus Cursos</h1>
+        <h1 style="color: rgb(223 103 30);">Meus Cursos</h1>
             <?php
                 $pesquisa_trilhas = "SELECT nome FROM trilhas";
                 $resultado_pesquisa_trilhas = mysqli_query($conexao, $pesquisa_trilhas);
