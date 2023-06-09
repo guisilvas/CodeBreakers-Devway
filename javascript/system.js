@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       };
+      window.location.reload()
       // Envia o valor e o ID do curso para o arquivo PHP
       xhr.send('campo=' + valor + '&id_curso=' + cursoId);
     });

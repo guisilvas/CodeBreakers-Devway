@@ -45,16 +45,25 @@
 <body>
     <header>
         <nav class="navbar">
-           
+            <?php  
+                $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'";
+                $consulta = mysqli_query($conexao, $resultadoProgress);
+                while ($row = mysqli_fetch_assoc($consulta)) {
+                    $progressoT = $row["progress"];
+                }
+             echo "<progress class=\"progress_bar\" id=\"progress_bar\" value=\"" . $progressoT . "\" max=\"100\"> </progress>";
+            ?>
             <a href="system.php"></a>
-            
         </nav>
     </header>
     
     <div class="content">
         <?php
+            
+           
             $nomeTrilha = $_GET["trilha"];
-            echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" ."</h1>";
+            $progressTrilha = 0;
+            echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" .  "</h1>";
             // pesquisando o nome dos temas
             $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 4";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
@@ -64,6 +73,7 @@
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
                 // conta tipo o id do tema 
                 $contador = 1;
+                $contTemas = 0;
                 // Loop para percorrer os resultados e exibir os temas em divs
                 while ($row = $resultado_pesquisa_temas->fetch_assoc()) {
                     $idTema = $row["id"];
@@ -112,6 +122,7 @@
                                 // se não, ainda não foi concluido e podemos carca-la 
                                 echo "<input type='checkbox' name='curso' data-curso-id='$idCurso'>";
                                 echo "<a class=nome_curso href=" . $curso_link . " for='curso' target=\"\_blank\"\">" . $curso_nome ."</a>";
+                                $chave = false;
                             }
                             echo "</div>";
                             $contadorCursos++;
@@ -124,15 +135,21 @@
                     // soma +1 no tema para calcular o próximo 
                     $contador++;
 
-                    $progresso = ($controlProgresso * 10) / $contadorCursos;
+                    $progresso = ($controlProgresso * 100) / $contadorCursos;
                     // Progresso do tema
-                    echo "<h3 class=\"trilhas_nome\"> Progresso: " . $contadorCursos . " " . $controlProgresso .  " " . $progresso ."</h3>";
-                    echo "<progress class=\"progress_bar\" value=\"" . $progresso . "\" max=\"10\"> </progress>";
+                    // echo "<h3 class=\"trilhas_nome\"> Progresso: " . $progresso ."%</h3>";
+                    echo "<progress class=\"progress_bar\" id=\"progress_bar\" value=\"" . $progresso . "\" max=\"100\"> </progress>";
+                    echo "</div>";
+                    $contTemas += $progresso ;
                 }
             } else {
                 echo '<script>alert("Nenhuma trilha encontrada");</script>';
             }
+            $progressTrilha += (($contTemas / (($contador - 1) * 100)) * 100);
+            // print_r($progressTrilha);
 
+            $sqlprogress = "UPDATE usuariotrilha SET progress = '$progressTrilha' WHERE user_id = '$_SESSION[id]'";
+            $resultado_progress = mysqli_query($conexao, $sqlprogress);
         ?>
     </div>
     <script src="javascript/system.js"></script>
