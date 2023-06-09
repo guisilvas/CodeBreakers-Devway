@@ -23,6 +23,28 @@
     <link rel="stylesheet" href="assets\style_profile.css">
     <title>Document</title>
 </head>
+<style>
+.trocar_img{
+    width:50px;
+    height:50px;
+}
+.buttomperfil{
+    display:block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor:pointer;
+   
+}
+
+
+    /*@media screen and (max-width: 426){
+  .aa{
+    width: 250px;
+    height: 100%;
+  }
+}*/
+</style>
 
 <body onload="ajustarTamanhoFonte()">
     <header>
@@ -36,8 +58,17 @@
 
     <div class="grid-container"id="grid-container!">
         <div class="grid-item">
+<<<<<<< HEAD
+            <div class="img_profile1">
+                <img src="assets\characters\defaultCharacter.png" class="aa" id="img_profile"></div>
+                <a href=""class="buttomperfil">
+                    <img class="trocar_img" src="assets/botaotp.png">
+                </a>
+            </div>
+=======
             <div class="img_profile1"><a href="-----"><img src="assets\characters\defaultCharacter.png" class="aa" id=img_profile></a></div>
         </div>
+>>>>>>> c6b9164e7ffa603cd0f71d13166e692cea444254
         <div class="grid-item">
             <div class="title_profile" id="title">
                 <h2 class="text">Perfil</h2></div>
