@@ -19,7 +19,12 @@ function selectCharacter(characterId) {
 
 function chooseCharacter() {
   if (selectedCharacter !== null) {
-    // Onde seleciona o personagem
-    console.log(`Personagem ${selectedCharacter} escolhido!`);
+    //seleciona o personagem
+    console.log(selectedCharacter);
   }
 }
+
+const profile = document.getElementById("img_profile");
+  if (selectedCharacter == "1"){
+    img_profile.src="assets/characters/character1.png";
+  }

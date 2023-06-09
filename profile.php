@@ -36,7 +36,7 @@
 
     <div class="grid-container"id="grid-container!">
         <div class="grid-item">
-            <div class="img_profile1"><a href="-----"><img src="assets\characters\defaultCharacter.png" class="aa"></a></div>
+            <div class="img_profile1"><a href="-----"><img src="assets\characters\defaultCharacter.png" class="aa" id=img_profile></a></div>
         </div>
         <div class="grid-item">
             <div class="title_profile" id="title">
@@ -148,9 +148,9 @@
     // Chamar a função quando a janela for redimensionada
     window.addEventListener('resize', verificarDimensaoTela)
 
-   
-
 </script>
+
+<script src="javascript/selectChar.js" defer></script>
 
 
 </html>
