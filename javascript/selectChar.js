@@ -1,12 +1,13 @@
 const character = document.getElementsByClassName("character");
 function automatc(id){
-  for (let i = 1; i < character.length; i++) {
+  for (let i = 0; i < character.length; i++) {
+    character[i].classList.remove("selected");
     if(id === i){
+      character[i].classList.toggle("selected");
+      id_url = i + 1;
       console.log(i);
-      imageUrl = "assets/characters/character"+ id + ".png";
-      id_class = i - 1;
-      character[id_class].classList.toggle("selected");
-      console.log("personagem"+ i +" selecionado");
+      imageUrl = "assets/characters/character"+ id_url + ".png";
+      console.log("personagem"+ id_url +" selecionado");
     }
   }
 }
