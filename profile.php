@@ -13,6 +13,8 @@
     $pesquisa_usuario = "SELECT * FROM users WHERE id = '$id_user'";
     $resultado_pesquisa_usuario = mysqli_query($conexao, $pesquisa_usuario);
     $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
+
+    $foto_perfil= $row_pesquisa_usuario['foto_perfil'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,14 +38,6 @@
     cursor:pointer;
    
 }
-
-
-    /*@media screen and (max-width: 426){
-  .aa{
-    width: 250px;
-    height: 100%;
-  }
-}*/
 </style>
 
 <body onload="ajustarTamanhoFonte()">
@@ -59,10 +53,29 @@
     <div class="grid-container"id="grid-container!">
         <div class="grid-item">
             <div class="img_profile1">
-                <img src="assets\characters\defaultCharacter.png" class="aa" id="img_profile"></div>
+                <?php 
+                    if (isset($_GET['image'])) {
+                        $newImageUrl = $_GET['image'];
+                        echo "<img id=\"img_profile\" class=\"aa\" src=".$newImageUrl." alt=\"Perfil\">";
+                        echo "<a href=\"select_character.html\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
+                        // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
+                        // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
+                        $update_image = "UPDATE users SET foto_perfil = '$newImageUrl' WHERE id = '$id_user'";
+                        $resultado_update_image = mysqli_query($conexao, $update_image);
+                        if ($resultado_update_image){
+                            echo "<script>alert('foto de perfil atualizada');</script>";
+                        }else{
+                            echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
+                        }
+                    }else{
+                        echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
+                        echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
+                    }
+                ?>
+                <!-- <img src="assets\characters\defaultCharacter.png" class="aa" id="img_profile"></div>
                 <a href="select_character.html"class="buttomperfil">
                     <img class="trocar_img" src="assets/botaotp.png">
-                </a>
+                </a> -->
             </div>
         <div class="grid-item">
             <div class="title_profile" id="title">

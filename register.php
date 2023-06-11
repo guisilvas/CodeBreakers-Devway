@@ -26,7 +26,7 @@
             echo "<script>window.location.href = 'index.html';</script>";
 
         } else { // Preparando a consulta SQL
-            $sql = "INSERT INTO users (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+            $sql = "INSERT INTO users (nome, email, senha, foto_perfil) VALUES ('$nome', '$email', '$senha', 'assets/characters/defaultCharacter.png')";
 
             // Execução da consulta
             if (mysqli_query($conexao, $sql)) { // Cadastro efetuado com sucesso
