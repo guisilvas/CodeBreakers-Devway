@@ -46,7 +46,7 @@
     <header>
         <nav class="navbar">
             <?php  
-                $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'";
+                $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'and trilha_id = '$_SESSION[idTrilha]' ";
                 $consulta = mysqli_query($conexao, $resultadoProgress);
                 while ($row = mysqli_fetch_assoc($consulta)) {
                     $progressoT = $row["progress"];
@@ -59,8 +59,6 @@
     
     <div class="content">
         <?php
-            
-           
             $nomeTrilha = $_GET["trilha"];
             $progressTrilha = 0;
             echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" .  "</h1>";
@@ -148,7 +146,7 @@
             $progressTrilha += (($contTemas / (($contador - 1) * 100)) * 100);
             // print_r($progressTrilha);
 
-            $sqlprogress = "UPDATE usuariotrilha SET progress = '$progressTrilha' WHERE user_id = '$_SESSION[id]'";
+            $sqlprogress = "UPDATE usuariotrilha SET progress = '$progressTrilha' WHERE user_id = '$_SESSION[id]' and trilha_id = $_SESSION[idTrilha]";
             $resultado_progress = mysqli_query($conexao, $sqlprogress);
         ?>
     </div>
