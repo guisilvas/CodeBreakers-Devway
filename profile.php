@@ -77,16 +77,15 @@
                     <img class="trocar_img" src="assets/botaotp.png">
                 </a> -->
             </div>
+        </div>
         <div class="grid-item">
             <div class="title_profile" id="title">
                 <h2 class="text">Perfil</h2></div>
                 <div class="form_profile">
-                   <!-- <form  class="form"> -->
                     <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>"
                     oninput="ajustarTamanhoFonte(this)">
                     <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>"
                     oninput="ajustarTamanhoFonte(this)">
-                   <!-- </form> -->
                 </div>
             </div>
         </div>
