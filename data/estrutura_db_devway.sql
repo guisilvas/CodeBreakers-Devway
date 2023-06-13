@@ -15,7 +15,7 @@ CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `senha` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `senha` varchar(255) NOT NULL,
   `foto_perfil` varchar(255) NOT NULL,
   `foto_perfil_icon` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -183,13 +183,3 @@ CREATE TABLE `usuarioCurso` (
   FOREIGN KEY (`curso_id`) REFERENCES `cursos`(`id`),
   PRIMARY KEY (`user_id`, `curso_id`)
 );
-
--------------------------------------------------------------------------------
-
--- Depois de criar o banco de dados
-
-INSERT INTO `usuariotrilha` (`user_id`, `trilha_id`,) VALUES 
-(1, 1),
-(1, 2),
-(1, 3),
-(1, 4);
