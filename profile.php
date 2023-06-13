@@ -56,14 +56,15 @@
                 <?php 
                     if (isset($_GET['image'])) {
                         $newImageUrl = $_GET['image'];
-                        echo "<img id=\"img_profile\" class=\"aa\" src=".$newImageUrl." alt=\"Perfil\">";
+                        $newImageIconUrl = $_GET['image_icon'];
+                        echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
                         echo "<a href=\"select_character.html\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                         // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
                         // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
-                        $update_image = "UPDATE users SET foto_perfil = '$newImageUrl' WHERE id = '$id_user'";
+                        $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
                         $resultado_update_image = mysqli_query($conexao, $update_image);
                         if ($resultado_update_image){
-                            echo "<script>alert('foto de perfil atualizada');</script>";
+                            echo "<script>alert('Foto atualizada');</script>";
                         }else{
                             echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
                         }

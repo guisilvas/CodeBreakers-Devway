@@ -26,7 +26,7 @@
             echo "<script>window.location.href = 'index.html';</script>";
 
         } else { // Preparando a consulta SQL
-            $sql = "INSERT INTO users (nome, email, senha, foto_perfil) VALUES ('$nome', '$email', '$senha', 'assets/characters/defaultCharacter.png')";
+            $sql = "INSERT INTO users (nome, email, senha, foto_perfil, foto_perfil_icon) VALUES ('$nome', '$email', '$senha', 'assets/characters/defaultCharacter.png', 'assets/perfil.png')";
             $resultInsertUser = mysqli_query($conexao, $sql);
             
             // Execução da consulta

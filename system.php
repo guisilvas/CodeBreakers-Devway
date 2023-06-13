@@ -48,7 +48,17 @@
 <body>
     <header>
         <nav class="navbar" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);"> 
-            <a href="profile.php"><img src="./assets/perfil.png" id="perfil"></a>
+            <a href="profile.php">
+                <?php
+                    $user_id = $_SESSION['id'];
+                    $sql_icon_perfil = "SELECT * FROM users WHERE id = '$user_id'";
+                    $result_sql_icon_perfil = mysqli_query($conexao, $sql_icon_perfil);
+                    $row_sql_icon_perfil = mysqli_fetch_assoc($result_sql_icon_perfil);
+                    $foto_perfil_icon = $row_sql_icon_perfil['foto_perfil_icon'];
+
+                    echo "<img src=\"$foto_perfil_icon\" id=\"perfil\">";
+                ?>
+            </a>
             <div class="bn">
                 <form method="post" action="">
                     <input type="submit" name="sair" value="sair">

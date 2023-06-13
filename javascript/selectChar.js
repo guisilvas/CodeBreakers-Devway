@@ -2,12 +2,11 @@ const character = document.getElementsByClassName("character");
 function automatc(id){
   for (let i = 0; i < character.length; i++) {
     character[i].classList.remove("selected");
-    if(id === i){
+    if(id == i){
       character[i].classList.toggle("selected");
       id_url = i + 1;
-      console.log(i);
       imageUrl = "assets/characters/character"+ id_url + ".png";
-      console.log("personagem"+ id_url +" selecionado");
+      image_icon = "assets/characters/character"+ id_url + "_icon.png";
     }
   }
 }
@@ -18,8 +17,11 @@ function person(id){
 
   
 function chooseCharacter(){
-  window.location.href = "./profile.php?image=" + encodeURIComponent(imageUrl);
+  window.location.href = "./profile.php?image=" + encodeURIComponent(imageUrl) + "&image_icon=" + encodeURIComponent(image_icon);
+  // window.location.href = "./profile.php?image=" + encodeURIComponent(imageUrl);
 }
+
+
 
 // let selectedCharacter = null;
 
