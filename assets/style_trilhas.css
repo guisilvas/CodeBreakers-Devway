@@ -29,7 +29,7 @@ body{
     z-index: 1;
 }
     
-.navbar a{
+.home{
     height: 2rem;
     width: 2rem;
     cursor: pointer;
@@ -60,13 +60,13 @@ body{
 }
     
 #perfil{
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     background-image: url('../assets/perfil.png');
     cursor: pointer;
     border:none;
-    position: absolute;
-    left: 15px;
+    margin-left:15px;
+    
       
 }
 

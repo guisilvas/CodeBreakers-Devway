@@ -46,8 +46,18 @@
 <body>
     
     <header >
-        <nav class="navbar">
-            <a href="system.php"></a>
+    <nav class="navbar">
+        <a href="profile.php">
+                <?php
+                    $user_id = $_SESSION['id'];
+                    $sql_icon_perfil = "SELECT * FROM users WHERE id = '$user_id'";
+                    $result_sql_icon_perfil = mysqli_query($conexao, $sql_icon_perfil);
+                    $row_sql_icon_perfil = mysqli_fetch_assoc($result_sql_icon_perfil);
+                    $foto_perfil_icon = $row_sql_icon_perfil['foto_perfil_icon'];
+
+                    echo "<img src=\"$foto_perfil_icon\" id=\"perfil\">";
+                ?>
+            <a href="system.php" class="home"></a>
         </nav>
     </header>
     <div class="content">
