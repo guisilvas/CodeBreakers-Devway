@@ -10,12 +10,14 @@ DROP DATABASE IF EXISTS `devway`;
 CREATE DATABASE `devway`;
 USE `devway`;
 
-CREATE TABLE `users`(
+
+CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL,
+  `senha` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `foto_perfil` varchar(255) NOT NULL,
+  `foto_perfil_icon` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
