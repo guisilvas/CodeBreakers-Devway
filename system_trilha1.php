@@ -47,16 +47,6 @@
     
     <header >
         <nav class="navbar">
-            <?php
-                echo "<div class=\"progress-all-trail\">";
-                    $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'and trilha_id = '$_SESSION[idTrilha]' ";
-                    $consulta = mysqli_query($conexao, $resultadoProgress);
-                    $row = $consulta->fetch_assoc();
-                    $progressoT = $row["progress"];
-                    print_r($progressoT);
-                    echo "<progress class=\"progress_bar\" id=\"progress_bar\" value=\"" . $progressoT . "\" max=\"100\"> </progress>";
-                echo "</div>"
-             ?>
             <a href="system.php"></a>
         </nav>
     </header>
@@ -134,7 +124,7 @@
                     echo "</div>";
                     // soma +1 no tema para calcular o próximo 
                     $contador++;
-
+                    
                     $progresso = ($controlProgresso * 100) / $contadorCursos;
                     // Progresso do tema
                     // echo "<h3 class=\"trilhas_nome\"> Progresso: " . $progresso ."%</h3>";
@@ -147,10 +137,18 @@
             }
             $progressTrilha += (($contTemas / (($contador - 1) * 100)) * 100);
             // print_r($progressTrilha);
-
+            
             $sqlprogress = "UPDATE usuariotrilha SET progress = round('$progressTrilha', 1) WHERE user_id = '$_SESSION[id]' and trilha_id = $_SESSION[idTrilha]";
             $resultado_progress = mysqli_query($conexao, $sqlprogress);
-        ?>
+            echo "<div class=\"progress-all-trail\">";
+                $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'and trilha_id = '$_SESSION[idTrilha]' ";
+                $consulta = mysqli_query($conexao, $resultadoProgress);
+                $row = $consulta->fetch_assoc();
+                $progressoT = $row["progress"];
+                echo "Progresso Total:  $progressoT%";
+                
+            echo "</div>"
+            ?>
     </div>
     <script src="javascript/system.js"></script>
 </body>

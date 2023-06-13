@@ -175,7 +175,11 @@ background-color: #4CAF50;
 }
 
 .progress-all-trail {
-    background-color: orange;
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 10px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+    padding-left: 2rem;
 }
 
 /* Estilização da barra de progresso */

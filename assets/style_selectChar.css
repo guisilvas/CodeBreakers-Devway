@@ -11,7 +11,7 @@ body {
 
 /* container */
 .container {
-  padding-top: 5vw;
+  padding-top: 8vw;
   display: grid;
   place-items: center;
   height: 100%;
@@ -28,7 +28,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  padding: 40px;
+  padding: 9px;
 }
 
 /* quadros de seleção de personagem */
