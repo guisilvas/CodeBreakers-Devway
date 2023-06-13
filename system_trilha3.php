@@ -3,6 +3,7 @@
     if (!isset($_SESSION)) {
         // Seção iniciada
         session_start();
+        $_SESSION["idTrilha"] = 3;
     }
     
     // Incluindo o arquivo connect.php
@@ -45,29 +46,19 @@
 <body>
     <header>
         <nav class="navbar">
-            <?php  
-                $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'";
-                $consulta = mysqli_query($conexao, $resultadoProgress);
-                while ($row = mysqli_fetch_assoc($consulta)) {
-                    $progressoT = $row["progress"];
-                }
-             echo "<progress class=\"progress_bar\" id=\"progress_bar\" value=\"" . $progressoT . "\" max=\"100\"> </progress>";
-            ?>
+         
             <a href="system.php"></a>
         </nav>
     </header>
     
     <div class="content">
         <?php
-            
-           
             $nomeTrilha = $_GET["trilha"];
             $progressTrilha = 0;
             echo "<h1 class='titleTrilha'>" . $nomeTrilha . ":" .  "</h1>";
             // pesquisando o nome dos temas
-            $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = 3";
+            $pesquisa_temas = "SELECT * FROM temas  WHERE trilha_id = $_SESSION[idTrilha]";
             $resultado_pesquisa_temas = mysqli_query($conexao, $pesquisa_temas);
-            $_SESSION["idTrilha"] = 3;
 
             // Verifica se a consulta retornou resultados para TEMAS
             if (mysqli_num_rows($resultado_pesquisa_temas) > 0) {
@@ -148,8 +139,14 @@
             $progressTrilha += (($contTemas / (($contador - 1) * 100)) * 100);
             // print_r($progressTrilha);
 
-            $sqlprogress = "UPDATE usuariotrilha SET progress = '$progressTrilha' WHERE user_id = '$_SESSION[id]'";
+            $sqlprogress = "UPDATE usuariotrilha SET progress = round('$progressTrilha', 1) WHERE user_id = '$_SESSION[id]' and trilha_id = $_SESSION[idTrilha]";
             $resultado_progress = mysqli_query($conexao, $sqlprogress);
+            $resultadoProgress = "SELECT progress FROM usuariotrilha WHERE user_id = '$_SESSION[id]'and trilha_id = '$_SESSION[idTrilha]' ";
+            $consulta = mysqli_query($conexao, $resultadoProgress);
+            $row = $consulta->fetch_assoc();
+            $progressoT = $row["progress"];
+            print_r($progressoT);
+         echo "<progress class=\"progress_bar\" id=\"progress_bar\" value=\"" . $progressoT . "\" max=\"100\"> </progress>";
         ?>
     </div>
     <script src="javascript/system.js"></script>

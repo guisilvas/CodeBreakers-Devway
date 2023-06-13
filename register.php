@@ -27,9 +27,21 @@
 
         } else { // Preparando a consulta SQL
             $sql = "INSERT INTO users (nome, email, senha, foto_perfil) VALUES ('$nome', '$email', '$senha', 'assets/characters/defaultCharacter.png')";
-
+            $resultInsertUser = mysqli_query($conexao, $sql);
+            
             // Execução da consulta
-            if (mysqli_query($conexao, $sql)) { // Cadastro efetuado com sucesso
+            if ($resultInsertUser) { // Cadastro efetuado com sucesso
+                $consultaUsers = "SELECT id FROM users WHERE email = '$email' AND nome = '$nome'";
+                $result = mysqli_query($conexao, $consultaUsers);
+                $row = $result->fetch_assoc();
+                $idUser = $row["id"]; 
+                $consultaTrilhas = "SELECT id FROM trilhas";
+                $resultTrilhas = mysqli_query($conexao, $consultaTrilhas);
+                while ($row = $resultTrilhas->fetch_assoc()) {
+                    $idTrilha = $row["id"];
+                    $insertUsuarioTrilha = "INSERT INTO usuariotrilha (user_id, trilha_id) VALUES ('$idUser', '$idTrilha')";
+                    mysqli_query($conexao, $insertUsuarioTrilha);
+                }
                 echo "<script>alert('Cadastro realizado com sucesso!')</script>";
                 echo "<script>window.location.href = 'index.html';</script>";
 
