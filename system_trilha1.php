@@ -40,6 +40,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/style_trilhas.css"> -->
     <link rel="stylesheet" href="assets/style_trilhas.css">
     <title>Dev Way - Trilha</title>
 </head>
@@ -85,7 +86,10 @@
                     echo "<button class='seta_tema' id='seta_".$idTema."' name='bt_brir_cursos' onclick='abrir_cursos(\"tema_".$idTema."\", \"seta_".$idTema."\")'><img src='assets\icons\seta.png'></button>";
                     echo "</div>";
                     echo "<div class='tema_conteiner' id='tema_".$idTema."' style='display: none;'>";
-
+                    echo "<div class=\"fundo\">";
+                    echo "<img src=\"assets/pergaminho_margem_top.png\" class=\"bordertop\">";
+                    echo "<div class= \"cursos_tema\">";
+                   
                     //filtra os cursos pro tema
                     $pesquisa_filtrar_cursos = "SELECT * FROM cursos WHERE tema_id = $idTema";
                     $resultado_filtrar_cursos = mysqli_query($conexao, $pesquisa_filtrar_cursos);
@@ -130,6 +134,8 @@
                     } else {
                         echo '<script>alert("Nenhum curso encontrado");</script>';
                     }
+                    echo "</div>";
+                    echo "<img src=\"assets/pergaminho_margem_bottom.png\" class=\"borderbottom\"></div>";
                     // fecha a div do tema
                     echo "</div>";
                     // soma +1 no tema para calcular o próximo 
