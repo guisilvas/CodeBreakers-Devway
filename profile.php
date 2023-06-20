@@ -26,17 +26,65 @@
     <title>Document</title>
 </head>
 <style>
-.trocar_img{
-    width:50px;
-    height:50px;
+
+.navbar{
+    display: flex;
+    width: 100vw;
+    height: 7vh;
+    background-color: white;     
+    align-items: center;
+    position: initial;
+    z-index: 1;
+    }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    background-image: url('assets/pergaminho222.png'); 
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    background-position-x: center;
+    background-position-y: center;
+    padding: 8rem;
+    column-gap: 0rem;
+    justify-content: center;
 }
-.buttomperfil{
-    display:block;
+
+.form_profile input{ 
+    
+    font-family: 'Press Start 2P', cursive;
+    color: black;;
+    width: 80%;
+    height: 3.5rem;
+    background-color: #D0A270;
+    margin: 1.3rem;
+    /*font-size: 1.5rem*/
+    padding-left: 10px ;
+    border-color: black;
+    border-radius:0px;
+  }
+
+body{
+    background-image: url('assets/fundoareia.png');
+}
+
+.text{
+    color: black;
+}
+ 
+.trocar_img {
+    width: 100%;
+    height: 100%;
+}
+.buttomperfil {
+    display: flex;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor:pointer;
-   
+    right: 90px;
+    top: 35px;
+    cursor: pointer;
+    z-index: 1;
+    height: 13%;
+    width: 10%;
 }
 </style>
 
@@ -87,6 +135,8 @@
                     oninput="ajustarTamanhoFonte(this)">
                     <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>"
                     oninput="ajustarTamanhoFonte(this)">
+                    <input id="inputbloq3" type="password" name="Senha" value="<?php echo $row_pesquisa_usuario['nome'];?>"
+                    oninput="ajustarTamanhoFonte(this)">
                 </div>
             </div>
         </div>
@@ -100,6 +150,9 @@
 
     var inputElement2 = document.getElementById("inputbloq2");
     inputElement2.disabled = true;
+
+    var inputElement3 = document.getElementById("inputbloq3");
+    inputElement3.disabled = true;
 
 
     //ajustando o tamanho da fonte com base no comprimento do texto inserido no input

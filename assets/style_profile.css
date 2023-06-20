@@ -9,12 +9,12 @@
 
 body{
     font-family: 'Press Start 2P', cursive;
-    background: linear-gradient(180deg, #0E1947 -3.65%, rgba(32, 6, 58, 0.71) 96.35%);
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
+    background-image: url('assets/fundoareia.png');
 }
 
 .navbar{
@@ -23,7 +23,7 @@ body{
     height: 7vh;
     background-color: white;     
     align-items: center;
-    position: fixed;
+    position: initial;
     z-index: 1;
     }
     
@@ -53,14 +53,17 @@ body{
     color: transparent;
 }
 
-.grid-container {
+.grid-container{
   display: grid;
-  grid-template-columns: 50% 50%;
-    
+  grid-template-columns: 40% 50%;
+  background-image: url('assets/pergaminho222.png'); 
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  background-position-x: center;
+  background-position-y: center;
   padding: 8rem;
-  column-gap: 4rem;
+  /*column-gap: 4rem;*/
   justify-content: center;
-    
 }
   
 .grid-item {    
@@ -71,6 +74,21 @@ body{
   text-align: center;
   align-items: center;
   position:relative;
+}
+.buttomperfil {
+  display: flex;
+    position: absolute;
+    right: 90px;
+    top: 35px;
+    cursor: pointer;
+    z-index: 1;
+    height: 13%;
+    width: 10%;
+}
+
+.trocar_img {
+  width: 100%;
+  height: 100%;
 }
 
 .img_profile1 {
@@ -94,6 +112,7 @@ body{
 }
 
 .text{
+  color: black;
   font-family: 'Press Start 2P';
     
 }
@@ -122,16 +141,16 @@ body{
 
 .form_profile input{ 
     
-font-family: 'Press Start 2P', cursive;
-color: white;
-border-radius: 20px;
-width: 80%;
-height: 3.5rem;
-background-color: #cf83eb40;
-margin: 1.3rem;
-/*font-size: 1.5rem*/
-padding-left: 10px ;
-border-color: violet;
+  font-family: 'Press Start 2P', cursive;
+  color: black;;
+  width: 80%;
+  height: 3.5rem;
+  background-color: #D0A270;
+  margin: 1.3rem;
+  /*font-size: 1.5rem*/
+  padding-left: 10px ;
+  border-color: black;
+  border-radius: 0px;
 }
 
 /*esta classe vai substituir .grid-container*/

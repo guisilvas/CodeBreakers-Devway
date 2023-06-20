@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navteste</title>
+    <style>
+        body{
+            font-family: 'Press Start 2P', cursive;
+            background: linear-gradient(180deg, #0E1947 -3.65%, rgba(32, 6, 58, 0.71) 96.35%);
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            margin:0px;
+        }
+
+        .navbar{
+            width: 100%;
+            height: 8vh;
+            background-color: white;   
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .btnmenu{
+            position:absolute;
+            right: 2rem;
+            height: 5vh;
+            width: 7vw;
+        }
+
+        .menu{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(245, 70, 16);
+            height: 0vh;
+            width: 20vw;
+            z-index: 1;
+            position: fixed;
+            right:0rem;
+            top: 8vh;
+            transition: height 0.5s ease; /* Adicionado: Transição de altura com duração de 0.5s e função ease */
+            overflow: hidden; /* Adicionado: Para esconder o conteúdo quando o menu está fechado */
+        }
+
+        .menu.active {
+            height: 100vh; /* Quando o menu está inativo, definimos a altura como 0 para ocultá-lo */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">=</button>
+        </nav>
+        <div class="menu" id="menu">
+            <h1>MENU</h1>
+        </div>
+    </header>
+
+    <script>
+        function abrirmenu() {
+            let menu = document.getElementById("menu");
+            menu.classList.toggle("active"); /* Adicionado: Alternar a classe 'active' no menu */
+        }
+    </script>
+</body>
+</html>
