@@ -135,8 +135,6 @@ body{
                     oninput="ajustarTamanhoFonte(this)">
                     <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>"
                     oninput="ajustarTamanhoFonte(this)">
-                    <input id="inputbloq3" type="password" name="Senha" value="<?php echo $row_pesquisa_usuario['nome'];?>"
-                    oninput="ajustarTamanhoFonte(this)">
                 </div>
             </div>
         </div>
@@ -151,8 +149,6 @@ body{
     var inputElement2 = document.getElementById("inputbloq2");
     inputElement2.disabled = true;
 
-    var inputElement3 = document.getElementById("inputbloq3");
-    inputElement3.disabled = true;
 
 
     //ajustando o tamanho da fonte com base no comprimento do texto inserido no input
