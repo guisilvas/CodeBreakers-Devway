@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navteste</title>
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
         body{
             font-family: 'Press Start 2P', cursive;
             background: linear-gradient(180deg, #0E1947 -3.65%, rgba(32, 6, 58, 0.71) 96.35%);
@@ -25,17 +27,27 @@
             align-items: center;
             position: fixed;
             z-index: 1;
+            background-image: url('assets/tronconav.png');
+            /*background-repeat: no-repeat;
+            background-size: 100% 100%;*/
         }
 
         .btnmenu{
+            cursor:pointer;
             position:absolute;
             right: 2rem;
             height: 5vh;
             width: 7vw;
+            background-color: yellow;
+            color:white;
+            text-shadow: 2px 2px 2px gray;
+            font-family: 'Press Start 2P', cursive;
+            border-radius: 10px;
+            
         }
 
         .menu{
-            display: flex;
+            display: block;
             justify-content: center;
             background-color: rgb(245, 70, 16);
             height: 0vh;
@@ -46,6 +58,8 @@
             top: 8vh;
             transition: height 0.5s ease; /* Adicionado: Transição de altura com duração de 0.5s e função ease */
             overflow: hidden; /* Adicionado: Para esconder o conteúdo quando o menu está fechado */
+            background-image: url('assets/fundopapelmenu.jpg');
+          
         }
 
         .menu.active {
@@ -56,10 +70,16 @@
 <body>
     <header>
         <nav class="navbar">
-            <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">=</button>
+            <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
         <div class="menu" id="menu">
-            <h1>MENU</h1>
+            <!--<input id="inputbloq2" type="text" name="Nome" value="<?php echo $row_pesquisa_usuario['nome'];?>">-->
+            <a href="system_trilha1.php">Front-end</a>
+            <a href="system_trilha2.php">Back-end</a>
+            <a href="system_trilha3.php">Git e Github</a>
+            <a href="system_trilha4.php">Banco de Dados</a>
+            <!--<a href="">Contato</a>
+            <a href="">Sobre Nós</a>-->
         </div>
     </header>
 
