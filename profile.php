@@ -135,6 +135,7 @@ body{
                     oninput="ajustarTamanhoFonte(this)">
                     <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>"
                     oninput="ajustarTamanhoFonte(this)">
+                    <a href="navteste.php">nav</a>
                 </div>
             </div>
         </div>
