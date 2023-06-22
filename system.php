@@ -69,25 +69,25 @@
     <!-- <img src="assets/fundo-system.jpg" class="fundo"> -->
     <div class="container">
         <div class="trilhas">
-        <h1>Meus Cursos</h1>
-            <?php
-                $pesquisa_trilhas = "SELECT nome FROM trilhas";
-                $resultado_pesquisa_trilhas = mysqli_query($conexao, $pesquisa_trilhas);
-                // Verifica se a consulta retornou resultados
-                if (mysqli_num_rows($resultado_pesquisa_trilhas) > 0) {
-                    $contador = 1; // Inicializa o contador para mudar o link 
-                    // Loop para percorrer os resultados e exibir As trilhas em divs
-                    while ($row = $resultado_pesquisa_trilhas->fetch_assoc()) {
-                        $nome = $row["nome"];
-                        echo "<a href='system_trilha" . $contador . ".php?trilha=" .  $nome ."'><div class='trilhas_conteiner'>";
-                        echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
-                        echo "</div></a>";
-                        $contador++;
+            <h1>Meus Cursos</h1>
+                <?php
+                    $pesquisa_trilhas = "SELECT nome FROM trilhas";
+                    $resultado_pesquisa_trilhas = mysqli_query($conexao, $pesquisa_trilhas);
+                    // Verifica se a consulta retornou resultados
+                    if (mysqli_num_rows($resultado_pesquisa_trilhas) > 0) {
+                        $contador = 1; // Inicializa o contador para mudar o link 
+                        // Loop para percorrer os resultados e exibir As trilhas em divs
+                        while ($row = $resultado_pesquisa_trilhas->fetch_assoc()) {
+                            $nome = $row["nome"];
+                            echo "<a href='system_trilha" . $contador . ".php?trilha=" .  $nome ."'><div class='trilhas_conteiner'>";
+                            echo "<h3 class='trilhas_nome'>" . $nome . "</h3>";
+                            echo "</div></a>";
+                            $contador++;
+                        }
+                    } else {
+                        echo '<script>alert("Nenhuma trilha encontrada");</script>';
                     }
-                } else {
-                    echo '<script>alert("Nenhuma trilha encontrada");</script>';
-                }
-    
+        
                 ?>
         </div>
     </div>

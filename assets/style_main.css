@@ -11,15 +11,11 @@
 
 body{
   font-family: 'Press Start 2P', cursive;
-  height: 100vh;
-  width: 100vw;
-  margin: 0px;
-  font-family: 'Press Start 2P', cursive;
-  background-image: url('fundo-system.jpg');
   width: 100%;
   height: 100%;
+  background-image: url('fundo_main.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-attachment: fixed;
 }
@@ -52,8 +48,6 @@ body{
   color: transparent;
 }
   
-  
-  
 .bn{
   right: 30px;
   position: absolute;
@@ -81,16 +75,15 @@ body{
 .trilhas h1 {
   font-size: 3rem;
   padding-bottom: 40px;
-  color:#FF5925;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
+  color: black;
   animation: float 2s ease-in-out infinite;
   text-align: center;
+  width: 100%;
 }
-
 
 .trilhas{
   display: flex;
-  max-width: 800px;
+  width: 80%;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,23 +95,34 @@ body{
 
 .trilhas_conteiner{
   display: flex;
-  width: 300px;
-  height: 200px;
-  margin: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(62, 152, 212, 0.384);
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
-  color: #F3E8E8;
+  min-width: 400px;
+  height: 200px;
+  margin: 20px;
+  color: black;
   font-size: 1rem;
   transition-duration: 0.4s;
-  }
+  background-image: url('pergaminho.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.trilhas_nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  line-height: 1.8rem;
+  width: 50%;
+  height: 70%;
+}
 
 .trilhas_conteiner:hover{
-  color:#FF5925;
-  text-shadow: 0px 4px 4px rgb(0 0 0 / 70%);
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 30%);
+  color: #F3E8E8;
 }
 
 .trilhas_conteiner:active{
@@ -135,5 +139,7 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
-
+  .trilhas_conteiner{
+    min-width: 90vw;
+  }
 }
