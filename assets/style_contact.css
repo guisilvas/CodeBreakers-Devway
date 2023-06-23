@@ -1,0 +1,132 @@
+/* Importando as fontes de texto */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+/* Formatação padrão */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilização do body */
+body{
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('form_background.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilização da navbar */
+.navbar{
+  display: flex;
+  width: 100vw;
+  height: 7vh;
+  background-color: white;     
+  align-items: center;
+  position: initial;
+  z-index: 1;
+  }
+  
+.navbar a{
+height: 2rem;
+width: 2rem;
+cursor: pointer;
+background-image: url('../assets/casa.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color: rgba(255,255,255,0);
+border:none;
+position: absolute;
+right: 30px;
+}
+  
+.navbar input{
+  height: 2rem;
+  width: 4rem;
+  cursor: pointer;
+  background-image: url("../img/quit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  color: transparent;
+}
+
+/* Estilização do container */
+.container {
+  padding-top: 20vh;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-image: url('pergaminho.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+/* Estilo do pergaminho */
+.pergaminho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20vh;
+  height: 100%;
+  width: 100%;
+}
+
+/* Estilo do formulário */
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Estilo das divs dos inputs */
+.box {
+  margin: 5%;
+}
+
+/* Estilo inputs */
+.input {
+  color: #000;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  border-style: none;
+  background-color: #D0A270;
+  padding: 0.8rem;
+  border: 3px solid #000;
+}
+
+.input::placeholder {
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+/* Estilo botão de enviar */
+#button {
+  background-image: url(button_action.png);
+  font-family: 'Press Start 2P', cursive;
+  width: 200px;
+  height: 60px;
+  text-decoration: none;
+  border-style: none;
+  background-size: 100% 100%;
+  background-position: center center;
+  padding: 5%;
+  cursor: pointer;
+}
