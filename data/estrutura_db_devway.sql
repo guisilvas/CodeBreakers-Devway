@@ -10,7 +10,6 @@ DROP DATABASE IF EXISTS `devway`;
 CREATE DATABASE `devway`;
 USE `devway`;
 
-
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -21,6 +20,16 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `contato` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_user` int NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `assunto` varchar(255) NOT NULL,
+  `mensagem` varchar(255) NOT NULL,
+  FOREIGN KEY (`id_user`) REFERENCES `users`(`id`),
+  PRIMARY KEY (`id`)
+);
 
 CREATE TABLE `trilhas` (
   `id` int NOT NULL AUTO_INCREMENT,

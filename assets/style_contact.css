@@ -103,23 +103,23 @@ input:focus {
 }
 
 @media only screen and (max-width: 1000px) {
-  h1 {
-    font-size: 28px;
-  }
-
   .pergaminho {
     background-image: url('pergaminho_vertical.png');
     height: 70%;
     width: 85%;
     background-repeat: no-repeat;
     background-position: center;
-  }  
+  } 
 
   .form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: 28px;
   }
 
   .input {
@@ -132,11 +132,9 @@ input:focus {
     padding: 0.8rem;
     border: 3px solid #000;
   } 
-
   }
 
 @media only screen and (max-width: 700px) {
-
   .container {
     height: 80%;
     width: 80%;
@@ -148,15 +146,15 @@ input:focus {
     justify-content: center;
   }
 
-  h1 {
-    font-size: 25px;
-  }
-
   .form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: 25px;
   }
 
   .box {
