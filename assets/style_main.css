@@ -20,48 +20,7 @@ body{
   background-attachment: fixed;
 }
 
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  height: 8vh;
-  background-color: white;    
-  align-items: center;
-  position: fixed;
-  z-index: 1;
-}
-  
-.navbar a{
-  justify-content: center;
-  align-items: center;
-}
-  
-.navbar input{
-  height: 1.5rem;
-  width: 4rem;
-  cursor: pointer;
-  background-image: url("../assets/quit.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  color: transparent;
-}
-  
-.bn{
-  right: 30px;
-  position: absolute;
-}
-  
-#perfil{
-  height: 3rem;
-  width: 3rem;
-  background-image: url('../assets/perfil.png');
-  cursor: pointer;
-  border:none;
-  margin-left: 15px;
-    
-}
+
 
 .container {
   padding-top: 13vh;

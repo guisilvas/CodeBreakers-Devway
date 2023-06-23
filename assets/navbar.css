@@ -94,7 +94,9 @@
     width: 60%;
     font-family: 'Press Start 2P', cursive;
 }
-
+.bn{
+    position: initial;
+}
 .bn input{
     cursor:pointer;
     position:absolute;

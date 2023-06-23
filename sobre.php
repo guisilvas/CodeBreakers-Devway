@@ -62,10 +62,10 @@
                     <a href="system.php">Trilhas</a>
                 </div>
                 <div class="linksmenu">
-                    <a href="#">Contato</a>
+                    <a href="contact.php">Contato</a>
                 </div>
                 <div class="linksmenu">
-                    <a href="#">Sobre Nós</a>
+                    <a href="sobre.php">Sobre Nós</a>
                 </div>
 
                 <div class="bn">
