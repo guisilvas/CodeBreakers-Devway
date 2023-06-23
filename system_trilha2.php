@@ -20,6 +20,15 @@
         // Tentativa de acesso via URL, vai para a página de acesso negado
         header('Location: denied.html');
     }
+    //pegando a variável de seção 
+    $id_user = $_SESSION['id'];
+
+    // pesquisando no banco 
+    $pesquisa_usuario = "SELECT * FROM users WHERE id = '$id_user'";
+    $resultado_pesquisa_usuario = mysqli_query($conexao, $pesquisa_usuario);
+    $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
+
+    $foto_perfil= $row_pesquisa_usuario['foto_perfil'];
     
     // Verifica se o botão de sair foi clicado
     if (isset($_POST['sair'])) {
@@ -34,32 +43,67 @@
         exit();
     }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/navbar.css"> 
     <link rel="stylesheet" href="assets/style_trilhas.css">
     <title>Dev Way - Trilha</title>
 </head>
 <body>
     
-    <header >
+<header>
         <nav class="navbar">
-        <a href="profile.php">
-                <?php
-                    $user_id = $_SESSION['id'];
-                    $sql_icon_perfil = "SELECT * FROM users WHERE id = '$user_id'";
-                    $result_sql_icon_perfil = mysqli_query($conexao, $sql_icon_perfil);
-                    $row_sql_icon_perfil = mysqli_fetch_assoc($result_sql_icon_perfil);
-                    $foto_perfil_icon = $row_sql_icon_perfil['foto_perfil_icon'];
-
-                    echo "<img src=\"$foto_perfil_icon\" id=\"perfil\">";
-                ?>
-            <a href="system.php" class="home"></a>
+            <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
+        <div class="menu1" id="menu1">
+            <div class="menu2" id="menu2">
+                <div class="menup">
+                    <?php 
+                            if (isset($_GET['image'])) {
+                                $newImageUrl = $_GET['image'];
+                                $newImageIconUrl = $_GET['image_icon'];
+                                echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
+                                // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
+                                // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
+                                $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
+                                $resultado_update_image = mysqli_query($conexao, $update_image);
+                                if ($resultado_update_image){
+                                    echo "<script>alert('Foto atualizada');</script>";
+                                }else{
+                                    echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
+                                }
+                            }else{
+                                echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
+                                
+                            }
+                        ?>
+                    <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
+                </div>
+                <div class="linksmenu">
+                    <a href="system.php">Trilhas</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="#">Contato</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="#">Sobre Nós</a>
+                </div>
+
+                <div class="bn">
+                    <form method="post" action="">
+                        <input type="submit" name="sair" value="sair">
+                    </form>
+                </div>
+            </div> 
+            </div>
+        </div>
     </header>
+    
     <div class="content">
         <?php
             $nomeTrilha = $_GET["trilha"];
@@ -88,6 +132,7 @@
                     echo "<div class=\"fundo\">";
                     echo "<img src=\"assets/pergaminho_margem_top.png\" class=\"bordertop\">";
                     echo "<div class= \"cursos_tema\">";
+                   
                     //filtra os cursos pro tema
                     $pesquisa_filtrar_cursos = "SELECT * FROM cursos WHERE tema_id = $idTema";
                     $resultado_filtrar_cursos = mysqli_query($conexao, $pesquisa_filtrar_cursos);
@@ -165,5 +210,6 @@
             ?>
     </div>
     <script src="javascript/system.js"></script>
+    <script src="javascript/nav.js"></script>
 </body>
 </html>
