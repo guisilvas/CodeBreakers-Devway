@@ -16,6 +16,13 @@
         $sql = "SELECT * FROM users WHERE email = '$email'";
         $result = mysqli_query($conexao, $sql);
 
+        // Consulta do nome
+        $sqlName = "SELECT nome FROM users WHERE email = '$email'";
+        $resultName = mysqli_query($conexao, $sql);
+        if (mysqli_num_rows($resultName) > 0) {
+            $_SESSION['nome'] = $row['nome'];
+        }
+
         if (mysqli_num_rows($result) > 0) { // Verifica se o email está cadastrado
             $row = mysqli_fetch_assoc($result);
             $hash = $row['senha']; // Obtém a senha criptografada do banco de dados

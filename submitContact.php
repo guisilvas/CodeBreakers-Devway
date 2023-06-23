@@ -1,18 +1,25 @@
 <?php
-    // Incluindo a ligação com o banco de dados
+    //Iniciando seção caso ainda não tenha sido iniciada
+    if (!isset($_SESSION)) {
+        // Seção iniciada
+        session_start();
+    }
+    // Incluindo a ligação com o banco de dados e login
     include_once("connect.php");
+    include_once("testLogin.php");
 
     //Variáveis do formulário
-    $nome = $_SESSION['id'];
-    $email = $resultEmail;
+    $id_user = $_SESSION['id'];
+    $nome = $_SESSION['nome'];
+    $email = $_SESSION['email'];
     $assunto = $_POST['subject'];
     $mensagem = $_POST['message'];
 
-    $sql = "INSERT INTO contato(nome, email, assunto, mensagem) VALUES ('$nome', '$email', '$assunto', '$mensagem')";
+    $sql = "INSERT INTO contato(id_user, nome, email, assunto, mensagem) VALUES ('$id_user', '$nome', '$email', '$assunto', '$mensagem')";
 
     if (mysqli_query($conexao, $sql)) {
     // Envio bem-sucedido
-    // echo "OK";
+        echo "<script>alert('Enviado com sucesso!')</script>";
         header('Location: contact.php');
     } else {
     echo "Erro ao enviar mensagem."; // Envio com erro

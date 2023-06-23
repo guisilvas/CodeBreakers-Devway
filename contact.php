@@ -33,22 +33,13 @@
     <body>
         <header>
             <nav class="navbar">
-            
                 <a href="system.php"></a>
-                
             </nav>
         </header>
         <div class="container">
             <div class="pergaminho">
                 <form action="submitContact.php" method="POST" class="form">
                     <h1>Contate-nos</h1>
-                    <!--
-                    <div class="box">
-                        <input type="text" name="name" placeholder="Nome" class="input" required>
-                    </div>
-                    <div class="box">
-                        <input type="email" name="email" placeholder="Email" class="input" required>
-                    </div> -->
                     <div class="box">
                         <input type="text" name="subject" placeholder="Assunto" class="input" required>
                     </div>
