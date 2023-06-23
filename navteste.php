@@ -311,30 +311,30 @@
         var inputElement1 = document.getElementById("inputbloq1");
         inputElement1.disabled = true;
 
-        var parentDiv = document.getElementById("menu1");
-        var childDiv = document.getElementById("menu2");
+        var menu1 = document.getElementById("menu1");
+        var menu2 = document.getElementById("menu2");
         var toggle = false;
 
         
 
         function abrirmenu() {
         if (toggle) {
-            parentDiv.style.transition = "width 1s ease";
-            childDiv.style.transition = "opacity 0.5s cubic-bezier(1, 0, 1, 0)";
-            parentDiv.style.transitionDelay = "1s";
-            childDiv.style.transitionDelay = "0s";
-            parentDiv.style.width = "0vw";
-            childDiv.style.opacity = "0";
+            menu1.style.transition = "width 1s ease";
+            menu2.style.transition = "opacity 0.5s cubic-bezier(1, 0, 1, 0)";
+            menu1.style.transitionDelay = "1s";
+            menu2.style.transitionDelay = "0s";
+            menu1.style.width = "0vw";
+            menu2.style.opacity = "0";
         } else {
-            parentDiv.style.transition = "width 1s ease";
-            childDiv.style.transition = "opacity 0.5s cubic-bezier(1, 0, 1, 0)";
-            parentDiv.style.transitionDelay = "0s";
-            childDiv.style.transitionDelay = "1s";
-            childDiv.style.opacity = "1";
+            menu1.style.transition = "width 1s ease";
+            menu2.style.transition = "opacity 0.5s cubic-bezier(1, 0, 1, 0)";
+            menu1.style.transitionDelay = "0s";
+            menu2.style.transitionDelay = "1s";
+            menu2.style.opacity = "1";
             if (window.innerWidth <= 425) {
-                parentDiv.style.width = "100vw";
+                menu1.style.width = "100vw";
             } else {
-                parentDiv.style.width = "25vw";
+                menu2.style.width = "25vw";
             }
                
         }
