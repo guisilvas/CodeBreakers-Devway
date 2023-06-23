@@ -29,7 +29,7 @@
     $resultado_pesquisa_usuario = mysqli_query($conexao, $pesquisa_usuario);
     $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
 
-    $foto_perfil= $row_pesquisa_usuario['foto_perfil'];
+    $foto_perfil= $row_pesquisa_usuario['foto_perfil_icon'];
 
     // Verifica se o botão de sair foi clicado
     if (isset($_POST['sair'])) {
@@ -63,36 +63,18 @@
         </nav>
         <div class="menu1" id="menu1">
             <div class="menu2" id="menu2">
-                <div class="menup">
-                    <?php 
-                            if (isset($_GET['image'])) {
-                                $newImageUrl = $_GET['image'];
-                                $newImageIconUrl = $_GET['image_icon'];
-                                echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
-                                // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
-                                // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
-                                $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
-                                $resultado_update_image = mysqli_query($conexao, $update_image);
-                                if ($resultado_update_image){
-                                    echo "<script>alert('Foto atualizada');</script>";
-                                }else{
-                                    echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
-                                }
-                            }else{
-                                echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
-                                
-                            }
-                        ?>
+                <a class="menup" href="profile.php">
+                    <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
                     <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
-                </div>
+                </a>
                 <div class="linksmenu">
                     <a href="system.php">Trilhas</a>
                 </div>
                 <div class="linksmenu">
-                    <a href="#">Contato</a>
+                    <a href="contact.php">Contato</a>
                 </div>
                 <div class="linksmenu">
-                    <a href="#">Sobre Nós</a>
+                    <a href="sobre.php">Sobre Nós</a>
                 </div>
 
                 <div class="bn">
