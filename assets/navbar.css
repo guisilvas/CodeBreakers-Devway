@@ -6,7 +6,7 @@
     flex-direction: row;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background-image: url('tronconav.png');
     background-repeat: repeat-x;
     background-size:auto 100%;
@@ -34,7 +34,7 @@
     justify-content: center;
     height: 100vh;
     width: 0vw;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     right:0rem;
     top: 8vh;
@@ -108,6 +108,7 @@
     text-shadow: 2px 2px 2px gray;
     font-family: 'Press Start 2P', cursive;
     border:none;
+    bottom: 4rem;
 }
 
 
