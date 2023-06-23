@@ -16,6 +16,19 @@
 
     $foto_perfil= $row_pesquisa_usuario['foto_perfil'];
 
+    // Verifica se as seções de email e senha estão ativas
+    if ((!isset($_SESSION['email']) == true)) { // Não estão
+        // Não está logado
+        unset($_SESSION['email']);
+
+        // Destroi a sessão
+        session_destroy();
+
+        // Tentativa de acesso via URL, vai para a página de acesso negado
+        header('Location: denied.html');
+    }
+
+    // Verifica se o botão de sair foi clicado
     if (isset($_POST['sair'])) {
         // Remove todas as variáveis de sessão
         session_unset();
@@ -59,8 +72,9 @@
             position: fixed;
             z-index: 1;
             background-image: url('assets/tronconav.png');
-            /*background-repeat: no-repeat;
-            background-size: 100% 100%;*/
+            background-repeat: repeat-x;
+            background-size:auto 100%;
+            background-position: center top;
         }
 
         .btnmenu{
@@ -115,8 +129,8 @@
         
         }
 
-        .linksmenu{
-            height: 12%;
+        .linksmenu,.menup{
+            height: 10%;
             width: 100%;
             display:flex;
             justify-content: center; 
@@ -144,6 +158,95 @@
             width: 60%;
             font-family: 'Press Start 2P', cursive;
         }
+
+        .bn input{
+            cursor:pointer;
+            position:absolute;
+            right: 2rem;
+            height: 5vh;
+            width: 7vw;
+            background-image: url('assets/button_action.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color:white;
+            text-shadow: 2px 2px 2px gray;
+            font-family: 'Press Start 2P', cursive;
+            border:none;
+        }
+
+        
+        @media screen and (max-width: 1024px){
+
+            .btnmenu{
+                font-size: 10px;
+                height: 4vh;
+            }
+            .bn input{
+                font-size: 10px;
+                height: 4vh;
+            }
+            .nomeinput{
+                font-size:80%;
+            }
+            .aa{
+                height: 70%;
+            }
+            .linksmenu{
+                height: 7%;
+
+            }
+            .linksmenu a{
+                font-size:80%
+            }
+        }
+        @media screen and (max-width: 820px){
+            .bn{
+                display: flex;
+                justify-content: center;
+            }
+            .bn input{
+                position: initial;
+            }
+            .btnmenu{
+                height:3vh;
+                font-size: 7px;
+
+            }
+            .bn input{
+                height:3vh;
+                font-size: 7px;
+            }
+            .menup{
+                height: 30%;
+            }
+            .menup input{
+                display:none;
+            }
+            .linksmenu a{
+                font-size: 60%;
+            }
+        }
+
+        @media screen and (max-width: 425px){
+            .btnmenu{
+                height: 80%;
+                font-size: 15px;
+                width: 20vw;
+            }
+            .bn input{
+                font-size: 15px;
+                height: 50px;
+                width: 20vw;
+            }
+            .linksmenu{
+                height: 8%;
+            }
+            .linksmenu a{
+                font-size: 150%
+            }
+        }
+            
+        
     </style>
 </head>
 <body>
@@ -153,7 +256,7 @@
         </nav>
         <div class="menu1" id="menu1">
             <div class="menu2" id="menu2">
-                <div class="linksmenu">
+                <div class="menup">
                     <?php 
                             if (isset($_GET['image'])) {
                                 $newImageUrl = $_GET['image'];
@@ -187,12 +290,18 @@
                 <div class="linksmenu">
                     <a href="system_trilha4.php">Banco de Dados</a>
                 </div>
-                <!--<a href="">Contato</a>
-                <a href="">Sobre Nós</a>-->
+                <div class="linksmenu">
+                    <a href="#">Contato</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="#">Sobre Nós</a>
+                </div>
+
                 <div class="bn">
-                <form method="post" action="">
-                    <input type="submit" name="sair" value="sair">
-                </form>
+                    <form method="post" action="">
+                        <input type="submit" name="sair" value="sair">
+                    </form>
+                </div>
             </div> 
             </div>
         </div>
@@ -205,6 +314,8 @@
         var parentDiv = document.getElementById("menu1");
         var childDiv = document.getElementById("menu2");
         var toggle = false;
+
+        
 
         function abrirmenu() {
         if (toggle) {
@@ -219,12 +330,18 @@
             childDiv.style.transition = "opacity 0.5s cubic-bezier(1, 0, 1, 0)";
             parentDiv.style.transitionDelay = "0s";
             childDiv.style.transitionDelay = "1s";
-            parentDiv.style.width = "25vw";
             childDiv.style.opacity = "1";
+            if (window.innerWidth <= 425) {
+                parentDiv.style.width = "100vw";
+            } else {
+                parentDiv.style.width = "25vw";
+            }
+               
         }
+        
 
         toggle = !toggle;
-        }
+    }
 
     </script>                       
    
