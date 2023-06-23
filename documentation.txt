@@ -1,0 +1,1137 @@
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+
+Documentação: Site DevWay
+Qualidade de Software
+
+3ª Prática: ESW 
+Nesta prática, iremos utilizar uma metodologia ágil XP (Extreme Programming) para guiar o projeto de criação de uma aplicação web voltada para o aprendizado de programação.Iremos utilizar o Trello e o Discord como ferramenta de apoio para o gerenciamento do projeto e Git/GitHub para o controle de versão.
+
+-------------------------------------------
+
+Versão Beta 1.0
+
+Cronograma
+Data: 22/05 a 07/06: Criação do projeto, incluindo definição de requisitos, arquitetura, design da interface e estrutura de banco de dados.
+09/06: Apresentação do projeto, demonstrando as funcionalidades implementadas e o progresso alcançado.
+
+Desenvolvimento Dev Way - Steps in Process
+22/05/2023 - 07/06/2023
+
+Desenvolvimento index
+22/05/2023 - 26/05/2023
+
+✅- Documentação e Requisitos: 
+    Anny,Gabriel e Guilherme,
+
+✅- Wireframe e Funcionalidades(buttons, forms, etc): 
+    Breno, Henrique e Eduarda
+
+✅- Material(fonte, cor, imagens, etc): 
+    Anny, Bruno e Luzia
+
+✅- Desenvolvimento Frontend(HTML, CSS e JS): 
+    Bruna =>  Funcionalidades / JavaScript, Tags Semânticas, CSS
+    Pablo => CSS / @Key Frames / Responsividade
+    Douglas => Funcionalidades / JavaScript, manipulação do DOM(Document Object Model)
+
+Login - Banco de Dados 
+27/05/2023 - 30/05/2023
+
+✅- Wireframe e Funcionalidades(buttons, forms, etc): 
+    Bruna, Bruno (login, cadastro)
+
+✅- Banco de Dados(entidades, campos, tabelas): 
+    Henrique, Luzia(id, nome, email, senha, imagem)
+
+✅- Desenvolvimento Frontend(HTML, CSS e JS): 
+    Gabriel =>  Funcionalidades/ JavaScript, Tags Semânticas, CSS
+    Breno => CSS/ @Key Frames / Responsividade
+    Anny => Funcionalidades/ JavaScript, alerts
+    Pablo => CSS/ @Key Frames / Responsividade
+
+✅- Desenvolvimento Backend(PHP):
+    Guilherme => Validações, create, read, update, sessões.
+    Eduarda =>  Validações, create, read, update, sessões.
+    Douglas => Validações, create, read, update, sessões.
+
+Sistema - Trilhas de aprendizado
+31/05/2023 - 07/06/2023
+
+✅- Wireframe e Funcionalidades(buttons, forms, etc): 
+    Henrique, Eduarda, Anny
+
+✅- Material da plataforma(textos, cursos, imagens):
+    Anny, Luzia
+
+✅- Banco de Dados (usuário,Trilha, trilhas, temas, cursos, users): 
+    Bruna, Gabriel, Guilherme
+
+✅- Desenvolvimento Frontend(HTML, CSS e JS): 
+    Breno, Henrique, Eduarda, Pablo, Bruno, Douglas, Luzia
+
+✅- Desenvolvimento Backend(php):
+	Bruna, Gabriel, Guilherme
+
+Colaboradores:
+
+Professor idealizador:
+    Felipe de Paula
+
+Alunos:
+    Anny Duarte, Breno Gomes, Bruna Gontijo, Bruno Santana, Douglas Lima, Eduarda Leandra, Gabriel Mendonça, Guilherme Silva, Henrique Rios, Luzia Rodrigues, Pablo Soares.
+
+Cores:
+    Azul Escuro (#0B3C5D): cor principal do site, transmitindo estabilidade e confiabilidade.
+    Azul Claro (#6FB1BF): cor para realçar elementos importantes, como botões de chamada para ação ou destaque em links.
+    Cinza Escuro (#333333): cor para o texto principal e cabeçalhos, proporcionando uma leitura confortável e contrastante com o fundo.
+    Cinza Claro (#F2F2F2): cor para fundo, criando um contraste agradável com o texto e outros elementos.
+    Verde (#83C167): cor para indicar sucesso ou conclusão de tarefas, como em botões de "Enviar" ou "Concluir".
+    Laranja (#F39A27): cor para destacar elementos interativos ou alertas importantes, chamando a atenção do usuário.
+
+Fontes utilizadas:
+    Roboto: fonte sans-serif moderna, com excelente legibilidade em diferentes tamanhos e telas, transmitindo clareza e profissionalismo.
+    Open Sans: fonte sans-serif amplamente utilizada, conhecida por sua legibilidade e versatilidade, com aparência amigável e adequada para longos trechos de texto.
+    Source Code Pro: fonte especialmente projetada para programadores, amplamente utilizada em ambientes de desenvolvimento, com estética monoespaçada facilitando a leitura de código e destaque de sintaxe.
+    Fira Code: fonte monoespaçada voltada para programadores, que inclui ligaturas para melhorar a legibilidade de combinações comuns de caracteres usados em programação.
+    Montserrat: fonte sans-serif com aparência elegante e moderna, amplamente utilizada em projetos de web design, com diferentes pesos para criar hierarquia visual em diferentes elementos do site
+
+2. Resumo Executivo 
+O DevWay é um website responsivo que apresenta uma trilha de estudos para iniciantes em desenvolvimento de sistemas. Com o foco em fornecer um conteúdo gratuito aos estudantes iniciantes em TI ele visa consolidar os estudos iniciais dessa área já que muitos que ingressam não sabem quais conhecimentos devem buscar a princípio e o DevWay se tornará o guia para esse público.
+
+3. Visão Geral
+O DevWay é uma plataforma web responsiva com um layout limpo, dinâmico, interativo e adaptável a diferentes dispositivos. Ele permite que os usuários acessem trilhas de conhecimento em diferentes áreas de programação e avancem em seu aprendizado de forma progressiva. A plataforma oferece uma experiência intuitiva e personalizada para cada usuário, permitindo que eles selecionem uma trilha, acompanhem seu progresso e acessem conteúdos relevantes.
+
+4. Objetivos
+Fornecer uma plataforma de estudos online para iniciantes em tecnologia da informação com conteúdos gratuitos e de qualidade em trilhas de Git/GitHub, Frontend, Backend e Análise de Dados, desta forma auxiliando os usuários a escolherem uma área de atuação e iniciar seus estudos de forma sólida.
+
+5. Público-Alvo
+O público-alvo do DevWay são iniciantes em Tecnologia da Informação, estudantes e entusiastas que desejam obter conhecimentos básicos em programação e explorar diferentes áreas de atuação. 
+
+6. Requisitos Funcionais
+    Página inicial (index.html) com mensagem de boas-vindas, formulário de login e cadastro.
+    Página de login (signup.html) para usuários existentes realizarem o login.
+    Página de cadastro (signin.html) para novos usuários criarem uma conta.
+    Página principal das trilhas (way.html) com seleção de trilhas e exibição de conteúdos por trilha.
+    Exibição de progresso e opção de marcar como concluído para cada conteúdo.
+    Botão para retornar à página principal com todas as trilhas disponíveis.
+    Cabeçalho (header) e rodapé (footer) compartilhados nas páginas index.html e way.html.
+
+7. Requisitos Não Funcionais
+Usabilidade
+   - A interface do sistema deve ser intuitiva e fácil de usar, permitindo que os usuários naveguem facilmente pelas trilhas de aprendizagem e recursos disponíveis.
+   - O sistema deve ser responsivo e compatível com dispositivos móveis para melhor acessibilidade.
+Segurança
+   - O sistema deve garantir a segurança das informações do usuário, como senhas, por meio de criptografia e boas práticas de segurança.
+   - A autenticação do usuário deve ser segura e protegida contra ataques de força bruta ou tentativas de violação.
+Desempenho
+   - O sistema deve ser rápido e responsivo, permitindo um carregamento rápido das páginas e a realização de operações de forma eficiente.
+   - O sistema deve ser escalável para lidar com um número crescente de usuários e dados.
+Confiabilidade
+   - O sistema deve ser confiável e estar disponível a maior parte do tempo, evitando quedas frequentes ou interrupções do serviço.
+   - Os dados do usuário devem ser armazenados de forma segura e não devem ser perdidos ou corrompidos.
+Manutenibilidade
+   - O sistema deve ser fácil de manter e atualizar, permitindo a adição de novos recursos ou correções de bugs sem interrupções significativas.
+   - O código fonte do sistema deve ser organizado, modular e bem documentado para facilitar a manutenção.
+
+Arquitetura
+O DevWay será desenvolvido utilizando as seguintes tecnologias:
+
+Linguagens:
+    HTML: estrutura básica da plataforma.
+    CSS: estilização dos componentes e elementos das páginas.
+    JavaScript: funcionalidades cliente-side, animações e interações do usuário.
+    SQL: criação e análise de dados a partir de um banco de dados em MySQL.
+    PHP: funcionalidades server-side, ligação do site ao banco de dados e validações.
+
+Tecnologias:
+    Discord: Discussão e distribuição de tarefas durante o desenvolvimento.
+    Trello: divisão de tarefas e visualização do progresso do projeto.
+    Git: controle de versionamento de código do projeto.
+    GitHub: armazenamento remoto e colaboração no desenvolvimento do projeto.
+    MySQL: banco de dados para armazenar e analisar os dados da plataforma.
+
+8. Design da Interface
+O design da interface do DevWay será baseado em um layout limpo e minimalista. As páginas terão uma aparência profissional, com elementos visuais adequados e uma identidade visual coesa.
+
+-------------------------------------------
+
+9. Trilhas e Cursos de cada trilha:
+
+Back-end
+
+HTML - Fundamentos
+    HTML é uma linguagem de marcação que define a estrutura do seu conteúdo. HTML consiste em uma série de elementos que você usa para mostrar algo de uma determinada maneira ou agir de uma certo modo. As tags podem criar um hiperlink de uma palavra ou imagem para outro lugar, podem colocar palavras em itálico, podem aumentar ou diminuir a fonte e assim por diante.
+    Aprender quais tags são necessárias para um HTML básico.
+    Criar um parágrafo de texto.
+    Exibir uma imagem.
+    Conhecer a diferença entre 'h1', 'h2', 'h3', etc.
+    Criar um texto com hyperlink.
+    Criar um formulário com campos relevantes.
+    Criar uma lista de itens ordenada ou não ordenada.
+    Criar uma lista de itens dentro de uma lista suspensa (dropdown list).
+    Conectar com um arquivo de CSS.
+    Criar uma tabela.
+    Adicionar IDs e classes.    
+
+Links
+Site: MDN Web Docs: HTML Básico https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+Youtube:Rafaella Ballerini: 5 MINUTOS DE HTML PARA INICIAR EM PROGRAMAÇÃO!
+https://www.youtube.com/watch?v=3oSIqIqzN3M
+
+Youtube: Rafaella Ballerini: LANDING PAGE COM HTML e CSS!
+https://www.youtube.com/watch?v=llF6vD-RljE
+
+Youtube: Rafaella Ballerini: FORMULÁRIOS COM HTML e CSS!
+https://www.youtube.com/watch?v=wwqOJ2o84S4
+
+Youtube: HTML, CSS e Javascript, quais as diferenças?
+https://www.youtube.com/watch?v=wwqOJ2o84S4
+
+Artigo: O que é o HTML e suas tags? Parte 1: estrutura básica
+https://www.alura.com.br/artigos/html-css-e-js-definicoes
+
+Artigo: O que é o HTML e suas tags? Parte 2: elementos inline 
+https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-1-estrutura-basica
+
+Artigo: O que é o HTML e suas tags? Parte 3: elementos block-level
+https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-2-elementos-inline
+
+Artigo: O que é o HTML e suas tags? Parte 4: elementos de um formulário
+https://www.alura.com.br/artigos/html-tags-elementos-block-level
+
+Artigo: O que é o HTML e suas tags? Parte 5: atributos dos elementos
+https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-5-atributos-elementos
+Youtube: Alura: Curso de HTML5 e CSS3
+https://www.youtube.com/watch?v=78AyiuxYceg
+
+CSS - Fundamentos
+    Cascading Style Sheets (CSS) é uma linguagem usada para descrever a apresentação de um documento escrito em uma linguagem de marcação como HTML ou XML. CSS pode ser usado para estilos de texto de documentos muito básicos — por exemplo, para alterar a cor e o tamanho de títulos e links. Ele pode ser usado para criar um layout — por exemplo, transformar uma única coluna de texto em um layout com uma área de conteúdo principal e uma barra lateral para informações relacionadas. Pode até ser usado para efeitos como animações.
+    Aprender a estrutura visual de uma página, com 'margin' e 'padding'.
+    Estabelecer o tamanho com 'width' e 'height'.
+    Aprender sobre a posição de um elemento ('static', 'relative' ou 'absolute).
+    Aprender sobre o 'display' de exibição de um elemento ('block', 'inline', 'inline-block').
+    Aprender a posicionar imagens em relação ao texto.
+    Aprender sobre alinhamento.
+    Aprender sobre estilo de fontes.
+    Aprender as diferenças e vantagens de usar as diferentes unidades de medida em CSS (%, relativas, etc).
+    Conectar com os elementos (IDs, classes) de um arquivo HTML.
+    Alterar características de um elemento quando o mouse passar por cima dele ('hover').
+    Aprender box-sizing.
+    Aprender Flexbox.
+    Aprender Grid.
+
+Links
+Site:MDN Web Docs: Iniciando com CSS
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps/Getting_started
+
+Site: MDN Web Docs: Seletores
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors
+
+Site: MDN Web Docs: Cascata e herança
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
+
+Site: MDN Web Docs: Propriedade 'display'
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/display
+
+Site: MDN Web Docs: Conceitos básicos de Flexbox
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+
+Site: MDN Web Docs: Grid Layout
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+
+Artigo: Entendendo CSS: Display Inline, Block e Inline-Block
+https://dev.to/sucodelarangela/entendendo-css-display-inline-block-e-inline-block-lic
+
+Artigo: Entendendo CSS: Pseudo-Classes e Pseudo-Elementos
+https://dev.to/sucodelarangela/entendendo-css-pseudo-classes-e-pseudo-elementos-b83
+
+Artigo: Como aplicar opacidade em background-image sem afetar textos
+https://dev.to/sucodelarangela/como-aplicar-opacidade-em-background-image-sem-afetar-textos-31fj
+
+Youtube: Rafaella Ballerini: O QUE É CSS?
+https://www.youtube.com/watch?v=LWU2OR19ZG4
+
+Youtube: Rafaella Ballerini: FLEXBOX CSS! Como posicionar elementos na página web - parte 1
+https://www.youtube.com/watch?v=KbjLtEgmZ_E
+
+Youtube: Rafaella Ballerini: FLEXBOX CSS! Como posicionar elementos na página web - parte 2
+https://www.youtube.com/watch?v=hjz6ezV9_uc
+
+Youtube: Matheus Castiglioni: Arquitetura CSS - BEM
+https://www.youtube.com/watch?v=yKPXW9aSxQI
+
+Youtube: Matheus Castiglioni: CSS Grid Layout
+https://www.youtube.com/watch?v=HBlBNAtFcdw
+
+Youtube: Mario Souto - Dev Soutinho: Como centralizar no CSS
+https://www.youtube.com/watch?v=Cu-HP-gvggg
+
+Podcast: Hipster 09 - CSS: Cansei de Ser Simples
+https://www.hipsters.tech/css-cansei-de-ser-simples-hipsters-09/
+
+Artigo: HTML, CSS e Javascript, quais as diferenças?
+https://www.alura.com.br/artigos/html-css-e-js-definicoes
+
+Artigo: Guia de unidades no CSS
+https://www.alura.com.br/artigos/guia-de-unidades-no-css 
+
+Artigo: CSS: Guia do Flexbox
+https://www.alura.com.br/artigos/css-guia-do-flexbox 
+
+Artigo: Como fazer Grids e a Responsividade na Web
+https://www.alura.com.br/artigos/como-fazer-grids-e-a-responsividade-na-web 
+
+Youtube: Alura: CSS FlexBox: Dicas para começar
+https://www.youtube.com/watch?v=326-B1avuYo 
+
+Youtube: Alura: Box Model e Sizing no CSS
+https://www.youtube.com/watch?v=qcNUxyOWXIw 
+
+JavaScript - Fundamentos    
+    JavaScript é a linguagem de programação mais popular do mundo e é uma das principais tecnologias da World Wide Web, juntamente com HTML e CSS. Ela possui tipagem dinâmica, orientação a objetos baseada em protótipos e funções de primeira classe. Ela é multi-paradigma e suporta estilos de programação orientados a eventos, funcionais e imperativos.
+    Conhecer os tipos primitivos.
+    Declarar variáveis, considerando a diferença entre 'var', 'let' e 'const'.
+    Usar estruturas condicionais ('if', 'else').
+    Conhecer os operadores de atribuição e comparação ('=', '==', '===').
+    Usar estruturas de repetição e laços ('while', 'for').
+    Usar funções, passando parâmetros e argumentos.
+    Manipular arrays e listas.
+    Aprender o conceito de Orientação a Objetos.
+    Fazer um CRUD.
+    Obter dados de uma API.
+    Fazer chamadas assíncronas usando 'Async/Await', 'Promise', etc.
+
+Links 
+Site: MDN Web Docs: Um primeiro mergulho no JavaScript.
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash 
+
+Site: MDN Web Docs: Trabalhando com texto — strings em JavaScript.
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings 
+
+Site: MDN Web Docs: if...else.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else 
+
+Site: MDN Web Docs: while.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while 
+
+Site:MDN Web Docs: for.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for 
+
+Site: MDN Web Docs: Arrays.
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Arrays 
+
+Site: MDN Web Docs: Template strings.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals 
+
+Artigo: Definindo Funções em Javascript.
+https://blog.matheuscastiglioni.com.br/definindo-funcoes-em-javascript/ 
+
+Youtube: Mario Souto - Dev Soutinho: Como manipular arrays e objetos em JavaScript.
+https://www.youtube.com/watch?v=yS7AcF-xRUg 
+
+Youtube: Marco Bruno: O que é Json e como criar um objeto.
+https://www.youtube.com/watch?v=oCY5YEEjlwE 
+
+Youtube: Mario Souto - Dev Soutinho: Como usar Async/Await? Promises no JavaScript?
+https://www.youtube.com/watch?v=q28lfkBd9F4 
+
+Youtube: Mario Souto - Dev Soutinho: Como pegar dados de uma API? Como fazer AJAX? | Pegando dados de serviços via JavaScript.
+https://www.youtube.com/watch?v=85vJXFpXLQw 
+
+Artigo: JavaScript: o que é, como aprender e um Guia da linguagem mais popular do mundo.
+https://www.alura.com.br/artigos/javascript 
+
+Podcast: Hipster 38 - O Reino encantado do JavaScript.
+https://www.hipsters.tech/o-reino-encantado-do-javascript-hipsters-38/ 
+
+Podcast: Hipster 169 - JavaScript: manual de sobrevivência 2020.
+https://www.hipsters.tech/javascript-manual-de-sobrevivencia-2020-hipsters-169/ 
+
+Podcast: Hipster 236 - Evolução do JavaScript.
+https://www.hipsters.tech/evolucao-do-javascript-hipsters-ponto-tech-236/ 
+
+Artigo: Strings com JavaScript: o que são e como manipulá-las.
+https://www.alura.com.br/artigos/strings-com-javascript-o-que-sao-e-como-manipular 
+
+Artigo: Como utilizar operadores de comparação em Javascript.
+https://www.alura.com.br/artigos/operadores-matematicos-em-javascript 
+
+Artigo: Para que serve um Array?
+https://www.alura.com.br/artigos/javascript-para-que-serve-array 
+
+Artigo: Quando usar forEach e map?
+https://www.alura.com.br/artigos/javascript-quando-devo-usar-foreach-e-map 
+
+Artigo: Manipulação de array com map, filter e reduce.
+https://www.alura.com.br/artigos/manipulacao-de-array-com-map-filter-e-reduce 
+
+Youtube: Alura: O que é JavaScript?
+https://www.youtube.com/watch?v=NaVSbnnV75Q 
+
+Youtube: Alura: Destructuring em JavaScript.
+https://www.youtube.com/watch?v=f8a-qwKC5yk 
+
+Youtube: Alura: Classes x funções no Javascript.
+https://www.youtube.com/watch?v=iohhj-k9L6s 
+
+-------------------------------------------
+
+Back-end
+
+PHP - Fundamentos 
+    PHP é uma linguagem de programação que permite aos desenvolvedores web criar conteúdo dinâmico que interage com bancos de dados. O PHP é basicamente usado para desenvolver aplicações de software baseadas na web.
+    Conhecer os tipos primitivos
+    Declarar variáveis
+    Usar estruturas condicionais ('if', 'else')
+    Conhecer os operadores de atribuição e comparação ('=', '==', '===')
+    Usar estruturas de repetição e laços ('while', 'for')
+    Usar funções, passando parâmetros e argumentos
+    Manipular arrays e listas.
+
+Links
+Site: Documentação PHP
+https://www.php.net/manual/pt_BR/index.php
+
+Artigo: Introdução ao PHP
+https://medium.com/café-com-java/introdução-ao-php-91472783da7c 
+
+Artigo: Guia prático do Modern PHP: desenvolvimento e ecossistema
+https://medium.com/walternascimentobarroso-pt/curso-de-php-básico-fa984be7c9b9 
+
+Artigo: Curso de PHP Básico
+https://medium.com/walternascimentobarroso-pt/curso-de-php-básico-fa984be7c9b9 
+
+Youtube: Mjailton: O que é PHP ? Saiba tudo sobre esta Linguagem
+https://www.youtube.com/watch?v=va4WIzo211Y 
+
+Youtube: Mjailton: Aprenda Como Rodar o PHP
+https://www.youtube.com/watch?v=xKkipZ133_s 
+
+Youtube: Alura: Ecossistema PHP | HipstersPontoTube
+https://www.youtube.com/watch?v=yD3BqXWHua4 
+
+Artigo: PHP - Uma Introdução à Linguagem
+https://www.alura.com.br/artigos/php-uma-introducao-linguagem 
+
+Artigo: Quando usar == ou === em php?
+https://www.alura.com.br/artigos/quando-usar-ou-em-php 
+
+Artigo: PHP: operação com números decimais
+https://www.alura.com.br/artigos/php-operacoes-com-numeros-decimais
+
+Artigo: Trabalhando com arrays em PHP
+https://www.alura.com.br/artigos/trabalhando-com-arrays-em-php 
+
+Python - Fundamentos 
+    Python é uma linguagem de programação de alto nível, de uso geral, amplamente utilizada em aplicações web, desenvolvimento de software, ciência de dados e Machine Learning. Sua filosofia de projeto enfatiza a legibilidade do código com o uso de indentação significativa. Python é dinamicamente tipada e tem um garbage collector.
+    Conhecer os tipos primitivos.
+    Declarar variáveis, considerando os diferentes tipos.
+    Usar estruturas condicionais ('if', 'else').
+    Conhecer os operadores de atribuição e comparação.
+    Usar estruturas de repetição e laços ('while', 'for').
+    Usar funções, passando parâmetros e argumentos.
+    Manipular métodos.
+    Manipular arrays e listas.
+    Obter dados de uma API.
+    Criar construtores.
+    Funções anônimas.
+
+Links 
+Site: Documentação Python
+https://docs.python.org/pt-br/3/tutorial/ 
+
+Artigo: Programação | Python — Parte 1
+https://medium.com/turing-talks/turing-talks-4-python-parte-1-29b8d9efd0a5 
+
+Artigo: Introdução ao Python
+https://medium.com/@goularteduarda.a/introdução-ao-python-d30c29eba0d6 
+
+Youtube: Eduardo Mendes: Curso introdutório de Python.
+https://www.youtube.com/watch?v=yTQDbqmv8Ho 
+
+Artigo: O que é Python? História, Sintaxe e um Guia para iniciar na Linguagem
+https://www.alura.com.br/artigos/python 
+
+Podcast: Hipsters.tech: Python – Hipsters 122
+https://www.hipsters.tech/python-hipsters-122/
+
+Podcast: Hipsters.tech: Python Fluente – Hipsters Ponto Tech 179
+https://www.hipsters.tech/python-fluente-hipsters-ponto-tech-179/ 
+
+Youtube: Alura: A linguagem Python - Alura Live 94
+https://www.youtube.com/watch?v=Nbt0eQHChoI 
+
+Youtube: Alura: O que é Python?
+https://www.youtube.com/watch?v=-LATVnPcvHI 
+
+Artigo: Python - Uma Introdução à Linguagem
+https://www.alura.com.br/artigos/python-uma-introducao-a-linguagem 
+
+Artigo: Python: Trabalhando com precisão em números decimais
+https://www.alura.com.br/artigos/precisao-numeros-decimais-python 
+
+Artigo: Listas em Python: operações básicas
+https://www.alura.com.br/artigos/listas-no-python 
+
+Artigo: Como comparar objetos no Python?
+https://www.alura.com.br/artigos/como-comparar-objetos-no-python 
+
+Artigo: Python datetime: Lidando com datas e horários
+https://www.alura.com.br/artigos/lidando-com-datas-e-horarios-no-python 
+
+Git e GitHub -  Fundamentos
+    Git é um sistema de controle de versão distribuído gratuito e de código aberto projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência.
+    GitHub é um serviço de hospedagem para desenvolvimento de software e controle de versão usando Git.
+    Criar um repositório.
+    Clonar um repositório.
+    Fazer commit, push e pull de e para o repositório.
+    Reverter um commit.
+    Criar branches e pul requests.
+    Lidar com merge e conflitos.
+
+Links 
+Site: GitHub Documentação                                                                                                https://docs.github.com/pt
+
+Site: GitHub Pages Documentação
+https://docs.github.com/pt/pages/getting-started-with-github-pages/about-github-pages
+
+Site: Git School - Visualizing Git                                                        
+https://git-school.github.io/visualizing-git/
+
+Site: Dangit, Git!?!                                                                                                                   https://dangitgit.com/
+
+Youtube: Rafaella Ballerini: O que é Git e GitHub? - definição e conceitos importantes 1/2
+https://www.youtube.com/watch?v=DqTITcMq68k
+
+Youtube: Rafaella Ballerini: Como usar Git e GitHub na prática! - desde o primeiro commit até o pull request! 2/2                                                                
+https://www.youtube.com/watch?v=UBAX-13g8OM
+
+Youtube: Mario Souto - Dev Soutinho: Git: Entendendo de vez como funciona do melhor e mais visual jeito possível  
+https://www.youtube.com/watch?v=4-tfJ-ZyA0Q
+
+Youtube: Mario Souto - Dev Soutinho: Como colocar seu projeto no ar DE GRAÇA via GitHub! | Hospedagem com GitHub Pages                                                      
+https://www.youtube.com/watch?v=BU-w2_Aae54
+
+Artigo: Git e Github: O que são, Como Configurar e Primeiros Passos
+https://www.alura.com.br/artigos/o-que-e-git-github
+
+Artigo: Mais git com o hub: a linha de comando do Github
+https://www.alura.com.br/artigos/github-na-linha-de-comando
+
+Site: Websérie: Git e Github para Sobrevivência
+https://www.alura.com.br/webseries/git-e-github-para-sobrevivencia
+
+Podcast: Hipsters 109: Git e Github
+https://www.alura.com.br/podcast/hipsterstech-git-e-github-hipsters-109-a474
+
+Youtube: Alura: Git e Github para Sobrevivência 01: Como o Git funciona?
+https://www.youtube.com/watch?v=BAmvmaKQklQ
+
+-------------------------------------------
+
+Bancos de Dados -  Fundamentos 
+    Os bancos de dados são sistemas de armazenamento de dados que permitem a organização, a manipulação e o acesso eficiente às informações. Existem dois principais tipos de bancos de dados, sendo eles SQL (Structured Query Language) e NoSQL (Not Only SQL).
+    O conhecimento dos fundamentos de bancos de dados, tanto SQL quanto NoSQL, é essencial na engenharia de dados. Os bancos de dados são a base para armazenar e manipular os dados utilizados nas análises e nos processos de tomada de decisão. Compreender os diferentes tipos de bancos de dados permite aos engenheiros de dados escolher a solução mais adequada para cada caso, levando em consideração os requisitos de escalabilidade, desempenho, consistência e flexibilidade. Além disso, a habilidade de escrever consultas SQL e de utilizar as características específicas dos bancos de dados NoSQL é essencial para extrair, transformar e carregar dados de forma eficiente e eficaz.
+
+Links
+Site: DB-Engines Ranking 
+https://db-engines.com/en/ranking
+
+Youtube: Código Fonte TV: SQL // Dicionário do Programador
+https://www.youtube.com/watch?v=kMznyI7r2Tc
+
+Youtube: Código Fonte TV: NoSQL // Dicionário do Programador
+https://www.youtube.com/watch?v=1B64oqE8PLs
+
+Artigo: SQL — O que é e como funciona na prática?  ARTIGOSQL: comandos básicos
+https://medium.com/pravaler-digital-team/sql-o-que-%C3%A9-e-como-funciona-na-pr%C3%A1tica-6ae7a322554a
+
+Youtube: Alura: O que é SQL e NoSQL? 
+https://www.youtube.com/watch?v=aure5d3B88g
+
+Artigo: SQL: Comandos básicos  
+https://www.alura.com.br/artigos/sql-comandos-basicos
+
+Artigo: SQL: consultas com SELECT 
+https://www.alura.com.br/artigos/sql-consultas-com-select
+
+Artigo: JOIN e seus tipos 
+https://www.alura.com.br/artigos/sql-comandos-basicos
+
+-------------------------------------------
+-------------------------------------------
+-------------------------------------------
+
+Versão Beta 2.0
+
+Cronograma
+Data: 15/06 a 21/06: Refatoração do projeto, incluindo definição de requisitos, arquitetura, alterações no design da interface e estrutura de banco de dados, inclusão de página sobre explicação do projeto e página com as informações dos membros da equipe com links para contato no LinkedIn e portfólio no GitHub.
+23/06: Apresentação do projeto, demonstrando as funcionalidades implementadas e o progresso alcançado.
+
+Desenvolvimento Dev Way - Steps in Process
+15/05/2023 - 21/06/2023
+
+✅- Requisitos: 
+    Anny, Breno, Bruna, Douglas, Eduarda, Gabriel, Guilherme, Henrique, Luzia, Maisa, Pablo e Pedro
+
+✅- Documentação: 
+    Henrique
+
+✅- Wireframe e Funcionalidades(buttons, forms, etc): 
+    Breno =>  Wireframe Contatos / Menu / Logo
+    Anny => Wireframe Perfil
+    Luzia => Wireframe Página Sobre
+    Pedro => Wireframe Página Sobre
+    Eduarda => Wireframe Navbar
+    Henrique => Wireframe Página Meus Cursos
+
+✅- Material(fonte, cor, imagens, etc): 
+    Maisa => Paleta de Cores
+    Anny => Seleção de Imagens
+
+✅- Desenvolvimento Frontend(HTML, CSS e JS): 
+    Gabriel => Formulários / Página Cursos
+    Guilherme => Formulários
+    Pablo => Alteração Página do Perfil
+    Douglas => Alteração da navbar
+    Breno => Alteração páginas de login e cadastro
+    Bruna => Alteração Página Cursos
+
+✅- Desenvolvimento Backend(PHP, Banco de Dados):
+    Bruna => Criação de tabela nova
+    Guilherme => Formulários
+
+Colaboradores
+
+Professor idealizador:
+    Felipe de Paula
+
+Alunos:
+    Anny Duarte, Breno Gomes, Bruna Gontijo, Douglas Lima, Eduarda Leandra, Gabriel Mendonça, Guilherme Silva, Henrique Rios, Luzia Rodrigues, Maisa Resende, Pablo Soares, Pedro Reis
+
+Cores: 
+    Preto (#000000): cor utilizada para textos e realçar imagens e elementos do site
+    Amarelo Claro (#F2D541):cor de fundo das imagens.
+    Laranja Claro (#F28627): cor de fundo das imagens.
+    Laranja Escuro (#BF5B21): cor de fundo das imagens.
+    Marrom (#592A0F): cor de fundo das imagens, do nome das trilhas e navbar
+    Salmão (#D96941): cor de fundo 
+    Roxo em degradê (#20063A) e (#D9D9D9): degradê da página dos Desenvolvedores
+
+Fontes utilizadas:
+    Press Start 2P: fonte gameficada,utilizada para demonstrar a proposta do projeto que será uma plataforma de aprendizado simulando um game, deixando o usuário mais instigado a utilizar a plataforma e interagindo bem com os demais elementos.
+
+2. Resumo Executivo 
+O DevWay é um website responsivo que apresenta uma trilha de estudos para iniciantes em desenvolvimento de sistemas. Com o foco em fornecer um conteúdo gratuito aos estudantes iniciantes em TI ele visa consolidar os estudos iniciais dessa área já que muitos que ingressam não sabem quais conhecimentos devem buscar a princípio e o DevWay se tornará o guia para esse público.
+
+3. Visão Geral
+O DevWay é uma plataforma web responsiva com um layout limpo, dinâmico, interativo e adaptável a diferentes dispositivos. Ele permite que os usuários acessem trilhas de conhecimento em diferentes áreas de programação e avancem em seu aprendizado de forma progressiva. A plataforma oferece uma experiência intuitiva e personalizada para cada usuário, permitindo que eles selecionem uma trilha, acompanhem seu progresso e acessem conteúdos relevantes.
+
+4. Objetivos
+Fornecer uma plataforma de estudos online para iniciantes em tecnologia da informação com conteúdos gratuitos e de qualidade em trilhas de Git/GitHub, Frontend, Backend e Análise de Dados, desta forma auxiliando os usuários a escolherem uma área de atuação e iniciar seus estudos de forma sólida.
+
+5. Público-Alvo
+O público-alvo do DevWay são iniciantes em Tecnologia da Informação, estudantes e entusiastas que desejam obter conhecimentos básicos em programação e explorar diferentes áreas de atuação. 
+
+6. Requisitos Funcionais:
+    Página inicial (index.html) com mensagem de boas-vindas, formulário de login e cadastro.
+    Página de login (signup.html) para usuários existentes realizarem o login.
+    Página de cadastro (signin.html) para novos usuários criarem uma conta.
+    Página principal das trilhas (way.html) com seleção de trilhas e exibição de conteúdos por trilha.
+    Exibição de progresso e opção de marcar como concluído para cada conteúdo.
+    Página sobre o projeto (sobre.html) com um resumo sobre o projeto, fotos e links do LinkedIn e GitHub de cada desenvolver do projeto
+    Botão para retornar à página principal com todas as trilhas disponíveis.
+    Navbar para acessar as principais seções do site
+    Página de contato (contact.html) com um formulário para o usuário entrar em contato com a equipe
+
+7. Requisitos Não Funcionais:
+Usabilidade
+   - A interface do sistema deve ser intuitiva e fácil de usar, permitindo que os usuários naveguem facilmente pelas trilhas de aprendizagem e recursos disponíveis.
+   - O sistema deve ser responsivo e compatível com dispositivos móveis para melhor acessibilidade.
+Segurança
+   - O sistema deve garantir a segurança das informações do usuário, como senhas, por meio de criptografia e boas práticas de segurança.
+   - A autenticação do usuário deve ser segura e protegida contra ataques de força bruta ou tentativas de violação.
+Desempenho
+   - O sistema deve ser rápido e responsivo, permitindo um carregamento rápido das páginas e a realização de operações de forma eficiente.
+   - O sistema deve ser escalável para lidar com um número crescente de usuários e dados.
+Confiabilidade
+   - O sistema deve ser confiável e estar disponível a maior parte do tempo, evitando quedas frequentes ou interrupções do serviço.
+   - Os dados do usuário devem ser armazenados de forma segura e não devem ser perdidos ou corrompidos.
+Manutenibilidade
+   - O sistema deve ser fácil de manter e atualizar, permitindo a adição de novos recursos ou correções de bugs sem interrupções significativas.
+   - O código fonte do sistema deve ser organizado, modular e bem documentado para facilitar a manutenção.
+
+Arquitetura
+O DevWay será desenvolvido utilizando as seguintes tecnologias:
+
+Linguagens:
+    HTML: estrutura básica da plataforma.
+    CSS: estilização dos componentes e elementos das páginas.
+    JavaScript: funcionalidades cliente-side, animações e interações do usuário.
+    SQL: criação e análise de dados a partir de um banco de dados em MySQL.
+    PHP: funcionalidades server-side, ligação do site ao banco de dados e validações.
+    Tecnologias:
+    Discord: Discussão e distribuição de tarefas durante o desenvolvimento.
+    Trello: divisão de tarefas e visualização do progresso do projeto.
+    Git: controle de versionamento de código do projeto.
+    GitHub: armazenamento remoto e colaboração no desenvolvimento do projeto.
+    MySQL: banco de dados para armazenar e analisar os dados da plataforma.
+
+8. Design da Interface
+O design da interface do DevWay será baseado em um layout gameficado. As páginas terão uma aparência que remete à jogos e à arte 8bit, com elementos visuais adequados e uma identidade visual coesa.
+
+-------------------------------------------
+
+9. Trilhas e Cursos de cada trilha:
+
+Back-end
+    HTML - Fundamentos
+    HTML é uma linguagem de marcação que define a estrutura do seu conteúdo. HTML consiste em uma série de elementos que você usa para mostrar algo de uma determinada maneira ou agir de uma certo modo. As tags podem criar um hiperlink de uma palavra ou imagem para outro lugar, podem colocar palavras em itálico, podem aumentar ou diminuir a fonte e assim por diante.
+    Aprender quais tags são necessárias para um HTML básico.
+    Criar um parágrafo de texto.
+    Exibir uma imagem.
+    Conhecer a diferença entre 'h1', 'h2', 'h3', etc.
+    Criar um texto com hyperlink.
+    Criar um formulário com campos relevantes.
+    Criar uma lista de itens ordenada ou não ordenada.
+    Criar uma lista de itens dentro de uma lista suspensa (dropdown list).
+    Conectar com um arquivo de CSS.
+    Criar uma tabela.
+    Adicionar IDs e classes.  
+
+Links
+Site: MDN Web Docs: HTML Básico
+https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+Youtube:Rafaella Ballerini: 5 MINUTOS DE HTML PARA INICIAR EM PROGRAMAÇÃO!
+https://www.youtube.com/watch?v=3oSIqIqzN3M
+
+Youtube: Rafaella Ballerini: LANDING PAGE COM HTML e CSS!
+https://www.youtube.com/watch?v=llF6vD-RljE
+
+Youtube: Rafaella Ballerini: FORMULÁRIOS COM HTML e CSS!
+https://www.youtube.com/watch?v=wwqOJ2o84S4
+
+Youtube: HTML, CSS e Javascript, quais as diferenças?
+https://www.youtube.com/watch?v=wwqOJ2o84S4
+
+Artigo: O que é o HTML e suas tags? Parte 1: estrutura básica
+https://www.alura.com.br/artigos/html-css-e-js-definicoes
+
+Artigo: O que é o HTML e suas tags? Parte 2: elementos inline 
+https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-1-estrutura-basica
+
+Artigo: O que é o HTML e suas tags? Parte 3: elementos block-level
+https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-2-elementos-inline
+
+Artigo: O que é o HTML e suas tags? Parte 4: elementos de um formulário
+https://www.alura.com.br/artigos/html-tags-elementos-block-level
+
+Artigo: O que é o HTML e suas tags? Parte 5: atributos dos elementos
+https://www.alura.com.br/artigos/o-que-e-html-suas-tags-parte-5-atributos-elementos
+Youtube: Alura: Curso de HTML5 e CSS3
+https://www.youtube.com/watch?v=78AyiuxYceg
+
+CSS - Fundamentos
+    Cascading Style Sheets (CSS) é uma linguagem usada para descrever a apresentação de um documento escrito em uma linguagem de marcação como HTML ou XML. CSS pode ser usado para estilos de texto de documentos muito básicos — por exemplo, para alterar a cor e o tamanho de títulos e links. Ele pode ser usado para criar um layout — por exemplo, transformar uma única coluna de texto em um layout com uma área de conteúdo principal e uma barra lateral para informações relacionadas. Pode até ser usado para efeitos como animações.
+    Aprender a estrutura visual de uma página, com 'margin' e 'padding'.
+    Estabelecer o tamanho com 'width' e 'height'.
+    Aprender sobre a posição de um elemento ('static', 'relative' ou 'absolute).
+    Aprender sobre o 'display' de exibição de um elemento ('block', 'inline', 'inline-block').
+    Aprender a posicionar imagens em relação ao texto.
+    Aprender sobre alinhamento.
+    Aprender sobre estilo de fontes.
+    Aprender as diferenças e vantagens de usar as diferentes unidades de medida em CSS (%, relativas, etc).
+    Conectar com os elementos (IDs, classes) de um arquivo HTML.
+    Alterar características de um elemento quando o mouse passar por cima dele ('hover').
+    Aprender box-sizing.
+    Aprender Flexbox.
+    Aprender Grid.
+
+Links
+
+Site:MDN Web Docs: Iniciando com CSS
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps/Getting_started
+
+Site: MDN Web Docs: Seletores
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Selectors
+
+Site: MDN Web Docs: Cascata e herança
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
+
+Site: MDN Web Docs: Propriedade 'display'
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/display
+
+Site: MDN Web Docs: Conceitos básicos de Flexbox
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+
+Site: MDN Web Docs: Grid Layout
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+
+Artigo: Entendendo CSS: Display Inline, Block e Inline-Block
+https://dev.to/sucodelarangela/entendendo-css-display-inline-block-e-inline-block-lic
+
+Artigo: Entendendo CSS: Pseudo-Classes e Pseudo-Elementos
+https://dev.to/sucodelarangela/entendendo-css-pseudo-classes-e-pseudo-elementos-b83
+
+Artigo: Como aplicar opacidade em background-image sem afetar textos
+https://dev.to/sucodelarangela/como-aplicar-opacidade-em-background-image-sem-afetar-textos-31fj
+
+Youtube: Rafaella Ballerini: O QUE É CSS?
+https://www.youtube.com/watch?v=LWU2OR19ZG4
+
+Youtube: Rafaella Ballerini: FLEXBOX CSS! Como posicionar elementos na página web - parte 1
+https://www.youtube.com/watch?v=KbjLtEgmZ_E
+
+Youtube: Rafaella Ballerini: FLEXBOX CSS! Como posicionar elementos na página web - parte 2
+https://www.youtube.com/watch?v=hjz6ezV9_uc
+
+Youtube: Matheus Castiglioni: Arquitetura CSS - BEM
+https://www.youtube.com/watch?v=yKPXW9aSxQI
+
+Youtube: Matheus Castiglioni: CSS Grid Layout
+https://www.youtube.com/watch?v=HBlBNAtFcdw
+
+Youtube: Mario Souto - Dev Soutinho: Como centralizar no CSS
+https://www.youtube.com/watch?v=Cu-HP-gvggg
+
+Podcast: Hipster 09 - CSS: Cansei de Ser Simples
+https://www.hipsters.tech/css-cansei-de-ser-simples-hipsters-09/
+
+Artigo: HTML, CSS e Javascript, quais as diferenças?
+https://www.alura.com.br/artigos/html-css-e-js-definicoes
+
+Artigo: Guia de unidades no CSS
+https://www.alura.com.br/artigos/guia-de-unidades-no-css 
+
+Artigo: CSS: Guia do Flexbox
+https://www.alura.com.br/artigos/css-guia-do-flexbox 
+
+Artigo: Como fazer Grids e a Responsividade na Web
+https://www.alura.com.br/artigos/como-fazer-grids-e-a-responsividade-na-web 
+
+Youtube: Alura: CSS FlexBox: Dicas para começar
+https://www.youtube.com/watch?v=326-B1avuYo 
+
+Youtube: Alura: Box Model e Sizing no CSS
+https://www.youtube.com/watch?v=qcNUxyOWXIw 
+
+JavaScript - Fundamentos
+    JavaScript é a linguagem de programação mais popular do mundo e é uma das principais tecnologias da World Wide Web, juntamente com HTML e CSS. Ela possui tipagem dinâmica, orientação a objetos baseada em protótipos e funções de primeira classe. Ela é multi-paradigma e suporta estilos de programação orientados a eventos, funcionais e imperativos.
+    Conhecer os tipos primitivos.
+    Declarar variáveis, considerando a diferença entre 'var', 'let' e 'const'.
+    Usar estruturas condicionais ('if', 'else').
+    Conhecer os operadores de atribuição e comparação ('=', '==', '===').
+    Usar estruturas de repetição e laços ('while', 'for').
+    Usar funções, passando parâmetros e argumentos.
+    Manipular arrays e listas.
+    Aprender o conceito de Orientação a Objetos.
+    Fazer um CRUD.
+    Obter dados de uma API.
+    Fazer chamadas assíncronas usando 'Async/Await', 'Promise', etc.
+
+Links 
+Site: MDN Web Docs: Um primeiro mergulho no JavaScript.
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash 
+
+Site: MDN Web Docs: Trabalhando com texto — strings em JavaScript.
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings 
+
+Site: MDN Web Docs: if...else.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else 
+
+Site: MDN Web Docs: while.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while 
+
+Site:MDN Web Docs: for.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for 
+
+Site: MDN Web Docs: Arrays.
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Arrays 
+
+Site: MDN Web Docs: Template strings.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals 
+
+Artigo: Definindo Funções em Javascript.
+https://blog.matheuscastiglioni.com.br/definindo-funcoes-em-javascript/ 
+
+Youtube: Mario Souto - Dev Soutinho: Como manipular arrays e objetos em JavaScript.
+https://www.youtube.com/watch?v=yS7AcF-xRUg 
+
+Youtube: Marco Bruno: O que é Json e como criar um objeto.
+https://www.youtube.com/watch?v=oCY5YEEjlwE 
+
+Youtube: Mario Souto - Dev Soutinho: Como usar Async/Await? Promises no JavaScript?
+https://www.youtube.com/watch?v=q28lfkBd9F4 
+
+Youtube: Mario Souto - Dev Soutinho: Como pegar dados de uma API? Como fazer AJAX? | Pegando dados de serviços via JavaScript.
+https://www.youtube.com/watch?v=85vJXFpXLQw 
+
+Artigo: JavaScript: o que é, como aprender e um Guia da linguagem mais popular do mundo.
+https://www.alura.com.br/artigos/javascript 
+
+Podcast: Hipster 38 - O Reino encantado do JavaScript.
+https://www.hipsters.tech/o-reino-encantado-do-javascript-hipsters-38/ 
+
+Podcast: Hipster 169 - JavaScript: manual de sobrevivência 2020.
+https://www.hipsters.tech/javascript-manual-de-sobrevivencia-2020-hipsters-169/ 
+
+Podcast: Hipster 236 - Evolução do JavaScript.
+https://www.hipsters.tech/evolucao-do-javascript-hipsters-ponto-tech-236/ 
+
+Artigo: Strings com JavaScript: o que são e como manipulá-las.
+https://www.alura.com.br/artigos/strings-com-javascript-o-que-sao-e-como-manipular 
+
+Artigo: Como utilizar operadores de comparação em Javascript.
+https://www.alura.com.br/artigos/operadores-matematicos-em-javascript 
+
+Artigo: Para que serve um Array?
+https://www.alura.com.br/artigos/javascript-para-que-serve-array 
+
+Artigo: Quando usar forEach e map?
+https://www.alura.com.br/artigos/javascript-quando-devo-usar-foreach-e-map 
+
+Artigo: Manipulação de array com map, filter e reduce.
+https://www.alura.com.br/artigos/manipulacao-de-array-com-map-filter-e-reduce
+
+Youtube: Alura: O que é JavaScript?
+https://www.youtube.com/watch?v=NaVSbnnV75Q 
+
+Youtube: Alura: Destructuring em JavaScript.
+https://www.youtube.com/watch?v=f8a-qwKC5yk 
+
+Youtube: Alura: Classes x funções no Javascript.
+https://www.youtube.com/watch?v=iohhj-k9L6s 
+
+-------------------------------------------
+
+Back-end
+
+PHP - Fundamentos 
+    PHP é uma linguagem de programação que permite aos desenvolvedores web criar conteúdo dinâmico que interage com bancos de dados. O PHP é basicamente usado para desenvolver aplicações de software baseadas na web.
+    Conhecer os tipos primitivos
+    Declarar variáveis
+    Usar estruturas condicionais ('if', 'else')
+    Conhecer os operadores de atribuição e comparação ('=', '==', '===')
+    Usar estruturas de repetição e laços ('while', 'for')
+    Usar funções, passando parâmetros e argumentos
+    Manipular arrays e listas.
+
+Links
+Site: Documentação PHP
+https://www.php.net/manual/pt_BR/index.php
+
+Artigo: Introdução ao PHP
+https://medium.com/café-com-java/introdução-ao-php-91472783da7c 
+
+Artigo: Guia prático do Modern PHP: desenvolvimento e ecossistema
+https://medium.com/walternascimentobarroso-pt/curso-de-php-básico-fa984be7c9b9 
+
+Artigo: Curso de PHP Básico
+https://medium.com/walternascimentobarroso-pt/curso-de-php-básico-fa984be7c9b9 
+
+Youtube: Mjailton: O que é PHP ? Saiba tudo sobre esta Linguagem
+https://www.youtube.com/watch?v=va4WIzo211Y 
+
+Youtube: Mjailton: Aprenda Como Rodar o PHP
+https://www.youtube.com/watch?v=xKkipZ133_s 
+
+Youtube: Alura: Ecossistema PHP | HipstersPontoTube
+https://www.youtube.com/watch?v=yD3BqXWHua4 
+
+Artigo: PHP - Uma Introdução à Linguagem
+https://www.alura.com.br/artigos/php-uma-introducao-linguagem 
+
+Artigo: Quando usar == ou === em php?
+https://www.alura.com.br/artigos/quando-usar-ou-em-php 
+
+Artigo: PHP: operação com números decimais
+https://www.alura.com.br/artigos/php-operacoes-com-numeros-decimais 
+
+Artigo: Trabalhando com arrays em PHP
+https://www.alura.com.br/artigos/trabalhando-com-arrays-em-php 
+
+Python - Fundamentos 
+    Python é uma linguagem de programação de alto nível, de uso geral, amplamente utilizada em aplicações web, desenvolvimento de software, ciência de dados e Machine Learning. Sua filosofia de projeto enfatiza a legibilidade do código com o uso de indentação significativa. Python é dinamicamente tipada e tem um garbage collector.
+    Conhecer os tipos primitivos.
+    Declarar variáveis, considerando os diferentes tipos.
+    Usar estruturas condicionais ('if', 'else').
+    Conhecer os operadores de atribuição e comparação.
+    Usar estruturas de repetição e laços ('while', 'for').
+    Usar funções, passando parâmetros e argumentos.
+    Manipular métodos.
+    Manipular arrays e listas.
+    Obter dados de uma API.
+    Criar construtores.
+    Funções anônimas.
+
+Links 
+Site: Documentação Python
+https://docs.python.org/pt-br/3/tutorial/ 
+
+Artigo: Programação | Python — Parte 1
+https://medium.com/turing-talks/turing-talks-4-python-parte-1-29b8d9efd0a5
+
+Artigo: Introdução ao Python
+https://medium.com/@goularteduarda.a/introdução-ao-python-d30c29eba0d6 
+
+Youtube: Eduardo Mendes: Curso introdutório de Python.
+https://www.youtube.com/watch?v=yTQDbqmv8Ho 
+
+Artigo: O que é Python? História, Sintaxe e um Guia para iniciar na Linguagem
+https://www.alura.com.br/artigos/python 
+
+Podcast: Hipsters.tech: Python – Hipsters 122
+https://www.hipsters.tech/python-hipsters-122/ 
+
+Podcast: Hipsters.tech: Python Fluente – Hipsters Ponto Tech 179
+https://www.hipsters.tech/python-fluente-hipsters-ponto-tech-179/ 
+
+Youtube: Alura: A linguagem Python - Alura Live 94
+https://www.youtube.com/watch?v=Nbt0eQHChoI 
+
+Youtube: Alura: O que é Python?
+https://www.youtube.com/watch?v=-LATVnPcvHI 
+
+Artigo: Python - Uma Introdução à Linguagem
+https://www.alura.com.br/artigos/python-uma-introducao-a-linguagem 
+
+Artigo: Python: Trabalhando com precisão em números decimais
+https://www.alura.com.br/artigos/precisao-numeros-decimais-python 
+
+Artigo: Listas em Python: operações básicas
+https://www.alura.com.br/artigos/listas-no-python 
+
+Artigo: Como comparar objetos no Python?
+https://www.alura.com.br/artigos/como-comparar-objetos-no-python 
+
+Artigo: Python datetime: Lidando com datas e horários
+https://www.alura.com.br/artigos/lidando-com-datas-e-horarios-no-python 
+
+-------------------------------------------
+
+Git e GitHub -  Fundamentos
+    Git é um sistema de controle de versão distribuído gratuito e de código aberto projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência.
+    GitHub é um serviço de hospedagem para desenvolvimento de software e controle de versão usando Git.
+    Criar um repositório.
+    Clonar um repositório.
+    Fazer commit, push e pull de e para o repositório.
+    Reverter um commit.
+    Criar branches e pul requests.
+    Lidar com merge e conflitos.
+
+Links 
+Site: GitHub Documentação                                                                                                https://docs.github.com/pt
+
+Site: GitHub Pages Documentação
+https://docs.github.com/pt/pages/getting-started-with-github-pages/about-github-pages
+
+Site: Git School - Visualizing Git                                                        
+https://git-school.github.io/visualizing-git/
+
+Site: Dangit, Git!?!                                                                                                                   https://dangitgit.com/
+
+Youtube: Rafaella Ballerini: O que é Git e GitHub? - definição e conceitos importantes 1/2
+https://www.youtube.com/watch?v=DqTITcMq68k
+
+Youtube: Rafaella Ballerini: Como usar Git e GitHub na prática! - desde o primeiro commit até o pull request! 2/2                                                                
+https://www.youtube.com/watch?v=UBAX-13g8OM
+
+Youtube: Mario Souto - Dev Soutinho: Git: Entendendo de vez como funciona do melhor e mais visual jeito possível  
+https://www.youtube.com/watch?v=4-tfJ-ZyA0Q
+
+Youtube: Mario Souto - Dev Soutinho: Como colocar seu projeto no ar DE GRAÇA via GitHub! | Hospedagem com GitHub Pages                                                      
+https://www.youtube.com/watch?v=BU-w2_Aae54
+
+Artigo: Git e Github: O que são, Como Configurar e Primeiros Passos
+https://www.alura.com.br/artigos/o-que-e-git-github
+
+Artigo: Mais git com o hub: a linha de comando do Github
+https://www.alura.com.br/artigos/github-na-linha-de-comando
+
+Site: Websérie: Git e Github para Sobrevivência
+https://www.alura.com.br/webseries/git-e-github-para-sobrevivencia
+
+Podcast: Hipsters 109: Git e Github
+https://www.alura.com.br/podcast/hipsterstech-git-e-github-hipsters-109-a474
+
+Youtube: Alura: Git e Github para Sobrevivência 01: Como o Git funciona?
+https://www.youtube.com/watch?v=BAmvmaKQklQ
+
+-------------------------------------------
+
+Bancos de Dados -  Fundamentos 
+    Os bancos de dados são sistemas de armazenamento de dados que permitem a organização, a manipulação e o acesso eficiente às informações. Existem dois principais tipos de bancos de dados, sendo eles SQL (Structured Query Language) e NoSQL (Not Only SQL).
+    O conhecimento dos fundamentos de bancos de dados, tanto SQL quanto NoSQL, é essencial na engenharia de dados. Os bancos de dados são a base para armazenar e manipular os dados utilizados nas análises e nos processos de tomada de decisão. Compreender os diferentes tipos de bancos de dados permite aos engenheiros de dados escolher a solução mais adequada para cada caso, levando em consideração os requisitos de escalabilidade, desempenho, consistência e flexibilidade. Além disso, a habilidade de escrever consultas SQL e de utilizar as características específicas dos bancos de dados NoSQL é essencial para extrair, transformar e carregar dados de forma eficiente e eficaz.
+
+Links
+Site: DB-Engines Ranking 
+https://db-engines.com/en/ranking
+
+Youtube: Código Fonte TV: SQL // Dicionário do Programador
+https://www.youtube.com/watch?v=kMznyI7r2Tc
+
+Youtube: Código Fonte TV: NoSQL // Dicionário do Programador
+https://www.youtube.com/watch?v=1B64oqE8PLs
+
+Artigo: SQL — O que é e como funciona na prática?  ARTIGOSQL: comandos básicos
+https://medium.com/pravaler-digital-team/sql-o-que-%C3%A9-e-como-funciona-na-pr%C3%A1tica-6ae7a322554a
+
+Youtube: Alura: O que é SQL e NoSQL? 
+https://www.youtube.com/watch?v=aure5d3B88g
+
+Artigo: SQL: Comandos básicos  
+https://www.alura.com.br/artigos/sql-comandos-basicos
+
+Artigo: SQL: consultas com SELECT 
+https://www.alura.com.br/artigos/sql-consultas-com-select
+
+Artigo: JOIN e seus tipos 
+https://www.alura.com.br/artigos/sql-comandos-basicos
+
+-------------------------------------------
+
+10. Links de cada Desenvolvedor:
+
+Anny:
+    Linkedin: https://www.linkedin.com/in/annycaroliny1/
+    GitHub: https://github.com/Muniz-DuarteAnny
+Breno:
+    Linkedin: https://www.linkedin.com/in/breeno-gomes/
+    GitHub: https://github.com/brngom3s
+Bruna:
+    Linkedin: https://www.linkedin.com/in/brunagtmaia/
+    GitHub: https://github.com/brunagtmaia
+Douglas:
+    Linkedin:
+    GitHub: https://github.com/DouglasLima352
+Eduarda:
+    Linkedin: https://www.linkedin.com/in/eduarda-leandra/
+    GitHub: https://github.com/DudaLeandra
+Felipe (professor):
+    Linkedin: https://github.com/depaulaio
+    GitHub: https://www.linkedin.com/in/felipe-de-paula-io/
+Gabriel:
+    Linkedin: https://www.linkedin.com/in/gabriel-mendonça-4b0814244/
+    GitHub: https://github.com/Gabriel037
+Guilherme:
+    Linkedin: https://www.linkedin.com/in/guisilvas/
+    GitHub: https://www.linkedin.com/in/guisilvas/
+Henrique:
+    Linkedin: https://www.linkedin.com/in/henriquerios/
+    GitHub: https://github.com/hriquerios
+Luzia:
+    Linkedin: https://www.linkedin.com/in/luzia-rodrigues-a45707131
+    GitHub: https://github.com/Luziarcd
+Maisa:
+    Linkedin: https://github.com/Muniz-DuarteAnny
+    GitHub: https://github.com/ChyaaNkh
+Pablo:
+    Linkedin: https://www.linkedin.com/in/pablo-soares-597755280/
+    GitHub: https://github.com/PabloSoares1572
+Pedro:
+    Linkedin: https://www.linkedin.com/in/pedro-gabriel-silva-dos-reis-383a0a27b/?trk=contact-info
+    GitHub: https://github.com/Paindrin
