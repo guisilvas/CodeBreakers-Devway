@@ -38,10 +38,10 @@
                 
             </nav>
         </header>
-        <div class="cotainer">
+        <div class="container">
             <div class="pergaminho">
-                <h1>Contate-nos</h1>
                 <form action="submitContact.php" method="POST" class="form">
+                    <h1>Contate-nos</h1>
                     <!--
                     <div class="box">
                         <input type="text" name="name" placeholder="Nome" class="input" required>
