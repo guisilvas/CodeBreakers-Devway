@@ -22,127 +22,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/navbar.css">
     <link rel="stylesheet" href="assets\style_profile.css">
     <title>Document</title>
-</head>
 <style>
-
-.navbar{
-    display: flex;
-    width: 100vw;
-    height: 7vh;
-    background-color: white;     
-    align-items: center;
-    position: initial;
-    z-index: 1;
+    
+    body{
+        font-family: 'Press Start 2P', cursive;
+        background-image: url('./assets/fundo_main.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+        width: 100%;
     }
 
-.grid-container{
-    display: grid;
-    grid-template-columns: 40% 50%;
-    background-image: url('assets/pergaminho222.png'); 
-    background-repeat: no-repeat;
-    background-size: 90% 90%;
-    background-position-x: center;
-    background-position-y: center;
-    padding: 8rem;
-    column-gap: 0rem;
-    justify-content: center;
-}
-
-.form_profile input{ 
+    .navbar{
+        display: flex;
+        width: 100vw;
+        height: 7vh;
+        background-color: white;     
+        align-items: center;
+        position: initial;
+        z-index: 1;
+    }
     
-    font-family: 'Press Start 2P', cursive;
-    color: black;;
-    width: 80%;
-    height: 3.5rem;
-    background-color: #D0A270;
-    margin: 1.3rem;
-    /*font-size: 1.5rem*/
-    padding-left: 10px ;
-    border-color: black;
-    border-radius:0px;
-  }
+    .fatherOfAll{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 
-body{
-    background-image: url('assets/fundoareia.png');
-}
+    .grid-container{
+        display: flex;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        background-image: url('./assets/pergaminho.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        justify-content: center;
+    }
 
-.text{
-    color: black;
-}
- 
-.trocar_img {
-    width: 100%;
-    height: 100%;
-}
-.buttomperfil {
-    display: flex;
-    position: absolute;
-    right: 90px;
-    top: 35px;
-    cursor: pointer;
-    z-index: 1;
-    height: 13%;
-    width: 10%;
-}
+    
+    .form_profile input{ 
+        color: black;;
+        width: 80%;
+        height: 3.5rem;
+        background-color: #D0A270;
+        margin: 1.3rem;
+        /*font-size: 1.5rem*/
+        padding-left: 10px ;
+        border-color: black;
+        border-radius:0px;
+    }
+    
+    .text{
+        color: black;
+    }
+     
+    .trocar_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .buttomperfil {
+        display: flex;
+        position: absolute;
+        right: 90px;
+        top: 35px;
+        cursor: pointer;
+        z-index: 1;
+        height: 13%;
+        width: 10%;
+    }
 </style>
+</head>
 
-<body onload="ajustarTamanhoFonte()">
+<body>
     <header>
         <nav class="navbar">
-           
-            <a href="system.php"></a>
-            
+            <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
+        <div class="menu1" id="menu1">
+            <div class="menu2" id="menu2">
+                <div class="menup">
+                    <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
+                    <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
+                </div>
+                <div class="linksmenu">
+                    <a href="system.php">Trilhas</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="#">Contato</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="#">Sobre Nós</a>
+                </div>
+
+                <div class="bn">
+                    <form method="post" action="">
+                        <input type="submit" name="sair" value="sair">
+                    </form>
+                </div>
+            </div> 
+            </div>
+        </div>
     </header>
 
-
-    <div class="grid-container"id="grid-container!">
-        <div class="grid-item">
-            <div class="img_profile1">
-                <?php 
-                    if (isset($_GET['image'])) {
-                        $newImageUrl = $_GET['image'];
-                        $newImageIconUrl = $_GET['image_icon'];
-                        echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
-                        echo "<a href=\"select_character.html\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
-                        // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
-                        // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
-                        $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
-                        $resultado_update_image = mysqli_query($conexao, $update_image);
-                        if ($resultado_update_image){
-                            echo "<script>alert('Foto atualizada');</script>";
+    <div class="fatherOfAll">
+        <div class="grid-container" id="grid-container!">
+            <div class="grid-item">
+                <div class="img_profile1">
+                    <?php 
+                        if (isset($_GET['image'])) {
+                            $newImageUrl = $_GET['image'];
+                            $newImageIconUrl = $_GET['image_icon'];
+                            echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
+                            echo "<a href=\"select_character.html\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
+                            // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
+                            // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
+                            $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
+                            $resultado_update_image = mysqli_query($conexao, $update_image);
+                            if ($resultado_update_image){
+                                echo "<script>alert('Foto atualizada');</script>";
+                            }else{
+                                echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
+                            }
                         }else{
-                            echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
+                            echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
+                            echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                         }
-                    }else{
-                        echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
-                        echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
-                    }
-                ?>
-                <!-- <img src="assets\characters\defaultCharacter.png" class="aa" id="img_profile"></div>
-                <a href="select_character.html"class="buttomperfil">
-                    <img class="trocar_img" src="assets/botaotp.png">
-                </a> -->
-            </div>
-        </div>
-        <div class="grid-item">
-            <div class="title_profile" id="title">
-                <h2 class="text">Perfil</h2></div>
-                <div class="form_profile">
-                    <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>"
-                    oninput="ajustarTamanhoFonte(this)">
-                    <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>"
-                    oninput="ajustarTamanhoFonte(this)">
-                    <a href="navteste.php">nav</a>
+                    ?>
+                    <!-- <img src="assets\characters\defaultCharacter.png" class="aa" id="img_profile"></div>
+                    <a href="select_character.html"class="buttomperfil">
+                        <img class="trocar_img" src="assets/botaotp.png">
+                    </a> -->
                 </div>
             </div>
+            <div class="grid-item">
+                <div class="title_profile" id="title">
+                    <h2 class="text">Perfil</h2></div>
+                    <div class="form_profile">
+                        <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>"
+                        oninput="ajustarTamanhoFonte(this)">
+                        <input id="inputbloq2" type="text" name="E-mail" value="<?php echo $row_pesquisa_usuario['email'];?>"
+                        oninput="ajustarTamanhoFonte(this)">
+                    </div>
+                </div>
+            </div>
+        
         </div>
-     
     </div>
 </body>
 <script>
+
+
     //bloqueando os inputs para o usuário
     var inputElement1 = document.getElementById("inputbloq1");
     inputElement1.disabled = true;
@@ -238,7 +274,7 @@ body{
     window.addEventListener('resize', verificarDimensaoTela)
 
 </script>
-
+<script src="javascript/nav.js"></script>
 <script src="javascript/selectChar.js" defer></script>
 
 
