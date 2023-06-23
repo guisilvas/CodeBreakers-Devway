@@ -18,57 +18,7 @@ body{
     background-attachment: fixed;
 }
 
-.navbar{
-    width: 100%;
-    height: 8vh;
-    background-color: white;   
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    z-index: 99999;
-}
-    
-.home{
-    height: 2rem;
-    width: 2rem;
-    cursor: pointer;
-    background-image: url('../assets/casa.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(255,255,255,0);
-    border:none;
-    position: absolute;
-    right: 30px;
-}
-    
-.navbar input{
-    height: 1.5rem;
-    width: 4rem;
-    cursor: pointer;
-    background-image: url("../assets/quit.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    color: transparent;
-}   
-.bn{
-    right: 30px;
-    position: absolute;
-}
-    
-#perfil{
-    height: 3rem;
-    width: 3rem;
-    background-image: url('../assets/perfil.png');
-    cursor: pointer;
-    border:none;
-    margin-left:15px;
-    
-      
-}
+
 
 
 /* nome da trilha na parte de cima  */
