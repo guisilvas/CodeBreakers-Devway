@@ -28,14 +28,39 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/style_contact.css">
+        <link rel="stylesheet" href="assets/navbar.css">
         <title>Dev Way - Contate-nos</title>
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                <a href="system.php"></a>
-            </nav>
-        </header>
+    <header>
+        <nav class="navbar">
+            <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
+        </nav>
+        <div class="menu1" id="menu1">
+            <div class="menu2" id="menu2">
+                <a class="menup" href="profile.php">
+                    <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
+                    <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
+                </a>
+                <div class="linksmenu">
+                    <a href="system.php">Trilhas</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="contact.php">Contato</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="sobre.php">Sobre Nós</a>
+                </div>
+
+                <div class="bn">
+                    <form method="post" action="">
+                        <input type="submit" name="sair" value="sair">
+                    </form>
+                </div>
+            </div> 
+            </div>
+        </div>
+    </header>
         <div class="container">
             <div class="pergaminho">
                 <form action="submitContact.php" method="POST" class="form">
@@ -44,7 +69,7 @@
                         <input type="text" name="subject" placeholder="Assunto" class="input" required>
                     </div>
                     <div class="box">
-                        <input type="text" name="message" placeholder="Mensagem" class="input" required>
+                        <textarea name="message" id="message" class="input" placeholder="Mensagem" cols="20" rows="10" required></textarea>
                     </div>
                     <div class="box">
                         <button id="button" type="submit">Enviar</button>
