@@ -10,9 +10,9 @@
 
 body{
     font-family: 'Press Start 2P', cursive;
-    background: linear-gradient(180deg, #0E1947 -3.65%, rgba(32, 6, 58, 0.71) 96.35%);
     width: 100%;
     height: 100%;
+    background-image: url('fundo-pergaminho.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -73,10 +73,9 @@ body{
 
 /* nome da trilha na parte de cima  */
 .titleTrilha {
-    color: white;
+    color: black;
     font-size: 2.5rem;
     padding-bottom: 40px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
 }
 /* conteiner pai de todos  */
 .content {
@@ -104,14 +103,10 @@ body{
     color: white;
     font-size: 1.4rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
-    background-image: url('wood2.png');
+    background-image: url('barra_madeira.png');
     background-position: center;
-    background-size: 200vw auto;
-    /* background: #162A89; */
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    padding-left: 10px;
+    background-size: 100% 100%;
+    padding-left: 50px;
     padding-right: 10px;
 }
 .seta_tema{
@@ -168,19 +163,18 @@ body{
     line-height: 28px;
     font-size: 1.1rem;
     padding-left: 10px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
     z-index: 1;
 }
 .courseList {
     display: flex;
     padding: 0.5rem;
+    padding-left: 1.5rem;
 }
 
 .courseList a {
     color: black;
     font-size: 1rem;
     padding-left: 10px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
     align-items: center;
     justify-content: center;
 }
@@ -208,7 +202,7 @@ background-color: #4CAF50;
     font-size: 1.3rem;
     padding-left: 10px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.664);
-    padding-left: 2rem;
+    padding-left: 5rem;
 }
 
 /* Estilização da barra de progresso */
@@ -254,11 +248,18 @@ background-color: #4CAF50;
     }
     .tema_nome {
         font-size: 1.2rem;
+        min-height: 15vh;
+        padding-left: 1.5rem;
     }
     .courseList {
         padding-left: 10px;
     }
     .courseList a {
         font-size: 0.7rem;
+    }
+    .progress-all-trail {
+        padding-left: 1rem;
+        font-size: 0.8rem;
+        margin-bottom: 50px;
     }
 }

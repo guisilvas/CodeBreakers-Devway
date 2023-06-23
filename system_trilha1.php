@@ -34,6 +34,7 @@
         exit();
     }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +62,7 @@
             <a href="system.php" class="home"></a>
         </nav>
     </header>
+    
     <div class="content">
         <?php
             $nomeTrilha = $_GET["trilha"];
