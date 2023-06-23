@@ -334,7 +334,7 @@
             if (window.innerWidth <= 425) {
                 menu1.style.width = "100vw";
             } else {
-                menu2.style.width = "25vw";
+                menu1.style.width = "25vw";
             }
                
         }
