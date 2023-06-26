@@ -88,6 +88,10 @@ input:focus {
   height: 10vh;
 }
 
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+} 
+
 /* Estilo botão de enviar */
 #button {
   background-image: url(button_action.png);
