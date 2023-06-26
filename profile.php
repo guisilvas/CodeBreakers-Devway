@@ -149,7 +149,7 @@
                             $newImageUrl = $_GET['image'];
                             $newImageIconUrl = $_GET['image_icon'];
                             echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
-                            echo "<a href=\"select_character.html\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
+                            echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                             // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
                             // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
                             $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageUrl' WHERE id = '$id_user'";
