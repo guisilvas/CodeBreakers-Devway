@@ -68,9 +68,6 @@
                     <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
                 </a>
                 <div class="linksmenu">
-                    <a href="system.php">Trilhas</a>
-                </div>
-                <div class="linksmenu">
                     <a href="contact.php">Contato</a>
                 </div>
                 <div class="linksmenu">

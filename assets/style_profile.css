@@ -17,41 +17,7 @@ body{
     background-image: url('assets/fundoareia.png');
 }
 
-.navbar{
-    display: flex;
-    width: 100vw;
-    height: 7vh;
-    background-color: white;     
-    align-items: center;
-    position: initial;
-    z-index: 1;
-    }
-    
-.navbar a{
-  height: 2rem;
-  width: 2rem;
-  cursor: pointer;
-  background-image: url('../assets/casa.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(255,255,255,0);
-  border:none;
-  position: absolute;
-  right: 30px;
-}
-    
-.navbar input{
-    height: 2rem;
-    width: 4rem;
-    cursor: pointer;
-    background-image: url("../img/quit.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    color: transparent;
-}
+
 
 .grid-container{
   display: grid;
