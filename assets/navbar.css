@@ -12,7 +12,17 @@
     background-size:auto 100%;
     background-position: center top;
 }
-
+.navbar_sobre{
+    width: 100%;
+    height: 8vh;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(211, 211, 211, 0.253);
+    backdrop-filter: blur(1rem);
+}
 .btnmenu{
     cursor:pointer;
     position:absolute;
@@ -43,6 +53,21 @@
     overflow: hidden; /* Adicionado: Para esconder o conteúdo quando o menu está fechado */
     background-image: url('fundo-pergaminho.png');
   
+}
+.menu1_sobre{
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    width: 0vw;
+    z-index: 2;
+    position: fixed;
+    right:0rem;
+    top: 8vh;
+    transition: width 0.5s ease; /* Adicionado: Transição de altura com duração de 0.5s e função ease */
+    transition-delay: 1s;
+    overflow: hidden; /* Adicionado: Para esconder o conteúdo quando o menu está fechado */
+    background-color: rgba(211, 211, 211, 0.253);
+    backdrop-filter: blur(1rem);
 }
 .menu2{
     height:100%;
