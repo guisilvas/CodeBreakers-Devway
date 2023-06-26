@@ -70,9 +70,6 @@
                 <div class="linksmenu">
                     <a href="contact.php">Contato</a>
                 </div>
-                <div class="linksmenu">
-                    <a href="sobre.php">Sobre Nós</a>
-                </div>
 
                 <div class="bn">
                     <form method="post" action="">

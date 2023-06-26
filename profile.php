@@ -47,17 +47,10 @@
         background-size: 100% 100%;
         height: 100%;
         width: 100%;
+        background-attachment: fixed;
     }
 
-    .navbar{
-        display: flex;
-        width: 100vw;
-        height: 7vh;
-        background-color: white;     
-        align-items: center;
-        position: initial;
-        z-index: 1;
-    }
+    
     
     .fatherOfAll{
         display: flex;
@@ -110,15 +103,28 @@
         height: 13%;
         width: 10%;
     }
+    @media screen and (max-width: 425px){
+        .btnmenu{
+            height: 2.5rem;
+        }
+        .linksmenu{
+            height: 20%;
+
+        }
+        .bn{
+            padding-top: 20%;
+        }
+    }
+
 </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" style="position:initial;">
             <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
-        <div class="menu1" id="menu1">
+        <div class="menu1" id="menu1" style="top=0vh;">
             <div class="menu2" id="menu2">
                 <div class="linksmenu">
                     <a href="system.php">Trilhas</a>
