@@ -15,6 +15,19 @@
     $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
 
     $foto_perfil= $row_pesquisa_usuario['foto_perfil'];
+
+    // Verifica se o botão de sair foi clicado
+    if (isset($_POST['sair'])) {
+        // Remove todas as variáveis de sessão
+        session_unset();
+        
+        // Destroi a sessão
+        session_destroy();
+        
+        // Redireciona para a página principal
+        header('Location: index.html');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

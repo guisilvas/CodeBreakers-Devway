@@ -19,6 +19,28 @@
         // Tentativa de acesso via URL, vai para a página de acesso negado
         header('Location: denied.html');
     }
+        // Verifica se o botão de sair foi clicado
+    if (isset($_POST['sair'])) {
+        // Remove todas as variáveis de sessão
+        session_unset();
+        
+        // Destroi a sessão
+        session_destroy();
+        
+        // Redireciona para a página principal
+        header('Location: index.html');
+        exit();
+    }
+    //pegando a variável de seção 
+    $id_user = $_SESSION['id'];
+
+    // pesquisando no banco 
+    $pesquisa_usuario = "SELECT * FROM users WHERE id = '$id_user'";
+    $resultado_pesquisa_usuario = mysqli_query($conexao, $pesquisa_usuario);
+    $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
+
+    $foto_perfil= $row_pesquisa_usuario['foto_perfil_icon'];
+    
 ?>
 
 <!DOCTYPE html>
