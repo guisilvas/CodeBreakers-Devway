@@ -156,6 +156,10 @@
                             // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
                             $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
                             $resultado_update_image = mysqli_query($conexao, $update_image);
+                            if ($resultado_update_image) {
+                                echo "<script>window.location.href = 'system.php';</script>";
+                                echo "<script>window.location.reload();</script>";
+                            }
                             // if ($resultado_update_image){
                             //     echo "<script>alert('Foto atualizada');</script>";
                             // }else{
