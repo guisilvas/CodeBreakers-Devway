@@ -61,7 +61,7 @@
         <div class="menu1_sobre" id="menu1">
             <div class="menu2" id="menu2">
                 <a class="menup" href="profile.php">
-                    <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
+                    <img id="img_profile" class="imageNav" src="<?php echo $foto_perfil ?>" alt="Perfil">
                     <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
                 </a>
                 <div class="linksmenu">

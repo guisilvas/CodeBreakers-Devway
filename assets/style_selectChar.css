@@ -96,35 +96,6 @@ body {
 }
 
 /* Responsivo para telas menores que 600px */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  .big-square {
-    width: 100%;
-    height: auto;
-    grid-template-columns: 33.3% 33.3% 1fr;
-    grid-template-rows: 33.3% 33.3% 1fr;
-    padding: 20Zpx;
-  }
-
-  .character {
-    margin-bottom: 10px;
-  }
-
-  #chooseBtn {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-
-  /* Botão centralizado */
-  .container {
-    grid-template-rows: repeat(1, 1fr);
-    padding-top: 10vh;;
-  }
-}
-
 @media only screen and (max-width: 600px) {
 
   .pergaminho {
@@ -142,7 +113,6 @@ body {
     grid-template-rows: repeat(3, 1fr);
     padding: 30px;
     /* gap: 0px; */
-
   }
 
   .character {

@@ -121,7 +121,7 @@
         <div class="menu1" id="menu1">
             <div class="menu2" id="menu2">
                 <a class="menup" href="profile.php">
-                    <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
+                    <img id="img_profile" class="imageNav" src="<?php echo $foto_perfil ?>" alt="Perfil">
                     <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
                 </a>
                 <div class="linksmenu">
@@ -150,7 +150,7 @@
                         if (isset($_GET['image'])) {
                             $newImageUrl = $_GET['image'];
                             $newImageIconUrl = $_GET['image_icon'];
-                            echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
+                            echo "<img id=\"img_profile\" class=\"imageNav\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                             // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
                             // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
@@ -166,11 +166,11 @@
                             //     echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
                             // }
                         }else{
-                            echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
+                            echo "<img id=\"img_profile\" class=\"imageNav\" src=".$foto_perfil." alt=\"Perfil\">";
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                         }
                     ?>
-                    <!-- <img src="assets\characters\defaultCharacter.png" class="aa" id="img_profile"></div>
+                    <!-- <img src="assets\characters\defaultCharacter.png" class="imageNav" id="img_profile"></div>
                     <a href="select_character.html"class="buttomperfil">
                         <img class="trocar_img" src="assets/botaotp.png">
                     </a> -->
