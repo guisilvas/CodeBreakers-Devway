@@ -29,19 +29,6 @@
     $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
 
     $foto_perfil= $row_pesquisa_usuario['foto_perfil_icon'];
-
-    // Verifica se o botão de sair foi clicado
-    if (isset($_POST['sair'])) {
-        // Remove todas as variáveis de sessão
-        session_unset();
-        
-        // Destroi a sessão
-        session_destroy();
-        
-        // Redireciona para a página principal
-        header('Location: index.html');
-        exit();
-    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -51,14 +38,21 @@
     <link rel="stylesheet" href="assets/style_sobre.css">
     <script src="script.js"></script>
     <title>Sobre Nós</title>
+    <style>
+        .navbar{
+            background-color: #d9d9d92e;
+            backdrop-filter: blur(1rem);
+            background-image: url();
+        }
+    </style>
     <link rel="stylesheet" href="assets/navbar.css">
 </head>
 <body>
     <header>
-        <nav class="navbar_sobre">
+        <nav class="navbar">
             <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
-        <div class="menu1_sobre" id="menu1">
+        <div class="menu1" id="menu1">
             <div class="menu2" id="menu2">
                 <a class="menup" href="profile.php">
                     <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
@@ -69,6 +63,9 @@
                 </div>
                 <div class="linksmenu">
                     <a href="contact.php">Contato</a>
+                </div>
+                <div class="linksmenu">
+                    <a href="sobre.php">Sobre Nós</a>
                 </div>
 
                 <div class="bn">
@@ -190,7 +187,7 @@
                 <h1 class="card_nome">Pablo</h1>
                 <img class="card_img" src="assets\devs\pablo.jpeg">
                 <div class="card_links">
-                    <a href="https://github.com/PabloSoares1572"></a>
+                    <a href="https://www.linkedin.com/mwlite/in/pablo-soares-597755280" target="_blank"><img src="assets\icons\icons8-github-50.png"></a>
                     <a href="https://www.linkedin.com/mwlite/in/pablo-soares-597755280" target="_blank"><img src="assets\icons\icons8-linkedin-50.png"></a>
                 </div>
             </div>

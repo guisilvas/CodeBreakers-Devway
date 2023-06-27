@@ -15,19 +15,6 @@
     $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
 
     $foto_perfil= $row_pesquisa_usuario['foto_perfil'];
-
-    // Verifica se o botão de sair foi clicado
-    if (isset($_POST['sair'])) {
-        // Remove todas as variáveis de sessão
-        session_unset();
-        
-        // Destroi a sessão
-        session_destroy();
-        
-        // Redireciona para a página principal
-        header('Location: index.html');
-        exit();
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,10 +34,17 @@
         background-size: 100% 100%;
         height: 100%;
         width: 100%;
-        background-attachment: fixed;
     }
 
-    
+    .navbar{
+        display: flex;
+        width: 100vw;
+        height: 7vh;
+        background-color: white;     
+        align-items: center;
+        position: initial;
+        z-index: 1;
+    }
     
     .fatherOfAll{
         display: flex;
@@ -103,28 +97,15 @@
         height: 13%;
         width: 10%;
     }
-    @media screen and (max-width: 425px){
-        .btnmenu{
-            height: 2.5rem;
-        }
-        .linksmenu{
-            height: 20%;
-
-        }
-        .bn{
-            padding-top: 20%;
-        }
-    }
-
 </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar" style="position:initial;">
+        <nav class="navbar">
             <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
-        <div class="menu1" id="menu1" style="top=0vh;">
+        <div class="menu1" id="menu1">
             <div class="menu2" id="menu2">
                 <div class="linksmenu">
                     <a href="system.php">Trilhas</a>
@@ -155,10 +136,10 @@
                             $newImageUrl = $_GET['image'];
                             $newImageIconUrl = $_GET['image_icon'];
                             echo "<img id=\"img_profile\" class=\"aa\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
-                            echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
+                            echo "<a href=\"select_character.html\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                             // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
                             // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
-                            $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageUrl' WHERE id = '$id_user'";
+                            $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
                             $resultado_update_image = mysqli_query($conexao, $update_image);
                             if ($resultado_update_image){
                                 echo "<script>alert('Foto atualizada');</script>";
