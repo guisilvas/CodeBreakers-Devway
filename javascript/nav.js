@@ -5,8 +5,6 @@ var inputElement1 = document.getElementById("inputbloq1");
         var menu2 = document.getElementById("menu2");
         var toggle = false;
 
-        
-
         function abrirmenu() {
         if (toggle) {
             menu1.style.transition = "width 1s ease";
@@ -26,9 +24,7 @@ var inputElement1 = document.getElementById("inputbloq1");
             } else {
                 menu1.style.width = "25vw";
             }
-               
         }
         
-
         toggle = !toggle;
     }

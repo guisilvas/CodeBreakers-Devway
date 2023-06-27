@@ -17,8 +17,6 @@ body{
     background-image: url('assets/fundoareia.png');
 }
 
-
-
 .grid-container{
   display: grid;
   grid-template-columns: 40% 50%;
@@ -41,6 +39,7 @@ body{
   align-items: center;
   position:relative;
 }
+
 .buttomperfil {
   display: flex;
     position: absolute;
@@ -69,7 +68,6 @@ body{
 .aa {
   /*width: 100%;*/
   height: 90%;     
- 
 }
 
 .title_profile {
@@ -94,7 +92,6 @@ body{
     */
   /* } */
 .form_profile {
-
   padding-top: 2rem;
   font-family: 'Press Start 2P';
   height: 85%;
@@ -106,7 +103,6 @@ body{
 }
 
 .form_profile input{ 
-    
   font-family: 'Press Start 2P', cursive;
   color: black;;
   width: 80%;
@@ -126,29 +122,24 @@ body{
   height: 100%;
 }
 
-
-
-@media screen and (max-width: 426px){
+@media screen and (max-width: 600px){
   .navbar{
     width: 100%;
     position: initial;
   }
+
   .grid-item {
     padding: 20px;
     font-size: 30px;
     text-align: center;
     width: 100%;
     height: 40%;
-
   }
 
   .title_profile{
-
     font-size:2rem;
     padding-top: 6%;
     padding-bottom: 10%;
     text-align: center;
   }
 }
-
-

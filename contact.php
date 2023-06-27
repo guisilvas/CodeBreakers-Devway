@@ -40,6 +40,14 @@
     $row_pesquisa_usuario = mysqli_fetch_assoc($resultado_pesquisa_usuario);
 
     $foto_perfil= $row_pesquisa_usuario['foto_perfil_icon'];
+
+    // Consulta do nome
+    $sqlName = "SELECT nome FROM users WHERE email = '$_SESSION[email]'";
+    $resultName = mysqli_query($conexao, $sqlName);
+    $row = mysqli_fetch_assoc($resultName);
+    if (mysqli_num_rows($resultName) > 0) {
+        $_SESSION['nome'] = $row['nome'];
+    }
     
 ?>
 

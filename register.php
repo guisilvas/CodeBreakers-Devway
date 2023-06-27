@@ -10,7 +10,6 @@
         $email = $_POST['email'];
         $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-
         // Verifica se o e-mail já está cadastrado
         $consulta = "SELECT COUNT(*) FROM users WHERE email = '$email'";
         $resultado = mysqli_query($conexao, $consulta);

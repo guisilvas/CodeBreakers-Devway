@@ -30,14 +30,14 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/navbar.css">
-    <link rel="stylesheet" href="assets\style_profile.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/style_profile.css">
+    <title>Dev Way - Perfil</title>
 <style>
     
     body{
@@ -50,8 +50,6 @@
         background-attachment: fixed;
     }
 
-    
-    
     .fatherOfAll{
         display: flex;
         justify-content: center;
@@ -70,7 +68,6 @@
         background-size: 100% 100%;
         justify-content: center;
     }
-
     
     .form_profile input{ 
         color: black;;
@@ -111,9 +108,6 @@
             height: 20%;
 
         }
-        .bn{
-            padding-top: 20%;
-        }
     }
 
 </style>
@@ -124,8 +118,12 @@
         <nav class="navbar" style="position:initial;">
             <button class="btnmenu" onclick="abrirmenu()" id="btnmenu">MENU</button>
         </nav>
-        <div class="menu1" id="menu1" style="top=0vh;">
+        <div class="menu1" id="menu1">
             <div class="menu2" id="menu2">
+                <a class="menup" href="profile.php">
+                    <img id="img_profile" class="aa" src="<?php echo $foto_perfil ?>" alt="Perfil">
+                    <input id="inputbloq1" type="text" name="Usuario" value="<?php echo $row_pesquisa_usuario['nome'];?>" class="nomeinput">
+                </a>
                 <div class="linksmenu">
                     <a href="system.php">Trilhas</a>
                 </div>
@@ -135,14 +133,12 @@
                 <div class="linksmenu">
                     <a href="sobre.php">Sobre Nós</a>
                 </div>
-
                 <div class="bn">
                     <form method="post" action="">
                         <input type="submit" name="sair" value="sair">
                     </form>
                 </div>
             </div> 
-            </div>
         </div>
     </header>
 
@@ -158,13 +154,13 @@
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                             // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
                             // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
-                            $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageUrl' WHERE id = '$id_user'";
+                            $update_image = "UPDATE users SET foto_perfil = '$newImageUrl', foto_perfil_icon = '$newImageIconUrl' WHERE id = '$id_user'";
                             $resultado_update_image = mysqli_query($conexao, $update_image);
-                            if ($resultado_update_image){
-                                echo "<script>alert('Foto atualizada');</script>";
-                            }else{
-                                echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
-                            }
+                            // if ($resultado_update_image){
+                            //     echo "<script>alert('Foto atualizada');</script>";
+                            // }else{
+                            //     echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
+                            // }
                         }else{
                             echo "<img id=\"img_profile\" class=\"aa\" src=".$foto_perfil." alt=\"Perfil\">";
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
