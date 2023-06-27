@@ -12,7 +12,17 @@
     background-size:auto 100%;
     background-position: center top;
 }
-
+.navbar_sobre{
+    width: 100%;
+    height: 8vh;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(211, 211, 211, 0.253);
+    backdrop-filter: blur(1rem);
+}
 .btnmenu{
     cursor:pointer;
     position:absolute;
@@ -44,6 +54,21 @@
     background-image: url('fundo-pergaminho.png');
   
 }
+.menu1_sobre{
+    display: block;
+    justify-content: center;
+    height: 100vh;
+    width: 0vw;
+    z-index: 2;
+    position: fixed;
+    right:0rem;
+    top: 8vh;
+    transition: width 0.5s ease; /* Adicionado: Transição de altura com duração de 0.5s e função ease */
+    transition-delay: 1s;
+    overflow: hidden; /* Adicionado: Para esconder o conteúdo quando o menu está fechado */
+    background-color: rgba(211, 211, 211, 0.253);
+    backdrop-filter: blur(1rem);
+}
 .menu2{
     height:100%;
     width:100%;
@@ -71,8 +96,6 @@
     display:flex;
     justify-content: center; 
     align-items: center;
-    border-bottom: 10px;
-    border-bottom-color:black;
 }
 
 
@@ -81,6 +104,7 @@
     color:black;
     font-size: 130%;
     text-decoration: none;
+    transition-duration: 0.4s;
 }
 
 .nomeinput {
@@ -88,11 +112,16 @@
     background-color: transparent;
     border: none;
     color: black;
-    font-style: bold;
     font-size: 100%;
     height: 50%;
     width: 60%;
+    cursor:pointer;
     font-family: 'Press Start 2P', cursive;
+    transition-duration: 0.4s;
+}
+
+.nomeinput:hover,.linksmenu a:hover{
+    color:rgb(220, 221, 223)
 }
 .bn{
     position: initial;
@@ -172,13 +201,16 @@
         font-size: 15px;
         width: 20vw;
     }
+    .bn{
+        padding-top: 20%;
+    }
     .bn input{
         font-size: 15px;
         height: 50px;
         width: 20vw;
     }
     .linksmenu{
-        height: 8%;
+        height: 11%;
     }
     .linksmenu a{
         font-size: 150%
