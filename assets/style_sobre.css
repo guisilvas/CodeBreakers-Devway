@@ -14,12 +14,12 @@ body {
 }
 
 p {
-    color: #000;
+    color: #ffffff;
     text-shadow: 
-        -1px -1px 0px #FFF, 
-        -1px 1px 0px #FFF,      
-        1px -1px 0px #FFF,    
-        1px 0px 0px #FFF;
+        -1px -1px 0px #000000, 
+        -1px 1px 0px #000000,      
+        1px -1px 0px #000000,    
+        1px 0px 0px #000000;
     font-size: 1.3rem;
     font-family: 'Press Start 2P';
     text-align: left;
