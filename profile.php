@@ -104,10 +104,6 @@
         .btnmenu{
             height: 2.5rem;
         }
-        .linksmenu{
-            height: 20%;
-
-        }
     }
 
 </style>
@@ -150,7 +146,7 @@
                         if (isset($_GET['image'])) {
                             $newImageUrl = $_GET['image'];
                             $newImageIconUrl = $_GET['image_icon'];
-                            echo "<img id=\"img_profile\" class=\"imageNav\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
+                            echo "<img id=\"img_profile\" class=\"imageProfile\" src=\"" . $newImageUrl . "\" alt=\"Perfil\">";
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                             // Atualizar a imagem de perfil do usuário com a nova URL ($newImageUrl)
                             // ... (código para atualizar a imagem de perfil no banco de dados ou onde quer que esteja armazenada)
@@ -166,7 +162,7 @@
                             //     echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
                             // }
                         }else{
-                            echo "<img id=\"img_profile\" class=\"imageNav\" src=".$foto_perfil." alt=\"Perfil\">";
+                            echo "<img id=\"img_profile\" class=\"imageProfile\" src=".$foto_perfil." alt=\"Perfil\">";
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                         }
                     ?>
