@@ -156,20 +156,13 @@
                                 echo "<script>window.location.href = 'system.php';</script>";
                                 echo "<script>window.location.reload();</script>";
                             }
-                            // if ($resultado_update_image){
-                            //     echo "<script>alert('Foto atualizada');</script>";
-                            // }else{
-                            //     echo "<script>alert('Erro para atualizar a foto de perfil');</script>";
-                            // }
+                            
                         }else{
                             echo "<img id=\"img_profile\" class=\"imageProfile\" src=".$foto_perfil." alt=\"Perfil\">";
                             echo "<a href=\"select_character.html\" class=\"buttomperfil\"><img class=\"trocar_img\" src=\"assets/botaotp.png\"></a>";
                         }
                     ?>
-                    <!-- <img src="assets\characters\defaultCharacter.png" class="imageNav" id="img_profile"></div>
-                    <a href="select_character.html"class="buttomperfil">
-                        <img class="trocar_img" src="assets/botaotp.png">
-                    </a> -->
+                    
                 </div>
             </div>
             <div class="grid-item">
