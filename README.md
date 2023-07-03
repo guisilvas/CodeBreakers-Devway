@@ -1,10 +1,41 @@
+<div align="center">
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/Language-Portugu%C3%AAs-brightgreen" alt="Português">
+  </a>
+  <a href="README_en.md">
+    <img src="https://img.shields.io/badge/Language-English-blue" alt="English">
+  </a>
+  <a href="README_sp.md">
+    <img src="https://img.shields.io/badge/Language-Espa%C3%B1ol-orange" alt="Español">
+  </a>
+</div>
+
+<br>
+
 <!-- Header de apresentação -->
 <h1 align="center">
-    <!-- Logo do projeto -->
-    <img src="">
     <!-- Nome do projeto -->
     <p>DevWay</p>
+    <!-- Logo do projeto -->
+    <img src="assets/readmeimg.png">
 </h1>
+
+<br>
+
+<!-- APresentação da plataforma -->
+<h2 align="center">
+    Apresentação
+</h2>
+
+<!-- GIF de apresentação -->
+<img src="./assets/GIFdevway.gif">
+
+<br>
+
+<!-- Endereço do site -->
+<!-- <h2 align="center"><a href="">Em breve no...</a></h2> -->
+
+<br>
 
 <h2 align="center">
     Como rodar o Projeto
@@ -31,8 +62,8 @@
 
 <!-- Links úteis -->
 ## 🔗 Links
-- [Documentação]()
-- [Projeto]()
+- [Documentação](https://docs.google.com/document/d/1Rs7qrebyRe5CqEBB9wxDN2wHQxvrq_WX7Age8zAB-Ug/edit?pli=1)
+- [Projeto](https://github.com/guisilvas/CodeBreakers-Devway)
 - [Endereço]()
 
 <br>
@@ -79,7 +110,7 @@ O projeto Devway é uma plataforma com trilhas de conhecimento em programação,
 ## 🎯 Objetivo
 
  <p style="text-align: justify">
- O projeto possui como objetivo principal colocar em prática os aprendizados do módulo de Qualidade de Software e aplicar os conhecimentos de metodologias ágeis juntamente aos módulos anteriores de Desenvolvimento Web.
+ O projeto possui como objetivo principal colocar em prática os aprendizados do módulo de Qualidade de Software e Experiência do Usuário além de aplicar os conhecimentos de metodologias ágeis juntamente aos módulos anteriores de Desenvolvimento Web.
  </p>
 
 <br>
@@ -95,7 +126,7 @@ O projeto Devway é uma plataforma com trilhas de conhecimento em programação,
 
 ## 👷‍♂️ Colaboradores
 
-- Professor: [Felipe de Paula]()
+- Professor: [Felipe de Paula](https://github.com/depaulaio)
 
 <br>
 
@@ -105,7 +136,7 @@ O projeto Devway é uma plataforma com trilhas de conhecimento em programação,
     - [Bruna Gontijo](https://github.com/brunagtmaia)
     - [Bruno Santana]()
     - [Breno Gomes](https://github.com/brngom3s)
-    - [Douglas](https://github.com/DOzinhaha)
+    - [Douglas Lima](https://github.com/DOzinhaha)
     - [Eduarda Leandra](https://github.com/DudaLeandra)
     - [Gabriel Mendonça](https://github.com/Gabriel037)
     - [Guilherme Silva](https://github.com/guisilvas)
