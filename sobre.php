@@ -190,7 +190,7 @@
                 <h1 class="card_nome">Pablo</h1>
                 <img class="card_img" src="assets\devs\pablo.jpeg">
                 <div class="card_links">
-                    <a href="https://github.com/PabloSoares1572"></a>
+                    <a href="https://github.com/PabloSoares1572" target="_blank"><img src="assets\icons\icons8-github-50.png"></a>
                     <a href="https://www.linkedin.com/mwlite/in/pablo-soares-597755280" target="_blank"><img src="assets\icons\icons8-linkedin-50.png"></a>
                 </div>
             </div>
